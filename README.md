@@ -63,6 +63,16 @@ class Zaid:
 
 ---
 
+## 🐍 Contribution Snake
+
+<div align="center">
+
+![snake](https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg)
+
+</div>
+
+---
+
 ## 📊 GitHub Stats
 
 <div align="center">
