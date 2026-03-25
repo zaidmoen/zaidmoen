@@ -67,7 +67,7 @@ class Zaid:
 
 <div align="center">
 
-![snake](https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg)
+![snake](https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/snake-dark.svg)
 
 </div>
 
