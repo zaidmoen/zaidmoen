@@ -53,11 +53,11 @@ class Zaid:
 
 ---
 
-## 🐍 Contribution Snake
+## 📅 3D Contribution Calendar
 
 <div align="center">
 
-![snake](https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg)
+![3D Contribution](https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg)
 
 </div>
 
