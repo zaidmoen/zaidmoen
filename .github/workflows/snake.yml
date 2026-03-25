@@ -1,28 +1,73 @@
-name: Generate Snake
+name: 🐍 Generate Contribution Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *"   # runs every day at midnight UTC
+  workflow_dispatch:        # allows manual trigger from GitHub Actions tab
+  push:
+    branches:
+      - main               # also runs on every push to main
 
 permissions:
   contents: write
 
 jobs:
-  build:
+
+  # ─────────────────────────────────────────────
+  #   JOB 1 — Generate all snake SVG variants
+  # ─────────────────────────────────────────────
+  generate-snake:
+    name: Generate Snake Animations
     runs-on: ubuntu-latest
+
     steps:
-      - uses: Platane/snk@v3
+
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Generate — Default (light mode)
+        uses: Platane/snk@v3
+        with:
+          github_user_name: zaidmoen
+          outputs: dist/snake-default.svg
+
+      - name: 🌙 Generate — Dark mode
+        uses: Platane/snk@v3
+        with:
+          github_user_name: zaidmoen
+          outputs: dist/snake-dark.svg?palette=github-dark
+
+      - name: 🌊 Generate — Ocean Blue palette
+        uses: Platane/snk@v3
         with:
           github_user_name: zaidmoen
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/snake-ocean.svg?palette=github-dark&color_snake=58a6ff&color_dots=#0d1117,#0e4429,#006d32,#26a641,#39d353
 
-      - name: Push to output branch
+      - name: 💜 Generate — Purple palette
+        uses: Platane/snk@v3
+        with:
+          github_user_name: zaidmoen
+          outputs: |
+            dist/snake-purple.svg?palette=github-dark&color_snake=a371f7&color_dots=#0d1117,#1a0a2e,#3d1f6e,#7c3aed,#a371f7
+
+      - name: 🚀 Deploy all variants to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
+          commit_message: "chore: update contribution snake [skip ci]"
+          jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ✅ Done — Print summary
+        run: |
+          echo "## 🐍 Snake Generation Complete!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Variant | URL |" >> $GITHUB_STEP_SUMMARY
+          echo "|---------|-----|" >> $GITHUB_STEP_SUMMARY
+          echo "| Default | \`snake-default.svg\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Dark    | \`snake-dark.svg\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Ocean   | \`snake-ocean.svg\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Purple  | \`snake-purple.svg\` |" >> $GITHUB_STEP_SUMMARY
