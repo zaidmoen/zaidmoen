@@ -135,17 +135,32 @@ class Zaid:
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
 
-## 📊 GitHub Analytics
+## 📊 Professional Dashboard
 
-<!-- Professional Metrics Card (Self-updating & Stable) -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/github-metrics.svg" alt="Metrics" width="100%" />
-</div>
+
+<!-- Main Overview Card -->
+<img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.base.svg" alt="Base Metrics" width="100%" />
+
+<br/><br/>
+
+<!-- Engineering & Activity Grid -->
+<table border="0">
+  <tr>
+    <td width="50%" valign="top">
+      <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.engineering.svg" alt="Engineering Metrics" width="100%" />
+    </td>
+    <td width="50%" valign="top">
+      <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.activity.svg" alt="Activity Metrics" width="100%" />
+    </td>
+  </tr>
+</table>
 
 <br/>
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=zaidmoen&theme=transparent&hide_border=true&ring=c084fc&fire=38bdf8&currStreakLabel=818cf8&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6e7681&background=0d1117" alt="GitHub Streak" />
+<!-- Streak Stats -->
+<img src="https://streak-stats.demolab.com?user=zaidmoen&theme=transparent&hide_border=true&ring=c084fc&fire=38bdf8&currStreakLabel=818cf8&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6e7681&background=0d1117" alt="GitHub Streak" />
+
 </div>
 
 <br/>
