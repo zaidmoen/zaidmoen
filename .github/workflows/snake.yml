@@ -1,163 +1,24 @@
-# ════════════════════════════════════════════════════════════════
-#  🐍  Contribution Snake — CI/CD Pipeline
-#  Generates animated SVG contribution graphs and deploys them
-#  Author : zaidmoen
-#  Runs   : daily at midnight UTC · manual trigger · push to main
-# ════════════════════════════════════════════════════════════════
-
-name: 🐍 Contribution Snake
+name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # كل يوم عند منتصف الليل UTC
   workflow_dispatch:
-    inputs:
-      force_regenerate:
-        description: "Force regenerate all variants"
-        required: false
-        default: "false"
-        type: boolean
-  push:
-    branches: [main]
-    paths-ignore:
-      - "**.md"
-      - ".github/ISSUE_TEMPLATE/**"
-      - ".github/PULL_REQUEST_TEMPLATE/**"
 
-# ── Prevent concurrent runs on the same branch ──────────────────
-concurrency:
-  group: snake-${{ github.ref }}
-  cancel-in-progress: true
-
-# ── Minimal required permissions ────────────────────────────────
-permissions:
-  contents: write
-
-# ── Global environment variables ────────────────────────────────
-env:
-  GITHUB_USER: zaidmoen
-  OUTPUT_DIR: dist
-  TARGET_BRANCH: output
-
-# ════════════════════════════════════════════════════════════════
-#  JOB 1 — Generate all snake SVG variants
-# ════════════════════════════════════════════════════════════════
 jobs:
-  generate:
-    name: 🎨 Generate Snake Variants
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    strategy:
-      fail-fast: false          # keep generating remaining variants even if one fails
-      matrix:
-        variant:
-          - name: default
-            emoji: 🐍
-            outputs: dist/snake-default.svg
-
-          - name: dark
-            emoji: 🌙
-            outputs: dist/snake-dark.svg?palette=github-dark
-
-          - name: ocean
-            emoji: 🌊
-            outputs: |
-              dist/snake-ocean.svg?palette=github-dark&color_snake=58a6ff&color_dots=#0d1117,#0e4429,#006d32,#26a641,#39d353
-
-          - name: purple
-            emoji: 💜
-            outputs: |
-              dist/snake-purple.svg?palette=github-dark&color_snake=a371f7&color_dots=#0d1117,#1a0a2e,#3d1f6e,#7c3aed,#a371f7
-
     steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+      - uses: Platane/snk@v3
         with:
-          fetch-depth: 0
-
-      - name: ${{ matrix.variant.emoji }} Generate — ${{ matrix.variant.name }}
-        id: generate
-        uses: Platane/snk@v3
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          github_user_name: ${{ env.GITHUB_USER }}
-          outputs: ${{ matrix.variant.outputs }}
-
-      - name: 📤 Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: snake-${{ matrix.variant.name }}
-          path: ${{ env.OUTPUT_DIR }}
-          retention-days: 1
-          if-no-files-found: error
-
-  # ════════════════════════════════════════════════════════════════
-  #  JOB 2 — Merge all artifacts and deploy to output branch
-  # ════════════════════════════════════════════════════════════════
-  deploy:
-    name: 🚀 Deploy to Output Branch
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    needs: generate
-    if: ${{ !cancelled() && contains(needs.generate.result, 'success') }}
-
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: 📦 Download all snake artifacts
-        uses: actions/download-artifact@v4
-        with:
-          pattern: snake-*
-          path: ${{ env.OUTPUT_DIR }}
-          merge-multiple: true
-
-      - name: 🔍 Verify generated files
-        run: |
-          echo "📁 Files ready for deployment:"
-          ls -lh ${{ env.OUTPUT_DIR }}
-          EXPECTED=4
-          ACTUAL=$(ls ${{ env.OUTPUT_DIR }}/*.svg 2>/dev/null | wc -l)
-          if [ "$ACTUAL" -lt "$EXPECTED" ]; then
-            echo "⚠️  Warning: Expected $EXPECTED SVGs, found $ACTUAL"
-          else
-            echo "✅ All $ACTUAL SVG variants present"
-          fi
-
-      - name: 🚀 Deploy to output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: ${{ env.TARGET_BRANCH }}
-          build_dir: ${{ env.OUTPUT_DIR }}
-          keep_history: true
-          commit_message: "chore: update contribution snake [skip ci]"
-          jekyll: false
+          target_branch: output
+          build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: 📊 Job Summary
-        if: always()
-        run: |
-          BASE_URL="https://raw.githubusercontent.com/${{ github.repository }}/${{ env.TARGET_BRANCH }}"
-          {
-            echo "## 🐍 Snake Generation Report"
-            echo ""
-            echo "> **Triggered by:** \`${{ github.event_name }}\`  |  **Commit:** \`${{ github.sha }}\`"
-            echo ""
-            echo "| # | Variant | File | Preview |"
-            echo "|---|---------|------|---------|"
-            echo "| 1 | 🐍 Default | \`snake-default.svg\` | ![default]($BASE_URL/snake-default.svg) |"
-            echo "| 2 | 🌙 Dark    | \`snake-dark.svg\`    | ![dark]($BASE_URL/snake-dark.svg) |"
-            echo "| 3 | 🌊 Ocean   | \`snake-ocean.svg\`   | ![ocean]($BASE_URL/snake-ocean.svg) |"
-            echo "| 4 | 💜 Purple  | \`snake-purple.svg\`  | ![purple]($BASE_URL/snake-purple.svg) |"
-            echo ""
-            echo "### 📋 Usage in README"
-            echo '```md'
-            echo "<!-- Light mode -->"
-            echo "![snake]($BASE_URL/snake-default.svg#gh-light-mode-only)"
-            echo "<!-- Dark mode -->"
-            echo "![snake]($BASE_URL/snake-dark.svg#gh-dark-mode-only)"
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
