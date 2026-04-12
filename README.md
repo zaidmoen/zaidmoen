@@ -135,19 +135,11 @@ class Zaid:
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
 
-## 🏆 GitHub Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=zaidmoen&theme=algolia&no-bg=true&no-frame=true&column=7&margin-w=6" alt="GitHub Trophies" />
-</div>
-
-<br/>
-
 ## 📊 GitHub Analytics
 
+<!-- Professional Metrics Card (Self-updating & Stable) -->
 <div align="center">
-  <img width="49%" height="195px" src="https://github-readme-stats.vercel.app/api?username=zaidmoen&show_icons=true&count_private=true&hide_border=true&title_color=c084fc&icon_color=818cf8&text_color=c9d1d9&bg_color=0d1117&include_all_commits=true" alt="GitHub Stats" /> 
-  <img width="41%" height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zaidmoen&layout=compact&hide_border=true&title_color=c084fc&text_color=c9d1d9&bg_color=0d1117&langs_count=8" alt="Top Languages" />
+  <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/github-metrics.svg" alt="Metrics" width="100%" />
 </div>
 
 <br/>
@@ -157,11 +149,6 @@ class Zaid:
 </div>
 
 <br/>
-
-<!-- Activity Graph -->
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=zaidmoen&bg_color=0d1117&color=c084fc&line=818cf8&point=38bdf8&area=true&area_color=c084fc&hide_border=true&custom_title=📈%20Contribution%20Activity" alt="Activity Graph" width="98%"/>
-</div>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
 
