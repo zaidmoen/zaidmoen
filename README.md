@@ -77,13 +77,13 @@ class Zaid:
 
 ## 🐍 Contribution Snake
 
-<p align="center"> 
-  <picture> 
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg" /> 
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" /> 
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg" /> 
-  </picture> 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.gif" alt="Contribution Snake" />
 </p>
+
+## 📊 WakaTime Stats
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 ## 📅 3D Contribution Calendar
 
