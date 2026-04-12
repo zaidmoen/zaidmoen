@@ -4,11 +4,16 @@ on:
   schedule:
     - cron: '0 3 * * *'  # كل يوم الساعة 3 صباحًا
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   update-readme:
     name: Update Readme with WakaTime Metrics
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - uses: anmol098/waka-readme-stats@master
