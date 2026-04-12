@@ -1,12 +1,12 @@
+<!-- Custom Animated Header -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/header.svg" width="100%" alt="Zaid Mayyalleh - AI Student & Full Stack Developer"/>
+</div>
+
 <div align="center">
 
-<!-- Professional Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=6E40C9&height=300&section=header&text=Zaid%20Mayyalleh&fontSize=70&animation=fadeIn&fontAlignY=38&desc=AI%20Student%20|%20Full%20Stack%20Developer&descAlignY=51&descAlign=50" width="100%"/>
-
-<br/>
-
 <!-- Dynamic Typing Animation -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=6E40C9&center=true&vCenter=true&random=false&width=600&lines=Hi+there%2C+I'm+Zaid+%F0%9F%91%8B;AI+%26+ML+Enthusiast;Full+Stack+Web+Developer;Data+Science+Explora" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=600&height=50&lines=%E2%9C%A8+Turning+Ideas+into+Intelligent+Code+%E2%9C%A8" alt="Typing SVG" />
 
 <br/>
 
@@ -18,7 +18,7 @@
 <br/><br/>
 
 <!-- GitHub Trophies -->
-[![trophies](https://github-profile-trophy.vercel.app/?username=zaidmoen&theme=tokyonight&no-bg=true&margin-w=4&no-frame=true)](https://github.com/ryo-ma/github-profile-trophy)
+<img src="https://github-profile-trophy.vercel.app/?username=zaidmoen&theme=algolia&no-bg=true&margin-w=4&no-frame=true&column=7" alt="GitHub Trophies" />
 
 </div>
 
@@ -38,9 +38,13 @@ class Zaid:
         self.ask_me     = ["Python", "React", "Computer Vision", "System Design"]
 ```
 
-📌 Open for collaboration on interesting AI + Web projects.
+> 📌 Open for collaboration on interesting AI + Web projects.
+
+---
 
 ## 🛠️ Tech Stack
+
+<div align="center">
 
 ### 🤖 AI & Data Science
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -63,6 +67,8 @@ class Zaid:
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
+</div>
+
 ---
 
 ## 🚀 What I'm Up To
@@ -77,13 +83,20 @@ class Zaid:
 ## 📊 GitHub Stats
 
 <div align="center"> 
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=zaidmoen&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" /> 
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zaidmoen&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" /> 
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=zaidmoen&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117" /> 
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zaidmoen&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0d1117" /> 
 </div>
 
 <p align="center"> 
-  <img src="https://streak-stats.demolab.com?user=zaidmoen&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub Streak" /> 
+  <img src="https://streak-stats.demolab.com?user=zaidmoen&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D&background=0d1117" alt="GitHub Streak" /> 
 </p>
+
+<!-- Activity Graph -->
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=zaidmoen&bg_color=0d1117&color=A855F7&line=818CF8&point=38BDF8&area=true&area_color=6E40C9&hide_border=true" alt="Activity Graph" />
+</p>
+
+---
 
 ## 🐍 Contribution Snake
 
@@ -107,11 +120,26 @@ class Zaid:
 
 ---
 
+## 📫 Get In Touch
+
+<div align="center">
+  
+💌 **Email:** zaidmayalleh@gmail.com  
+💼 **LinkedIn:** [Zaid Mayyalleh](https://www.linkedin.com/in/zaid-mayyalleh-307499376)
+
+</div>
+
+---
+
 <div align="center">
 
 <img src="https://komarev.com/ghpvc/?username=zaidmoen&color=6E40C9&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
 
 <br/><br/>
-⭐ If you like my work, consider starring my repos! ⭐
+
+⭐ **If you like my work, consider starring my repos!** ⭐
 
 </div>
+
+<!-- Waving Footer -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=6E40C9&height=120&section=footer" width="100%"/>
