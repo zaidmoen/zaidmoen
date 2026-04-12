@@ -66,8 +66,11 @@ class Zaid:
 ## 🐍 Contribution Snake
 
 <div align="center">
-
-![snake](https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/snake-dark.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/snake-purple.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/snake-default.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/snake-purple.svg" />
+</picture>
 
 </div>
 
