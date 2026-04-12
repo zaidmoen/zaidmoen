@@ -1,7 +1,12 @@
 <div align="center">
 
+<!-- Professional Header -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=6E40C9&height=300&section=header&text=Zaid%20Mayyalleh&fontSize=70&animation=fadeIn&fontAlignY=38&desc=AI%20Student%20|%20Full%20Stack%20Developer&descAlignY=51&descAlign=50" width="100%"/>
+
+<br/>
+
 <!-- Dynamic Typing Animation -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=6E40C9&center=true&vCenter=true&random=false&width=600&lines=Hi+there%2C+I'm+Zaid+%F0%9F%91%8B;AI+%26+ML+Enthusiast;Full+Stack+Web+Developer;Data+Science+Explorer" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=6E40C9&center=true&vCenter=true&random=false&width=600&lines=Hi+there%2C+I'm+Zaid+%F0%9F%91%8B;AI+%26+ML+Enthusiast;Full+Stack+Web+Developer;Data+Science+Explora" alt="Typing SVG" />
 
 <br/>
 
@@ -9,6 +14,11 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zaid-mayyalleh-307499376)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zaidmayalleh@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zaidmoen)
+
+<br/><br/>
+
+<!-- GitHub Trophies -->
+[![trophies](https://github-profile-trophy.vercel.app/?username=zaidmoen&theme=tokyonight&no-bg=true&margin-w=4&no-frame=true)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
