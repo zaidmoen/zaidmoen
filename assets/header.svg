@@ -1,209 +1,225 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340">
   <defs>
-    <!-- Animated gradient for background -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d1117">
-        <animate attributeName="stop-color" values="#0d1117;#161b22;#0d1117" dur="6s" repeatCount="indefinite"/>
+    <!-- Background animated gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a">
+        <animate attributeName="stop-color" values="#0a0a1a;#0d0d2b;#0a0a1a" dur="8s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="50%" style="stop-color:#161b22">
-        <animate attributeName="stop-color" values="#161b22;#1a1040;#161b22" dur="6s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" style="stop-color:#1a1040">
-        <animate attributeName="stop-color" values="#1a1040;#0d1117;#1a1040" dur="6s" repeatCount="indefinite"/>
+      <stop offset="100%" style="stop-color:#1a0a2e">
+        <animate attributeName="stop-color" values="#1a0a2e;#0a0a1a;#1a0a2e" dur="8s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
 
-    <!-- Glow gradient for name -->
+    <!-- Name gradient -->
     <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#A855F7">
-        <animate attributeName="stop-color" values="#A855F7;#6E40C9;#818CF8;#A855F7" dur="4s" repeatCount="indefinite"/>
+      <stop offset="0%" style="stop-color:#c084fc">
+        <animate attributeName="stop-color" values="#c084fc;#818cf8;#38bdf8;#c084fc" dur="6s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="50%" style="stop-color:#818CF8">
-        <animate attributeName="stop-color" values="#818CF8;#A855F7;#6E40C9;#818CF8" dur="4s" repeatCount="indefinite"/>
+      <stop offset="50%" style="stop-color:#818cf8">
+        <animate attributeName="stop-color" values="#818cf8;#38bdf8;#c084fc;#818cf8" dur="6s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="100%" style="stop-color:#6E40C9">
-        <animate attributeName="stop-color" values="#6E40C9;#818CF8;#A855F7;#6E40C9" dur="4s" repeatCount="indefinite"/>
+      <stop offset="100%" style="stop-color:#38bdf8">
+        <animate attributeName="stop-color" values="#38bdf8;#c084fc;#818cf8;#38bdf8" dur="6s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
 
-    <!-- Accent gradient for subtitle -->
-    <linearGradient id="subtitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#38BDF8"/>
-      <stop offset="100%" style="stop-color:#818CF8"/>
+    <!-- Accent line gradient -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0"/>
     </linearGradient>
 
-    <!-- Glow filter -->
+    <!-- Glow filters -->
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <!-- Soft glow for particles -->
-    <filter id="particleGlow">
+    <filter id="softGlow">
       <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <!-- Radial glow behind name -->
-    <radialGradient id="centerGlow" cx="50%" cy="45%" r="35%">
-      <stop offset="0%" style="stop-color:#6E40C9;stop-opacity:0.15"/>
-      <stop offset="100%" style="stop-color:#6E40C9;stop-opacity:0"/>
+    <!-- Center radial glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="42%" r="30%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.12">
+        <animate attributeName="stop-opacity" values="0.12;0.20;0.12" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Orb gradient 1 -->
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Orb gradient 2 -->
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0"/>
     </radialGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="320" fill="url(#bgGrad)" rx="12"/>
+  <rect width="900" height="340" fill="url(#bg)" rx="0"/>
+  <rect width="900" height="340" fill="url(#centerGlow)"/>
 
-  <!-- Radial glow behind name -->
-  <rect width="900" height="320" fill="url(#centerGlow)" rx="12"/>
+  <!-- Floating orbs -->
+  <ellipse cx="150" cy="100" rx="120" ry="100" fill="url(#orb1)">
+    <animate attributeName="cx" values="150;200;150" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="100;140;100" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="750" cy="240" rx="130" ry="110" fill="url(#orb2)">
+    <animate attributeName="cx" values="750;700;750" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="240;200;240" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
 
-  <!-- Grid lines (subtle) -->
-  <g opacity="0.03" stroke="#A855F7">
-    <line x1="0" y1="40" x2="900" y2="40"/>
-    <line x1="0" y1="80" x2="900" y2="80"/>
-    <line x1="0" y1="120" x2="900" y2="120"/>
-    <line x1="0" y1="160" x2="900" y2="160"/>
-    <line x1="0" y1="200" x2="900" y2="200"/>
-    <line x1="0" y1="240" x2="900" y2="240"/>
-    <line x1="0" y1="280" x2="900" y2="280"/>
-    <line x1="100" y1="0" x2="100" y2="320"/>
-    <line x1="200" y1="0" x2="200" y2="320"/>
-    <line x1="300" y1="0" x2="300" y2="320"/>
-    <line x1="400" y1="0" x2="400" y2="320"/>
-    <line x1="500" y1="0" x2="500" y2="320"/>
-    <line x1="600" y1="0" x2="600" y2="320"/>
-    <line x1="700" y1="0" x2="700" y2="320"/>
-    <line x1="800" y1="0" x2="800" y2="320"/>
+  <!-- Fine dot grid -->
+  <g opacity="0.06">
+    <circle cx="50" cy="30" r="1" fill="#818cf8"/><circle cx="100" cy="30" r="1" fill="#818cf8"/>
+    <circle cx="150" cy="30" r="1" fill="#818cf8"/><circle cx="200" cy="30" r="1" fill="#818cf8"/>
+    <circle cx="250" cy="30" r="1" fill="#818cf8"/><circle cx="300" cy="30" r="1" fill="#818cf8"/>
+    <circle cx="350" cy="30" r="1" fill="#818cf8"/><circle cx="400" cy="30" r="1" fill="#818cf8"/>
+    <circle cx="450" cy="30" r="1" fill="#818cf8"/><circle cx="500" cy="30" r="1" fill="#818cf8"/>
+    <circle cx="550" cy="30" r="1" fill="#818cf8"/><circle cx="600" cy="30" r="1" fill="#818cf8"/>
+    <circle cx="650" cy="30" r="1" fill="#818cf8"/><circle cx="700" cy="30" r="1" fill="#818cf8"/>
+    <circle cx="750" cy="30" r="1" fill="#818cf8"/><circle cx="800" cy="30" r="1" fill="#818cf8"/>
+    <circle cx="850" cy="30" r="1" fill="#818cf8"/>
+
+    <circle cx="50" cy="70" r="1" fill="#818cf8"/><circle cx="100" cy="70" r="1" fill="#818cf8"/>
+    <circle cx="150" cy="70" r="1" fill="#818cf8"/><circle cx="200" cy="70" r="1" fill="#818cf8"/>
+    <circle cx="250" cy="70" r="1" fill="#818cf8"/><circle cx="300" cy="70" r="1" fill="#818cf8"/>
+    <circle cx="350" cy="70" r="1" fill="#818cf8"/><circle cx="400" cy="70" r="1" fill="#818cf8"/>
+    <circle cx="450" cy="70" r="1" fill="#818cf8"/><circle cx="500" cy="70" r="1" fill="#818cf8"/>
+    <circle cx="550" cy="70" r="1" fill="#818cf8"/><circle cx="600" cy="70" r="1" fill="#818cf8"/>
+    <circle cx="650" cy="70" r="1" fill="#818cf8"/><circle cx="700" cy="70" r="1" fill="#818cf8"/>
+    <circle cx="750" cy="70" r="1" fill="#818cf8"/><circle cx="800" cy="70" r="1" fill="#818cf8"/>
+    <circle cx="850" cy="70" r="1" fill="#818cf8"/>
+
+    <circle cx="50" cy="270" r="1" fill="#818cf8"/><circle cx="100" cy="270" r="1" fill="#818cf8"/>
+    <circle cx="150" cy="270" r="1" fill="#818cf8"/><circle cx="200" cy="270" r="1" fill="#818cf8"/>
+    <circle cx="250" cy="270" r="1" fill="#818cf8"/><circle cx="300" cy="270" r="1" fill="#818cf8"/>
+    <circle cx="350" cy="270" r="1" fill="#818cf8"/><circle cx="400" cy="270" r="1" fill="#818cf8"/>
+    <circle cx="450" cy="270" r="1" fill="#818cf8"/><circle cx="500" cy="270" r="1" fill="#818cf8"/>
+    <circle cx="550" cy="270" r="1" fill="#818cf8"/><circle cx="600" cy="270" r="1" fill="#818cf8"/>
+    <circle cx="650" cy="270" r="1" fill="#818cf8"/><circle cx="700" cy="270" r="1" fill="#818cf8"/>
+    <circle cx="750" cy="270" r="1" fill="#818cf8"/><circle cx="800" cy="270" r="1" fill="#818cf8"/>
+    <circle cx="850" cy="270" r="1" fill="#818cf8"/>
+
+    <circle cx="50" cy="310" r="1" fill="#818cf8"/><circle cx="100" cy="310" r="1" fill="#818cf8"/>
+    <circle cx="150" cy="310" r="1" fill="#818cf8"/><circle cx="200" cy="310" r="1" fill="#818cf8"/>
+    <circle cx="250" cy="310" r="1" fill="#818cf8"/><circle cx="300" cy="310" r="1" fill="#818cf8"/>
+    <circle cx="350" cy="310" r="1" fill="#818cf8"/><circle cx="400" cy="310" r="1" fill="#818cf8"/>
+    <circle cx="450" cy="310" r="1" fill="#818cf8"/><circle cx="500" cy="310" r="1" fill="#818cf8"/>
+    <circle cx="550" cy="310" r="1" fill="#818cf8"/><circle cx="600" cy="310" r="1" fill="#818cf8"/>
+    <circle cx="650" cy="310" r="1" fill="#818cf8"/><circle cx="700" cy="310" r="1" fill="#818cf8"/>
+    <circle cx="750" cy="310" r="1" fill="#818cf8"/><circle cx="800" cy="310" r="1" fill="#818cf8"/>
+    <circle cx="850" cy="310" r="1" fill="#818cf8"/>
   </g>
 
-  <!-- Floating particles -->
-  <g filter="url(#particleGlow)">
-    <!-- Particle 1 -->
-    <circle cx="80" cy="60" r="2" fill="#A855F7" opacity="0.6">
-      <animate attributeName="cy" values="60;40;60" dur="5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/>
+  <!-- Floating sparkles -->
+  <g filter="url(#softGlow)">
+    <circle cx="120" cy="55" r="1.8" fill="#c084fc" opacity="0">
+      <animate attributeName="opacity" values="0;0.9;0" dur="3s" begin="0s" repeatCount="indefinite"/>
     </circle>
-    <!-- Particle 2 -->
-    <circle cx="180" cy="250" r="1.5" fill="#818CF8" opacity="0.5">
-      <animate attributeName="cy" values="250;220;250" dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite"/>
+    <circle cx="780" cy="80" r="1.5" fill="#38bdf8" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="4s" begin="1s" repeatCount="indefinite"/>
     </circle>
-    <!-- Particle 3 -->
-    <circle cx="320" cy="40" r="2.5" fill="#38BDF8" opacity="0.4">
-      <animate attributeName="cy" values="40;20;40" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite"/>
+    <circle cx="300" cy="290" r="2" fill="#818cf8" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="3.5s" begin="0.5s" repeatCount="indefinite"/>
     </circle>
-    <!-- Particle 4 -->
-    <circle cx="700" cy="80" r="2" fill="#A855F7" opacity="0.5">
-      <animate attributeName="cy" values="80;55;80" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="4.5s" repeatCount="indefinite"/>
+    <circle cx="600" cy="40" r="1.5" fill="#c084fc" opacity="0">
+      <animate attributeName="opacity" values="0;0.9;0" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
     </circle>
-    <!-- Particle 5 -->
-    <circle cx="820" cy="200" r="1.8" fill="#818CF8" opacity="0.4">
-      <animate attributeName="cy" values="200;175;200" dur="5.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="5.5s" repeatCount="indefinite"/>
+    <circle cx="450" cy="310" r="1.8" fill="#38bdf8" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3.2s" begin="2s" repeatCount="indefinite"/>
     </circle>
-    <!-- Particle 6 -->
-    <circle cx="550" cy="280" r="2.2" fill="#38BDF8" opacity="0.3">
-      <animate attributeName="cy" values="280;260;280" dur="3.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.5s" repeatCount="indefinite"/>
+    <circle cx="680" cy="280" r="1.2" fill="#818cf8" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="4.5s" begin="0.8s" repeatCount="indefinite"/>
     </circle>
-    <!-- Particle 7 -->
-    <circle cx="420" cy="290" r="1.2" fill="#A855F7" opacity="0.5">
-      <animate attributeName="cy" values="290;270;290" dur="4.2s" repeatCount="indefinite"/>
+    <circle cx="200" cy="180" r="1.5" fill="#c084fc" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="3.8s" begin="1.2s" repeatCount="indefinite"/>
     </circle>
-    <!-- Particle 8 -->
-    <circle cx="650" cy="35" r="1.8" fill="#818CF8" opacity="0.6">
-      <animate attributeName="cy" values="35;15;35" dur="5.8s" repeatCount="indefinite"/>
-    </circle>
-    <!-- Particle 9 -->
-    <circle cx="130" cy="160" r="1.5" fill="#38BDF8" opacity="0.4">
-      <animate attributeName="cy" values="160;140;160" dur="3.8s" repeatCount="indefinite"/>
-    </circle>
-    <!-- Particle 10 -->
-    <circle cx="770" cy="260" r="2" fill="#A855F7" opacity="0.35">
-      <animate attributeName="cy" values="260;240;260" dur="4.8s" repeatCount="indefinite"/>
+    <circle cx="820" cy="160" r="1.8" fill="#38bdf8" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="5s" begin="0.3s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Animated code brackets left -->
-  <text x="120" y="155" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="60" fill="#6E40C9" opacity="0.15" font-weight="bold">
-    {
-    <animate attributeName="opacity" values="0.15;0.25;0.15" dur="3s" repeatCount="indefinite"/>
-  </text>
-  
-  <!-- Animated code brackets right -->
-  <text x="740" y="155" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="60" fill="#6E40C9" opacity="0.15" font-weight="bold">
-    }
-    <animate attributeName="opacity" values="0.15;0.25;0.15" dur="3s" repeatCount="indefinite"/>
-  </text>
+  <!-- Decorative code (left side) -->
+  <g opacity="0.08">
+    <text x="35" y="85" font-family="monospace" font-size="10" fill="#c084fc">import AI from 'future';</text>
+    <text x="35" y="100" font-family="monospace" font-size="10" fill="#818cf8">const passion = Infinity;</text>
+    <text x="35" y="260" font-family="monospace" font-size="10" fill="#38bdf8">model.fit(data, labels);</text>
+    <text x="35" y="275" font-family="monospace" font-size="10" fill="#c084fc">await deploy(production);</text>
+  </g>
+  <g opacity="0.08">
+    <text x="660" y="85" font-family="monospace" font-size="10" fill="#38bdf8">while(alive) { learn(); }</text>
+    <text x="660" y="100" font-family="monospace" font-size="10" fill="#818cf8">git push origin future</text>
+    <text x="660" y="260" font-family="monospace" font-size="10" fill="#c084fc">npm run build:dreams</text>
+    <text x="660" y="275" font-family="monospace" font-size="10" fill="#38bdf8">export default Success;</text>
+  </g>
 
-  <!-- Small decorative code snippets -->
-  <text x="60" y="100" font-family="'Fira Code', monospace" font-size="10" fill="#38BDF8" opacity="0.12">
-    const developer = new Zaid();
-    <animate attributeName="opacity" values="0.12;0.2;0.12" dur="4s" repeatCount="indefinite"/>
-  </text>
-  <text x="600" y="280" font-family="'Fira Code', monospace" font-size="10" fill="#818CF8" opacity="0.12">
-    async buildFuture() =&gt; {...}
-    <animate attributeName="opacity" values="0.12;0.2;0.12" dur="5s" repeatCount="indefinite"/>
-  </text>
-  <text x="60" y="270" font-family="'Fira Code', monospace" font-size="10" fill="#A855F7" opacity="0.12">
-    model.train(passion=True)
-    <animate attributeName="opacity" values="0.12;0.18;0.12" dur="3.5s" repeatCount="indefinite"/>
-  </text>
+  <!-- Accent line top -->
+  <line x1="200" y1="110" x2="700" y2="110" stroke="url(#lineGrad)" stroke-width="0.5" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+  </line>
 
   <!-- Main Name -->
-  <text x="450" y="130" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="800" fill="url(#nameGrad)" filter="url(#glow)" letter-spacing="2">
+  <text x="450" y="155" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="56" font-weight="800" fill="url(#nameGrad)" filter="url(#glow)" letter-spacing="3">
     Zaid Mayyalleh
   </text>
 
-  <!-- Animated underline -->
-  <line x1="280" y1="145" x2="620" y2="145" stroke="url(#nameGrad)" stroke-width="2" opacity="0.4">
-    <animate attributeName="x1" values="280;320;280" dur="4s" repeatCount="indefinite"/>
-    <animate attributeName="x2" values="620;580;620" dur="4s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite"/>
+  <!-- Subtitle line -->
+  <line x1="250" y1="172" x2="650" y2="172" stroke="url(#lineGrad)" stroke-width="1" opacity="0.4">
+    <animate attributeName="x1" values="250;290;250" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="650;610;650" dur="5s" repeatCount="indefinite"/>
   </line>
 
-  <!-- Subtitle -->
-  <text x="450" y="180" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="url(#subtitleGrad)" letter-spacing="4" font-weight="300">
-    AI STUDENT  •  FULL STACK DEVELOPER
-  </text>
+  <!-- Role tags -->
+  <g transform="translate(450, 200)" text-anchor="middle">
+    <!-- AI Tag -->
+    <rect x="-195" y="-14" width="120" height="26" rx="13" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.4"/>
+    <text x="-135" y="4" font-family="'Segoe UI', sans-serif" font-size="12" fill="#c084fc" font-weight="500" letter-spacing="1">🤖 AI Student</text>
+    
+    <!-- Dev Tag -->
+    <rect x="-55" y="-14" width="110" height="26" rx="13" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
+    <text x="0" y="4" font-family="'Segoe UI', sans-serif" font-size="12" fill="#818cf8" font-weight="500" letter-spacing="1">💻 Developer</text>
 
-  <!-- Location -->
-  <text x="450" y="215" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#8B949E" letter-spacing="2">
-    📍 Palestine 🇵🇸  •  Building the future with code
-  </text>
+    <!-- Location Tag -->
+    <rect x="75" y="-14" width="120" height="26" rx="13" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+    <text x="135" y="4" font-family="'Segoe UI', sans-serif" font-size="12" fill="#38bdf8" font-weight="500" letter-spacing="1">📍 Palestine</text>
+  </g>
 
-  <!-- Animated terminal cursor -->
-  <g transform="translate(340, 245)">
-    <rect x="0" y="0" width="220" height="28" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-    <circle cx="12" cy="14" r="3" fill="#F85149"/>
-    <circle cx="24" cy="14" r="3" fill="#D29922"/>
-    <circle cx="36" cy="14" r="3" fill="#3CB371"/>
-    <text x="52" y="18" font-family="'Fira Code', monospace" font-size="11" fill="#8B949E">
-      ~$ hello world
-    </text>
-    <rect x="192" y="6" width="8" height="16" fill="#58A6FF" opacity="0.8">
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+  <!-- Terminal widget -->
+  <g transform="translate(310, 238)">
+    <rect x="0" y="0" width="280" height="32" rx="8" fill="#12122a" stroke="#2a2a4a" stroke-width="1" opacity="0.9"/>
+    <circle cx="14" cy="16" r="4" fill="#ff5f57" opacity="0.8"/>
+    <circle cx="28" cy="16" r="4" fill="#febc2e" opacity="0.8"/>
+    <circle cx="42" cy="16" r="4" fill="#28c840" opacity="0.8"/>
+    <text x="60" y="20" font-family="'Fira Code', 'Consolas', monospace" font-size="12" fill="#8b949e">~$</text>
+    <text x="80" y="20" font-family="'Fira Code', 'Consolas', monospace" font-size="12" fill="#c084fc">echo</text>
+    <text x="115" y="20" font-family="'Fira Code', 'Consolas', monospace" font-size="12" fill="#38bdf8">"Hello, World!"</text>
+    <rect x="240" y="6" width="9" height="18" rx="1" fill="#c084fc" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="1.2s" repeatCount="indefinite"/>
     </rect>
   </g>
 
-  <!-- Bottom wave -->
-  <path d="M0 300 Q150 280 300 300 Q450 320 600 300 Q750 280 900 300 L900 320 L0 320 Z" fill="#0d1117" opacity="0.5">
-    <animate attributeName="d" values="M0 300 Q150 280 300 300 Q450 320 600 300 Q750 280 900 300 L900 320 L0 320 Z;M0 300 Q150 320 300 300 Q450 280 600 300 Q750 320 900 300 L900 320 L0 320 Z;M0 300 Q150 280 300 300 Q450 320 600 300 Q750 280 900 300 L900 320 L0 320 Z" dur="8s" repeatCount="indefinite"/>
+  <!-- Bottom decorative wave -->
+  <path d="M0 310 Q225 290 450 310 Q675 330 900 310 L900 340 L0 340 Z" fill="#0d1117" opacity="0.6">
+    <animate attributeName="d" values="M0 310 Q225 290 450 310 Q675 330 900 310 L900 340 L0 340 Z;M0 310 Q225 330 450 310 Q675 290 900 310 L900 340 L0 340 Z;M0 310 Q225 290 450 310 Q675 330 900 310 L900 340 L0 340 Z" dur="10s" repeatCount="indefinite"/>
   </path>
 
-  <!-- Horizontal accent lines -->
-  <line x1="50" y1="15" x2="200" y2="15" stroke="#6E40C9" stroke-width="1" opacity="0.2">
-    <animate attributeName="x2" values="200;250;200" dur="3s" repeatCount="indefinite"/>
+  <!-- Top corner accents -->
+  <line x1="0" y1="3" x2="80" y2="3" stroke="#c084fc" stroke-width="3" opacity="0.5">
+    <animate attributeName="x2" values="80;120;80" dur="3s" repeatCount="indefinite"/>
   </line>
-  <line x1="700" y1="15" x2="850" y2="15" stroke="#6E40C9" stroke-width="1" opacity="0.2">
-    <animate attributeName="x1" values="700;650;700" dur="3s" repeatCount="indefinite"/>
+  <line x1="3" y1="0" x2="3" y2="60" stroke="#c084fc" stroke-width="3" opacity="0.5">
+    <animate attributeName="y2" values="60;90;60" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="900" y1="3" x2="820" y2="3" stroke="#38bdf8" stroke-width="3" opacity="0.5">
+    <animate attributeName="x2" values="820;780;820" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="897" y1="0" x2="897" y2="60" stroke="#38bdf8" stroke-width="3" opacity="0.5">
+    <animate attributeName="y2" values="60;90;60" dur="3s" repeatCount="indefinite"/>
   </line>
 </svg>
