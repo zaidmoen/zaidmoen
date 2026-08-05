@@ -1,225 +1,528 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Zaid Mayyalleh — Developer Header</title>
+  <desc id="desc">A modern animated developer portfolio header for Zaid Mayyalleh.</desc>
+
   <defs>
-    <!-- Background animated gradient -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a1a">
-        <animate attributeName="stop-color" values="#0a0a1a;#0d0d2b;#0a0a1a" dur="8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" style="stop-color:#1a0a2e">
-        <animate attributeName="stop-color" values="#1a0a2e;#0a0a1a;#1a0a2e" dur="8s" repeatCount="indefinite"/>
-      </stop>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060914"/>
+      <stop offset="48%" stop-color="#0B1020"/>
+      <stop offset="100%" stop-color="#080B16"/>
     </linearGradient>
 
-    <!-- Name gradient -->
-    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#c084fc">
-        <animate attributeName="stop-color" values="#c084fc;#818cf8;#38bdf8;#c084fc" dur="6s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="50%" style="stop-color:#818cf8">
-        <animate attributeName="stop-color" values="#818cf8;#38bdf8;#c084fc;#818cf8" dur="6s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" style="stop-color:#38bdf8">
-        <animate attributeName="stop-color" values="#38bdf8;#c084fc;#818cf8;#38bdf8" dur="6s" repeatCount="indefinite"/>
-      </stop>
+    <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity=".34"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity=".24"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="48%" stop-color="#DDD6FE"/>
+      <stop offset="100%" stop-color="#67E8F9"/>
+
+      <animate
+        attributeName="x1"
+        values="0%;15%;0%"
+        dur="8s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="x2"
+        values="100%;85%;100%"
+        dur="8s"
+        repeatCount="indefinite"
+      />
     </linearGradient>
 
-    <!-- Accent line gradient -->
-    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0"/>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
     </linearGradient>
 
-    <!-- Glow filters -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path
+        d="M 42 0 L 0 0 0 42"
+        fill="none"
+        stroke="#94A3B8"
+        stroke-opacity=".055"
+        stroke-width="1"
+      />
+    </pattern>
+
+    <filter id="blur70">
+      <feGaussianBlur stdDeviation="70"/>
     </filter>
-    <filter id="softGlow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+
+    <filter id="textGlow">
+      <feGaussianBlur
+        in="SourceGraphic"
+        stdDeviation="8"
+        result="blur"
+      />
+
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="
+          1 0 0 0 0.35
+          0 1 0 0 0.25
+          0 0 1 0 0.90
+          0 0 0 .35 0
+        "
+        result="soft"
+      />
+
+      <feMerge>
+        <feMergeNode in="soft"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
 
-    <!-- Center radial glow -->
-    <radialGradient id="centerGlow" cx="50%" cy="42%" r="30%">
-      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.12">
-        <animate attributeName="stop-opacity" values="0.12;0.20;0.12" dur="4s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
-    </radialGradient>
+    <filter id="cardShadow" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow
+        dx="0"
+        dy="12"
+        stdDeviation="20"
+        flood-color="#000000"
+        flood-opacity=".4"
+      />
+    </filter>
 
-    <!-- Orb gradient 1 -->
-    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0.25"/>
-      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:0"/>
-    </radialGradient>
-    <!-- Orb gradient 2 -->
-    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:0.2"/>
-      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0"/>
-    </radialGradient>
+    <clipPath id="canvasClip">
+      <rect width="1200" height="420" rx="24"/>
+    </clipPath>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="340" fill="url(#bg)" rx="0"/>
-  <rect width="900" height="340" fill="url(#centerGlow)"/>
+  <g clip-path="url(#canvasClip)">
+    <!-- Background -->
+    <rect width="1200" height="420" fill="url(#background)"/>
+    <rect width="1200" height="420" fill="url(#grid)"/>
 
-  <!-- Floating orbs -->
-  <ellipse cx="150" cy="100" rx="120" ry="100" fill="url(#orb1)">
-    <animate attributeName="cx" values="150;200;150" dur="10s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="100;140;100" dur="8s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="750" cy="240" rx="130" ry="110" fill="url(#orb2)">
-    <animate attributeName="cx" values="750;700;750" dur="12s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="240;200;240" dur="9s" repeatCount="indefinite"/>
-  </ellipse>
+    <!-- Purple animated glow -->
+    <circle
+      cx="250"
+      cy="100"
+      r="210"
+      fill="url(#purpleGlow)"
+      filter="url(#blur70)"
+    >
+      <animate
+        attributeName="cx"
+        values="250;320;250"
+        dur="14s"
+        repeatCount="indefinite"
+      />
 
-  <!-- Fine dot grid -->
-  <g opacity="0.06">
-    <circle cx="50" cy="30" r="1" fill="#818cf8"/><circle cx="100" cy="30" r="1" fill="#818cf8"/>
-    <circle cx="150" cy="30" r="1" fill="#818cf8"/><circle cx="200" cy="30" r="1" fill="#818cf8"/>
-    <circle cx="250" cy="30" r="1" fill="#818cf8"/><circle cx="300" cy="30" r="1" fill="#818cf8"/>
-    <circle cx="350" cy="30" r="1" fill="#818cf8"/><circle cx="400" cy="30" r="1" fill="#818cf8"/>
-    <circle cx="450" cy="30" r="1" fill="#818cf8"/><circle cx="500" cy="30" r="1" fill="#818cf8"/>
-    <circle cx="550" cy="30" r="1" fill="#818cf8"/><circle cx="600" cy="30" r="1" fill="#818cf8"/>
-    <circle cx="650" cy="30" r="1" fill="#818cf8"/><circle cx="700" cy="30" r="1" fill="#818cf8"/>
-    <circle cx="750" cy="30" r="1" fill="#818cf8"/><circle cx="800" cy="30" r="1" fill="#818cf8"/>
-    <circle cx="850" cy="30" r="1" fill="#818cf8"/>
+      <animate
+        attributeName="cy"
+        values="100;145;100"
+        dur="11s"
+        repeatCount="indefinite"
+      />
+    </circle>
 
-    <circle cx="50" cy="70" r="1" fill="#818cf8"/><circle cx="100" cy="70" r="1" fill="#818cf8"/>
-    <circle cx="150" cy="70" r="1" fill="#818cf8"/><circle cx="200" cy="70" r="1" fill="#818cf8"/>
-    <circle cx="250" cy="70" r="1" fill="#818cf8"/><circle cx="300" cy="70" r="1" fill="#818cf8"/>
-    <circle cx="350" cy="70" r="1" fill="#818cf8"/><circle cx="400" cy="70" r="1" fill="#818cf8"/>
-    <circle cx="450" cy="70" r="1" fill="#818cf8"/><circle cx="500" cy="70" r="1" fill="#818cf8"/>
-    <circle cx="550" cy="70" r="1" fill="#818cf8"/><circle cx="600" cy="70" r="1" fill="#818cf8"/>
-    <circle cx="650" cy="70" r="1" fill="#818cf8"/><circle cx="700" cy="70" r="1" fill="#818cf8"/>
-    <circle cx="750" cy="70" r="1" fill="#818cf8"/><circle cx="800" cy="70" r="1" fill="#818cf8"/>
-    <circle cx="850" cy="70" r="1" fill="#818cf8"/>
+    <!-- Cyan animated glow -->
+    <circle
+      cx="1020"
+      cy="330"
+      r="230"
+      fill="url(#cyanGlow)"
+      filter="url(#blur70)"
+    >
+      <animate
+        attributeName="cx"
+        values="1020;930;1020"
+        dur="16s"
+        repeatCount="indefinite"
+      />
 
-    <circle cx="50" cy="270" r="1" fill="#818cf8"/><circle cx="100" cy="270" r="1" fill="#818cf8"/>
-    <circle cx="150" cy="270" r="1" fill="#818cf8"/><circle cx="200" cy="270" r="1" fill="#818cf8"/>
-    <circle cx="250" cy="270" r="1" fill="#818cf8"/><circle cx="300" cy="270" r="1" fill="#818cf8"/>
-    <circle cx="350" cy="270" r="1" fill="#818cf8"/><circle cx="400" cy="270" r="1" fill="#818cf8"/>
-    <circle cx="450" cy="270" r="1" fill="#818cf8"/><circle cx="500" cy="270" r="1" fill="#818cf8"/>
-    <circle cx="550" cy="270" r="1" fill="#818cf8"/><circle cx="600" cy="270" r="1" fill="#818cf8"/>
-    <circle cx="650" cy="270" r="1" fill="#818cf8"/><circle cx="700" cy="270" r="1" fill="#818cf8"/>
-    <circle cx="750" cy="270" r="1" fill="#818cf8"/><circle cx="800" cy="270" r="1" fill="#818cf8"/>
-    <circle cx="850" cy="270" r="1" fill="#818cf8"/>
+      <animate
+        attributeName="cy"
+        values="330;280;330"
+        dur="13s"
+        repeatCount="indefinite"
+      />
+    </circle>
 
-    <circle cx="50" cy="310" r="1" fill="#818cf8"/><circle cx="100" cy="310" r="1" fill="#818cf8"/>
-    <circle cx="150" cy="310" r="1" fill="#818cf8"/><circle cx="200" cy="310" r="1" fill="#818cf8"/>
-    <circle cx="250" cy="310" r="1" fill="#818cf8"/><circle cx="300" cy="310" r="1" fill="#818cf8"/>
-    <circle cx="350" cy="310" r="1" fill="#818cf8"/><circle cx="400" cy="310" r="1" fill="#818cf8"/>
-    <circle cx="450" cy="310" r="1" fill="#818cf8"/><circle cx="500" cy="310" r="1" fill="#818cf8"/>
-    <circle cx="550" cy="310" r="1" fill="#818cf8"/><circle cx="600" cy="310" r="1" fill="#818cf8"/>
-    <circle cx="650" cy="310" r="1" fill="#818cf8"/><circle cx="700" cy="310" r="1" fill="#818cf8"/>
-    <circle cx="750" cy="310" r="1" fill="#818cf8"/><circle cx="800" cy="310" r="1" fill="#818cf8"/>
-    <circle cx="850" cy="310" r="1" fill="#818cf8"/>
+    <!-- Small glowing points -->
+    <g opacity=".55">
+      <circle cx="110" cy="84" r="2" fill="#A78BFA">
+        <animate
+          attributeName="opacity"
+          values=".2;1;.2"
+          dur="3.4s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <circle cx="1090" cy="94" r="2" fill="#67E8F9">
+        <animate
+          attributeName="opacity"
+          values=".15;.85;.15"
+          dur="4.1s"
+          begin=".8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <circle cx="1025" cy="350" r="1.6" fill="#A78BFA">
+        <animate
+          attributeName="opacity"
+          values=".1;.75;.1"
+          dur="3.7s"
+          begin="1.1s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <circle cx="180" cy="330" r="1.8" fill="#67E8F9">
+        <animate
+          attributeName="opacity"
+          values=".1;.9;.1"
+          dur="4.4s"
+          begin=".5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+    </g>
+
+    <!-- Available badge -->
+    <g transform="translate(86 72)">
+      <rect
+        x="0"
+        y="0"
+        width="164"
+        height="34"
+        rx="17"
+        fill="#FFFFFF"
+        fill-opacity=".045"
+        stroke="#FFFFFF"
+        stroke-opacity=".12"
+      />
+
+      <circle cx="18" cy="17" r="5" fill="#22C55E">
+        <animate
+          attributeName="opacity"
+          values=".45;1;.45"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <text
+        x="33"
+        y="22"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="12"
+        font-weight="600"
+        letter-spacing=".8"
+        fill="#CBD5E1"
+      >
+        AVAILABLE TO BUILD
+      </text>
+    </g>
+
+    <!-- Main content -->
+    <g transform="translate(86 145)">
+      <text
+        x="0"
+        y="0"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="17"
+        font-weight="600"
+        letter-spacing="5"
+        fill="#8B5CF6"
+      >
+        DEVELOPER PORTFOLIO
+      </text>
+
+      <text
+        x="0"
+        y="82"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="70"
+        font-weight="800"
+        letter-spacing="-2"
+        fill="url(#nameGradient)"
+        filter="url(#textGlow)"
+      >
+        ZAID MAYYALLEH
+      </text>
+
+      <rect
+        x="0"
+        y="105"
+        width="116"
+        height="4"
+        rx="2"
+        fill="url(#accentGradient)"
+      >
+        <animate
+          attributeName="width"
+          values="72;116;72"
+          dur="5s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <text
+        x="0"
+        y="151"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="21"
+        font-weight="500"
+        fill="#E2E8F0"
+      >
+        AI Student
+      </text>
+
+      <circle cx="117" cy="144" r="3" fill="#475569"/>
+
+      <text
+        x="137"
+        y="151"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="21"
+        font-weight="500"
+        fill="#E2E8F0"
+      >
+        Full-Stack Developer
+      </text>
+
+      <circle cx="355" cy="144" r="3" fill="#475569"/>
+
+      <text
+        x="375"
+        y="151"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="21"
+        font-weight="500"
+        fill="#E2E8F0"
+      >
+        Palestine
+      </text>
+
+      <text
+        x="0"
+        y="199"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="16"
+        font-weight="400"
+        fill="#94A3B8"
+      >
+        Building useful products with clean code, thoughtful design, and AI.
+      </text>
+    </g>
+
+    <!-- Terminal card -->
+    <g transform="translate(790 95)" filter="url(#cardShadow)">
+      <rect
+        width="328"
+        height="226"
+        rx="18"
+        fill="#0B1020"
+        fill-opacity=".78"
+        stroke="#FFFFFF"
+        stroke-opacity=".11"
+      />
+
+      <rect
+        width="328"
+        height="43"
+        rx="18"
+        fill="#FFFFFF"
+        fill-opacity=".025"
+      />
+
+      <line
+        x1="0"
+        y1="43"
+        x2="328"
+        y2="43"
+        stroke="#FFFFFF"
+        stroke-opacity=".08"
+      />
+
+      <circle cx="20" cy="22" r="5" fill="#FF5F57"/>
+      <circle cx="38" cy="22" r="5" fill="#FEBC2E"/>
+      <circle cx="56" cy="22" r="5" fill="#28C840"/>
+
+      <text
+        x="164"
+        y="27"
+        text-anchor="middle"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="11"
+        fill="#64748B"
+      >
+        zaid@portfolio
+      </text>
+
+      <text
+        x="22"
+        y="76"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#64748B"
+      >
+        $
+      </text>
+
+      <text
+        x="42"
+        y="76"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#E2E8F0"
+      >
+        npm run build
+      </text>
+
+      <text
+        x="22"
+        y="108"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#22C55E"
+      >
+        ✓
+      </text>
+
+      <text
+        x="43"
+        y="108"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#94A3B8"
+      >
+        Code validated
+      </text>
+
+      <text
+        x="22"
+        y="136"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#22C55E"
+      >
+        ✓
+      </text>
+
+      <text
+        x="43"
+        y="136"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#94A3B8"
+      >
+        Production build ready
+      </text>
+
+      <text
+        x="22"
+        y="164"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#22C55E"
+      >
+        ✓
+      </text>
+
+      <text
+        x="43"
+        y="164"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#94A3B8"
+      >
+        Deploy successful
+      </text>
+
+      <text
+        x="22"
+        y="198"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#8B5CF6"
+      >
+        ›
+      </text>
+
+      <text
+        x="43"
+        y="198"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13"
+        fill="#67E8F9"
+      >
+        ready to create_
+      </text>
+
+      <rect
+        x="176"
+        y="186"
+        width="8"
+        height="15"
+        rx="1"
+        fill="#67E8F9"
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0;1"
+          dur="1s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </g>
+
+    <!-- Footer -->
+    <g transform="translate(86 365)">
+      <rect
+        width="1028"
+        height="1"
+        fill="url(#accentGradient)"
+        opacity=".24"
+      />
+
+      <text
+        x="0"
+        y="28"
+        font-family="Inter, Segoe UI, Arial, sans-serif"
+        font-size="12"
+        font-weight="500"
+        letter-spacing="2.2"
+        fill="#64748B"
+      >
+        LEARN • BUILD • SHIP • REPEAT
+      </text>
+
+      <text
+        x="1028"
+        y="28"
+        text-anchor="end"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="12"
+        fill="#64748B"
+      >
+        2026
+      </text>
+    </g>
+
+    <!-- Border -->
+    <rect
+      x=".5"
+      y=".5"
+      width="1199"
+      height="419"
+      rx="23.5"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-opacity=".09"
+    />
   </g>
-
-  <!-- Floating sparkles -->
-  <g filter="url(#softGlow)">
-    <circle cx="120" cy="55" r="1.8" fill="#c084fc" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="3s" begin="0s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="780" cy="80" r="1.5" fill="#38bdf8" opacity="0">
-      <animate attributeName="opacity" values="0;0.8;0" dur="4s" begin="1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="300" cy="290" r="2" fill="#818cf8" opacity="0">
-      <animate attributeName="opacity" values="0;0.7;0" dur="3.5s" begin="0.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="600" cy="40" r="1.5" fill="#c084fc" opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="450" cy="310" r="1.8" fill="#38bdf8" opacity="0">
-      <animate attributeName="opacity" values="0;0.6;0" dur="3.2s" begin="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="680" cy="280" r="1.2" fill="#818cf8" opacity="0">
-      <animate attributeName="opacity" values="0;0.8;0" dur="4.5s" begin="0.8s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="200" cy="180" r="1.5" fill="#c084fc" opacity="0">
-      <animate attributeName="opacity" values="0;0.7;0" dur="3.8s" begin="1.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="820" cy="160" r="1.8" fill="#38bdf8" opacity="0">
-      <animate attributeName="opacity" values="0;0.6;0" dur="5s" begin="0.3s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- Decorative code (left side) -->
-  <g opacity="0.08">
-    <text x="35" y="85" font-family="monospace" font-size="10" fill="#c084fc">import AI from 'future';</text>
-    <text x="35" y="100" font-family="monospace" font-size="10" fill="#818cf8">const passion = Infinity;</text>
-    <text x="35" y="260" font-family="monospace" font-size="10" fill="#38bdf8">model.fit(data, labels);</text>
-    <text x="35" y="275" font-family="monospace" font-size="10" fill="#c084fc">await deploy(production);</text>
-  </g>
-  <g opacity="0.08">
-    <text x="660" y="85" font-family="monospace" font-size="10" fill="#38bdf8">while(alive) { learn(); }</text>
-    <text x="660" y="100" font-family="monospace" font-size="10" fill="#818cf8">git push origin future</text>
-    <text x="660" y="260" font-family="monospace" font-size="10" fill="#c084fc">npm run build:dreams</text>
-    <text x="660" y="275" font-family="monospace" font-size="10" fill="#38bdf8">export default Success;</text>
-  </g>
-
-  <!-- Accent line top -->
-  <line x1="200" y1="110" x2="700" y2="110" stroke="url(#lineGrad)" stroke-width="0.5" opacity="0.5">
-    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- Main Name -->
-  <text x="450" y="155" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', sans-serif" font-size="56" font-weight="800" fill="url(#nameGrad)" filter="url(#glow)" letter-spacing="3">
-    Zaid Mayyalleh
-  </text>
-
-  <!-- Subtitle line -->
-  <line x1="250" y1="172" x2="650" y2="172" stroke="url(#lineGrad)" stroke-width="1" opacity="0.4">
-    <animate attributeName="x1" values="250;290;250" dur="5s" repeatCount="indefinite"/>
-    <animate attributeName="x2" values="650;610;650" dur="5s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- Role tags -->
-  <g transform="translate(450, 200)" text-anchor="middle">
-    <!-- AI Tag -->
-    <rect x="-195" y="-14" width="120" height="26" rx="13" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.4"/>
-    <text x="-135" y="4" font-family="'Segoe UI', sans-serif" font-size="12" fill="#c084fc" font-weight="500" letter-spacing="1">🤖 AI Student</text>
-    
-    <!-- Dev Tag -->
-    <rect x="-55" y="-14" width="110" height="26" rx="13" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.4"/>
-    <text x="0" y="4" font-family="'Segoe UI', sans-serif" font-size="12" fill="#818cf8" font-weight="500" letter-spacing="1">💻 Developer</text>
-
-    <!-- Location Tag -->
-    <rect x="75" y="-14" width="120" height="26" rx="13" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
-    <text x="135" y="4" font-family="'Segoe UI', sans-serif" font-size="12" fill="#38bdf8" font-weight="500" letter-spacing="1">📍 Palestine</text>
-  </g>
-
-  <!-- Terminal widget -->
-  <g transform="translate(310, 238)">
-    <rect x="0" y="0" width="280" height="32" rx="8" fill="#12122a" stroke="#2a2a4a" stroke-width="1" opacity="0.9"/>
-    <circle cx="14" cy="16" r="4" fill="#ff5f57" opacity="0.8"/>
-    <circle cx="28" cy="16" r="4" fill="#febc2e" opacity="0.8"/>
-    <circle cx="42" cy="16" r="4" fill="#28c840" opacity="0.8"/>
-    <text x="60" y="20" font-family="'Fira Code', 'Consolas', monospace" font-size="12" fill="#8b949e">~$</text>
-    <text x="80" y="20" font-family="'Fira Code', 'Consolas', monospace" font-size="12" fill="#c084fc">echo</text>
-    <text x="115" y="20" font-family="'Fira Code', 'Consolas', monospace" font-size="12" fill="#38bdf8">"Hello, World!"</text>
-    <rect x="240" y="6" width="9" height="18" rx="1" fill="#c084fc" opacity="0.8">
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="1.2s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- Bottom decorative wave -->
-  <path d="M0 310 Q225 290 450 310 Q675 330 900 310 L900 340 L0 340 Z" fill="#0d1117" opacity="0.6">
-    <animate attributeName="d" values="M0 310 Q225 290 450 310 Q675 330 900 310 L900 340 L0 340 Z;M0 310 Q225 330 450 310 Q675 290 900 310 L900 340 L0 340 Z;M0 310 Q225 290 450 310 Q675 330 900 310 L900 340 L0 340 Z" dur="10s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- Top corner accents -->
-  <line x1="0" y1="3" x2="80" y2="3" stroke="#c084fc" stroke-width="3" opacity="0.5">
-    <animate attributeName="x2" values="80;120;80" dur="3s" repeatCount="indefinite"/>
-  </line>
-  <line x1="3" y1="0" x2="3" y2="60" stroke="#c084fc" stroke-width="3" opacity="0.5">
-    <animate attributeName="y2" values="60;90;60" dur="3s" repeatCount="indefinite"/>
-  </line>
-  <line x1="900" y1="3" x2="820" y2="3" stroke="#38bdf8" stroke-width="3" opacity="0.5">
-    <animate attributeName="x2" values="820;780;820" dur="3s" repeatCount="indefinite"/>
-  </line>
-  <line x1="897" y1="0" x2="897" y2="60" stroke="#38bdf8" stroke-width="3" opacity="0.5">
-    <animate attributeName="y2" values="60;90;60" dur="3s" repeatCount="indefinite"/>
-  </line>
 </svg>
