@@ -223,6 +223,8 @@ React JavaScript CSS React Router
 
 <!-- ========================= DEVELOPMENT STATS ========================= -->
 
+<!-- ========================= DEVELOPMENT STATS ========================= -->
+
 ## ⚡ Development Stats
 
 <div align="center">
@@ -230,13 +232,13 @@ React JavaScript CSS React Router
   <img
     src="https://github-readme-stats.vercel.app/api?username=zaidmoen&show_icons=true&hide_border=true&bg_color=0d1117&title_color=c084fc&icon_color=38bdf8&text_color=c9d1d9&rank_icon=github"
     width="52%"
-    alt="Zaid's GitHub statistics"
+    alt="Zaid GitHub Stats"
   />
 
   <img
     src="https://github-readme-stats.vercel.app/api/top-langs/?username=zaidmoen&layout=compact&hide_border=true&bg_color=0d1117&title_color=c084fc&text_color=c9d1d9&langs_count=8"
     width="43%"
-    alt="Zaid's most used languages"
+    alt="Zaid Top Languages"
   />
 
   <br/><br/>
@@ -244,7 +246,7 @@ React JavaScript CSS React Router
   <img
     src="https://streak-stats.demolab.com?user=zaidmoen&theme=transparent&hide_border=true&background=0D1117&ring=C084FC&fire=38BDF8&currStreakLabel=818CF8&sideLabels=C9D1D9&currStreakNum=C9D1D9&sideNums=C9D1D9&dates=6E7681"
     width="65%"
-    alt="Zaid's GitHub streak"
+    alt="Zaid GitHub Streak"
   />
 
 </div>
@@ -254,7 +256,7 @@ React JavaScript CSS React Router
 <img
   src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png"
   width="100%"
-  alt="Animated divider"
+  alt="Animated Divider"
 />
 <!-- ========================= 3D CALENDAR ========================= -->
 🌌 3D Contribution Calendar
