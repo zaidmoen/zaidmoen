@@ -219,17 +219,31 @@ React JavaScript CSS React Router
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
 
 <!-- ========================= ACTIVITY GRAPH ========================= -->
-📈 Development Activity
+## ⚡ Development Overview
+
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=zaidmoen&bg_color=0d1117&color=c084fc&line=818cf8&point=38bdf8&area=true&hide_border=true&custom_title=Zaid's%20Contribution%20Activity" width="100%" alt="GitHub activity graph" />
+<img
+  src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=zaidmoen&theme=tokyonight"
+  width="100%"
+  alt="Development overview"
+/>
 
-</div> <br/> <!-- ========================= SNAKE ========================= -->
-🐍 Contribution Journey
-<div align="center"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" /> <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" width="100%" alt="Animated contribution snake" /> </picture> </div> <br/>
+<br/>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
+<img
+  src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=zaidmoen&theme=tokyonight"
+  width="48%"
+  alt="Repositories per language"
+/>
 
+<img
+  src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=zaidmoen&theme=tokyonight"
+  width="48%"
+  alt="Most committed languages"
+/>
+
+</div>
 <!-- ========================= 3D CALENDAR ========================= -->
 🌌 3D Contribution Calendar
 <div align="center"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-green-animate.svg" /> <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Animated 3D contribution calendar" /> </picture> </div> <br/>
