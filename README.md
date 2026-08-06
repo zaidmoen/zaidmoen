@@ -2,11 +2,11 @@
 
 <div align="center">
 
-  <img
-    src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/header.svg"
-    width="100%"
-    alt="Zaid Mayyalleh — Software Developer"
-  />
+<img
+ src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/header.svg"
+ width="100%"
+ alt="Zaid Mayyalleh — Software Developer"
+/>
 
   <br/>
 
@@ -40,37 +40,36 @@
     />
   </a>
 
-  <br/><br/>
+<br/><br/>
 
-  <img
-    src="https://komarev.com/ghpvc/?username=zaidmoen&color=c084fc&style=flat-square&label=Profile+Views"
-    alt="Profile views"
-  />
+<img
+ src="https://komarev.com/ghpvc/?username=zaidmoen&color=c084fc&style=flat-square&label=Profile+Views"
+ alt="Profile views"
+/>
 
-  <img
-    src="https://img.shields.io/github/followers/zaidmoen?label=Followers&style=flat-square&color=818cf8&labelColor=161b22"
-    alt="GitHub followers"
-  />
+<img
+ src="https://img.shields.io/github/followers/zaidmoen?label=Followers&style=flat-square&color=818cf8&labelColor=161b22"
+ alt="GitHub followers"
+/>
 
 </div>
 
 <br/>
 
 <img
-  src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png"
-  width="100%"
-  alt="Animated divider"
+src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png"
+width="100%"
+alt="Animated divider"
 />
 
 <!-- ========================= ABOUT ========================= -->
 
-## 👨‍💻 About Me
+👨‍💻 About Me
 
 <table>
   <tr>
     <td width="55%" valign="top">
 
-```python
 class ZaidMayyalleh:
     def __init__(self):
         self.role = "Full-Stack Developer"
@@ -86,7 +85,6 @@ class ZaidMayyalleh:
 
     def current_goal(self):
         return "Build software that creates real value."
-```
 
 </td> <td width="45%" valign="top">
 Currently
@@ -102,30 +100,31 @@ Currently
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
 
 <!-- ========================= SKILLS ========================= -->
+
 🛠️ Technical Stack
+
 <div align="center">
 Programming Languages
 <img src="https://skillicons.dev/icons?i=python,cpp,js,ts,html,css&theme=dark" alt="Programming languages"/>
 
 <br/><br/>
 
-Frontend Development
-<img src="https://skillicons.dev/icons?i=react,vite,materialui,tailwind&theme=dark" alt="Frontend technologies"/>
+Frontend Development<img src="https://skillicons.dev/icons?i=react,vite,materialui,tailwind&theme=dark" alt="Frontend technologies"/>
 
 <br/><br/>
 
-Backend and Databases
-<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,mysql,supabase&theme=dark" alt="Backend technologies"/>
+Backend and Databases<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,mysql,supabase&theme=dark" alt="Backend technologies"/>
 
 <br/><br/>
 
-Tools and Workflow
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm,figma&theme=dark" alt="Development tools"/> </div> <br/>
+Tools and Workflow<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm,figma&theme=dark" alt="Development tools"/> </div> <br/>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
 
 <!-- ========================= FEATURED PROJECTS ========================= -->
+
 🚀 Featured Projects
+
 <div align="center"> <table> <tr> <td width="50%" valign="top">
 🧠 APEX AI
 
@@ -133,11 +132,7 @@ AI-powered academic platform designed to help students manage, explore and solve
 
 Highlights
 
-Question bank and solving workflow
-Repository-based backend architecture
-REST API integration
-AI-assisted learning features
-Team-based development workflow
+Question bank and solving workflowRepository-based backend architectureREST API integrationAI-assisted learning featuresTeam-based development workflow
 
 Stack
 
@@ -150,11 +145,7 @@ Full-stack platform connecting clients with skilled workers and service provider
 
 Highlights
 
-Worker and client profiles
-Service request workflow
-Reviews and administrative features
-Authentication and authorization
-Responsive user interface
+Worker and client profilesService request workflowReviews and administrative featuresAuthentication and authorizationResponsive user interface
 
 Stack
 
@@ -167,11 +158,7 @@ University career-management platform designed to connect students, companies an
 
 Highlights
 
-Student career profiles
-Internship and job opportunities
-Certificates and CV management
-Company and administrator workflows
-Structured system analysis and design
+Student career profilesInternship and job opportunitiesCertificates and CV managementCompany and administrator workflowsStructured system analysis and design
 
 Stack
 
@@ -184,11 +171,7 @@ Responsive e-commerce interface for computer hardware and accessories.
 
 Highlights
 
-Product pages and categories
-Responsive reusable components
-Product filtering and pagination
-Shopping cart interface
-Collaborative Git workflow
+Product pages and categoriesResponsive reusable componentsProduct filtering and paginationShopping cart interfaceCollaborative Git workflow
 
 Stack
 
@@ -199,7 +182,9 @@ React JavaScript CSS React Router
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
 
 <!-- ========================= DASHBOARD ========================= -->
+
 📊 GitHub Dashboard
+
 <div align="center"> <!-- Single clean professional metrics card -->
 
 <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.base.svg" width="95%" alt="Zaid GitHub metrics" />
@@ -218,66 +203,37 @@ React JavaScript CSS React Router
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
 
-<!-- ========================= ACTIVITY GRAPH ========================= -->
-<!-- ========================= DEVELOPMENT ACTIVITY ========================= -->
+<!-- ========================= CONTRIBUTION SNAKE ========================= -->
 
-<!-- ========================= DEVELOPMENT STATS ========================= -->
-
-<!-- ========================= DEVELOPMENT STATS ========================= -->
-
-<!-- ========================= DEVELOPMENT HIGHLIGHTS ========================= -->
-
-## ⚡ Development Highlights
+🐍 Contribution Journey
 
 <div align="center">
 
-  <img
-    src="https://github-readme-stats.vercel.app/api/pin/?username=zaidmoen&repo=apex-ai&theme=tokyonight&hide_border=true"
-    width="48%"
-    alt="APEX AI repository"
-  />
-
-  <img
-    src="https://github-readme-stats.vercel.app/api/pin/?username=zaidmoen&repo=Binaa_Pal&theme=tokyonight&hide_border=true"
-    width="48%"
-    alt="Binaa Pal repository"
-  />
-
-  <br/><br/>
-
-  <a href="https://github.com/zaidmoen?tab=repositories">
-    <img
-      src="https://img.shields.io/badge/Explore_All_Projects-C084FC?style=for-the-badge&logo=github&logoColor=white"
-      alt="Explore repositories"
-    />
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" />
+    <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" width="100%" alt="Animated Contribution Snake" />
+  </picture>
 
 </div>
 
 <br/>
 
-<img
-  src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png"
-  width="100%"
-  alt="Animated divider"
-/>
 <!-- ========================= 3D CALENDAR ========================= -->
+
 🌌 3D Contribution Calendar
+
 <div align="center"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-green-animate.svg" /> <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Animated 3D contribution calendar" /> </picture> </div> <br/>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
 
 <!-- ========================= CONTACT ========================= -->
+
 🤝 Let's Build Something Great
+
 <div align="center"> <p> I am open to internships, junior development opportunities,<br/> open-source collaboration and meaningful software projects. </p> <br/> <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376"> <img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" /> </a> <a href="mailto:zaidmayalleh@gmail.com"> <img src="https://img.shields.io/badge/Send_an_Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Send an email" /> </a> <a href="https://github.com/zaidmoen"> <img src="https://img.shields.io/badge/Follow_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Follow on GitHub" /> </a>
 
-<br/><br/>
-╔══════════════════════════════════════════════════════════╗
-║                                                          ║
-║       Build. Learn. Improve. Repeat.                      ║
-║                                                          ║
-╚══════════════════════════════════════════════════════════╝
-<br/>
+<br/><br/>╔══════════════════════════════════════════════════════════╗║                                                          ║║       Build. Learn. Improve. Repeat.                      ║║                                                          ║╚══════════════════════════════════════════════════════════╝<br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:C084FC,50:818CF8,100:38BDF8&height=130&section=footer&animation=twinkling" width="100%" alt="Animated footer" />
 
