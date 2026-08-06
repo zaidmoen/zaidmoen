@@ -233,7 +233,6 @@ React JavaScript CSS React Router
 
 <div align="center"> <p> I am open to internships, junior development opportunities,<br/> open-source collaboration and meaningful software projects. </p> <br/> <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376"> <img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" /> </a> <a href="mailto:zaidmayalleh@gmail.com"> <img src="https://img.shields.io/badge/Send_an_Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Send an email" /> </a> <a href="https://github.com/zaidmoen"> <img src="https://img.shields.io/badge/Follow_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Follow on GitHub" /> </a>
 
-<br/><br/>╔══════════════════════════════════════════════════════════╗║                                                          ║║       Build. Learn. Improve. Repeat.                      ║║                                                          ║╚══════════════════════════════════════════════════════════╝<br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:C084FC,50:818CF8,100:38BDF8&height=130&section=footer&animation=twinkling" width="100%" alt="Animated footer" />
 
