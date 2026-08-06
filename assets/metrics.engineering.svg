@@ -1,344 +1,1173 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="3840"
-     height="2160"
-     viewBox="0 0 3840 2160"
-     role="img"
-     aria-labelledby="title desc">
-
-  <title id="title">Cyberpunk Developer Dashboard 4K</title>
-
-  <desc id="desc">
-    Animated cyberpunk developer dashboard with subtle neon pulse,
-    scanline, particles and HUD effects.
-  </desc>
+     width="3840" height="2160" viewBox="0 0 1920 1080"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Cyberpunk Developer Dashboard</title>
+  <desc id="desc">Standalone animated cyberpunk developer dashboard built entirely with SVG.</desc>
 
   <defs>
-    <linearGradient id="scanGradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#00ffd0" stop-opacity="0"/>
-      <stop offset="0.45" stop-color="#00ffd0" stop-opacity="0.08"/>
-      <stop offset="0.5" stop-color="#7ffff0" stop-opacity="0.42"/>
-      <stop offset="0.55" stop-color="#00ffd0" stop-opacity="0.08"/>
-      <stop offset="1" stop-color="#00ffd0" stop-opacity="0"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#02070d"/>
+      <stop offset="0.45" stop-color="#06131d"/>
+      <stop offset="1" stop-color="#02060b"/>
     </linearGradient>
 
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081925" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#03101a" stop-opacity=".92"/>
+    </linearGradient>
+
+    <linearGradient id="cyanStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f6ff" stop-opacity=".2"/>
+      <stop offset=".5" stop-color="#27ffd3"/>
+      <stop offset="1" stop-color="#00a8ff" stop-opacity=".2"/>
+    </linearGradient>
+
+    <linearGradient id="pinkStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff2bd6" stop-opacity=".15"/>
+      <stop offset=".5" stop-color="#ff52c8"/>
+      <stop offset="1" stop-color="#8b5cff" stop-opacity=".15"/>
+    </linearGradient>
+
+    <radialGradient id="moon" cx="40%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#e5ffff"/>
+      <stop offset=".22" stop-color="#8ef7ff"/>
+      <stop offset=".6" stop-color="#3b9ccf"/>
+      <stop offset="1" stop-color="#17425f"/>
+    </radialGradient>
+
     <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#8ffff1" stop-opacity="0.24"/>
-      <stop offset="0.45" stop-color="#27f4cf" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#00d9b0" stop-opacity="0"/>
+      <stop offset="0" stop-color="#7dfcff" stop-opacity=".55"/>
+      <stop offset=".5" stop-color="#22d7ff" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#22d7ff" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
-      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.44"/>
-    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40"
+            fill="none"
+            stroke="#0b91a8"
+            stroke-opacity=".07"
+            stroke-width="1"/>
+    </pattern>
 
-    <filter id="blurGlow"
-            x="-50%"
-            y="-50%"
-            width="200%"
-            height="200%">
-      <feGaussianBlur stdDeviation="28"/>
-    </filter>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" opacity=".08"/>
+    </pattern>
 
-    <filter id="smallGlow"
-            x="-100%"
-            y="-100%"
-            width="300%"
-            height="300%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <pattern id="scanLines"
-             width="8"
-             height="8"
-             patternUnits="userSpaceOnUse">
-      <rect width="8"
-            height="4"
-            fill="#000000"
-            opacity="0.045"/>
-    </pattern>
+    <filter id="bigGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow
+        dx="0"
+        dy="8"
+        stdDeviation="12"
+        flood-color="#000"
+        flood-opacity=".65"/>
+    </filter>
 
     <style>
+      :root {
+        --cyan: #35ffe0;
+        --blue: #34bfff;
+        --pink: #ff4fc3;
+        --text: #d8f7ff;
+        --muted: #7ea0b6;
+      }
+
+      text {
+        font-family: "Cascadia Code", "JetBrains Mono", "Courier New", monospace;
+      }
+
+      .panel {
+        fill: url(#panel);
+        stroke: #1fcde7;
+        stroke-opacity: .62;
+        stroke-width: 1.2;
+        filter: url(#shadow);
+      }
+
+      .panel2 {
+        fill: #04111a;
+        fill-opacity: .94;
+        stroke: #20f4cf;
+        stroke-opacity: .48;
+        stroke-width: 1;
+      }
+
+      .title {
+        fill: #45ffe4;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+
+      .label {
+        fill: #c8eff8;
+        font-size: 14px;
+      }
+
+      .muted {
+        fill: #7396aa;
+        font-size: 12px;
+      }
+
+      .value {
+        fill: #efffff;
+        font-size: 26px;
+        font-weight: 700;
+      }
+
+      .tiny {
+        fill: #69d8e7;
+        font-size: 10px;
+      }
+
+      .cyan {
+        fill: #2fffe0;
+      }
+
+      .pink {
+        fill: #ff52c8;
+      }
+
+      .line {
+        stroke: #27e8dc;
+        fill: none;
+        stroke-width: 2;
+      }
+
+      .dash {
+        stroke-dasharray: 12 10;
+        animation: dash 9s linear infinite;
+      }
+
+      .pulse {
+        animation: pulse 2.4s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      .blink {
+        animation: blink 1.2s steps(1, end) infinite;
+      }
+
+      .floatA {
+        animation: floatA 6s ease-in-out infinite;
+      }
+
+      .floatB {
+        animation: floatB 8s ease-in-out infinite;
+      }
+
       .scan {
-        animation: scanMove 8s linear infinite;
-      }
-
-      .moon-pulse {
-        transform-origin: 3140px 455px;
-        animation: moonPulse 5s ease-in-out infinite;
-      }
-
-      .status-dot {
-        animation: blink 1.8s ease-in-out infinite;
-      }
-
-      .hud-line {
-        stroke-dasharray: 34 22;
-        animation: dashFlow 10s linear infinite;
-      }
-
-      .particle-a {
-        animation: floatA 7s ease-in-out infinite;
-      }
-
-      .particle-b {
-        animation: floatB 9s ease-in-out infinite;
-      }
-
-      .particle-c {
-        animation: floatC 6s ease-in-out infinite;
+        animation: scan 7s linear infinite;
       }
 
       .flicker {
-        animation: flicker 6s steps(1, end) infinite;
+        animation: flicker 8s steps(1, end) infinite;
       }
 
-      @keyframes scanMove {
-        0% {
-          transform: translateY(-240px);
-          opacity: 0;
-        }
+      .bar1 {
+        animation: bar1 3s ease-in-out infinite alternate;
+        transform-origin: bottom;
+        transform-box: fill-box;
+      }
 
-        8% {
-          opacity: 0.9;
-        }
+      .bar2 {
+        animation: bar2 4s ease-in-out infinite alternate;
+        transform-origin: bottom;
+        transform-box: fill-box;
+      }
 
-        92% {
-          opacity: 0.9;
-        }
+      .ring {
+        stroke-dasharray: 240 80;
+        animation: ring 12s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+      }
 
-        100% {
-          transform: translateY(2400px);
-          opacity: 0;
+      @keyframes dash {
+        to {
+          stroke-dashoffset: -220;
         }
       }
 
-      @keyframes moonPulse {
-        0%,
-        100% {
-          opacity: 0.38;
-          transform: scale(0.96);
-        }
-
+      @keyframes pulse {
         50% {
-          opacity: 0.72;
-          transform: scale(1.05);
+          opacity: .35;
+          transform: scale(.92);
         }
       }
 
       @keyframes blink {
-        0%,
-        100% {
-          opacity: 0.35;
-        }
-
         50% {
-          opacity: 1;
-        }
-      }
-
-      @keyframes dashFlow {
-        from {
-          stroke-dashoffset: 0;
-        }
-
-        to {
-          stroke-dashoffset: -224;
+          opacity: .15;
         }
       }
 
       @keyframes floatA {
-        0%,
-        100% {
-          transform: translate(0, 0);
-          opacity: 0.28;
-        }
-
         50% {
-          transform: translate(20px, -42px);
-          opacity: 0.95;
+          transform: translate(12px, -18px);
+          opacity: .35;
         }
       }
 
       @keyframes floatB {
-        0%,
-        100% {
-          transform: translate(0, 0);
-          opacity: 0.2;
-        }
-
         50% {
-          transform: translate(-26px, -58px);
-          opacity: 0.85;
+          transform: translate(-10px, -24px);
+          opacity: .28;
         }
       }
 
-      @keyframes floatC {
-        0%,
-        100% {
-          transform: translate(0, 0);
-          opacity: 0.18;
+      @keyframes scan {
+        from {
+          transform: translateY(-100px);
         }
 
-        50% {
-          transform: translate(12px, -34px);
-          opacity: 0.78;
+        to {
+          transform: translateY(1180px);
         }
       }
 
       @keyframes flicker {
         0%,
-        7%,
-        9%,
-        12%,
+        97%,
         100% {
-          opacity: 1;
+          opacity: .02;
         }
 
-        8%,
-        10% {
-          opacity: 0.72;
+        98% {
+          opacity: .08;
         }
 
-        11% {
-          opacity: 0.9;
+        99% {
+          opacity: .01;
+        }
+      }
+
+      @keyframes bar1 {
+        to {
+          transform: scaleY(.62);
+        }
+      }
+
+      @keyframes bar2 {
+        to {
+          transform: scaleY(1.28);
+        }
+      }
+
+      @keyframes ring {
+        to {
+          transform: rotate(360deg);
         }
       }
     </style>
   </defs>
 
-  <!-- الصورة الأساسية -->
-  <image
-    href="cyberpunk_developer_dashboard_4k.png"
-    xlink:href="cyberpunk_developer_dashboard_4k.png"
-    x="0"
-    y="0"
-    width="3840"
-    height="2160"
-    preserveAspectRatio="xMidYMid slice"
-  />
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
 
-  <!-- نبض إضاءة القمر -->
-  <circle
-    class="moon-pulse"
-    cx="3140"
-    cy="455"
-    r="420"
-    fill="url(#moonGlow)"
-    filter="url(#blurGlow)"
-    pointer-events="none"
-  />
+  <!-- Ambient glows -->
+  <ellipse
+    cx="1525"
+    cy="220"
+    rx="300"
+    ry="260"
+    fill="#0ab8ff"
+    opacity=".08"
+    filter="url(#bigGlow)"/>
 
-  <!-- خط HUD متحرك -->
-  <path
-    class="hud-line"
-    d="M905 167 H2910"
-    fill="none"
-    stroke="#22f0c5"
-    stroke-width="3"
-    stroke-opacity="0.3"
-    pointer-events="none"
-  />
+  <ellipse
+    cx="960"
+    cy="1060"
+    rx="780"
+    ry="120"
+    fill="#ff2fb8"
+    opacity=".04"
+    filter="url(#bigGlow)"/>
 
-  <!-- نقطة System Online -->
-  <circle
-    class="status-dot"
-    cx="93"
-    cy="71"
-    r="12"
-    fill="#39ffd3"
-    filter="url(#smallGlow)"
-    pointer-events="none"
-  />
+  <!-- Futuristic city -->
+  <g opacity=".42">
+    <rect x="1180" y="305" width="48" height="250"
+          fill="#061b28"
+          stroke="#21cae0"
+          stroke-opacity=".3"/>
 
-  <!-- نقاط ضوئية متحركة -->
-  <g fill="#42ffd8"
-     filter="url(#smallGlow)"
-     pointer-events="none">
+    <rect x="1238" y="365" width="55" height="190" fill="#071824"/>
+    <rect x="1304" y="270" width="70" height="285" fill="#071b29"/>
+    <rect x="1386" y="330" width="42" height="225" fill="#061722"/>
+    <rect x="1440" y="235" width="88" height="320" fill="#081d2a"/>
+    <rect x="1540" y="300" width="48" height="255" fill="#061722"/>
+    <rect x="1596" y="350" width="66" height="205" fill="#081b29"/>
+    <rect x="1675" y="255" width="76" height="300" fill="#061722"/>
+    <rect x="1762" y="320" width="50" height="235" fill="#071a27"/>
 
-    <circle
-      class="particle-a"
-      cx="2840"
-      cy="1490"
-      r="5"
-    />
-
-    <circle
-      class="particle-b"
-      cx="3015"
-      cy="1660"
-      r="4"
-    />
-
-    <circle
-      class="particle-c"
-      cx="3340"
-      cy="1370"
-      r="6"
-    />
-
-    <circle
-      class="particle-a"
-      cx="3535"
-      cy="1540"
-      r="3"
-    />
-
-    <circle
-      class="particle-b"
-      cx="2725"
-      cy="1770"
-      r="4"
-    />
-
-    <circle
-      class="particle-c"
-      cx="3200"
-      cy="1840"
-      r="5"
-    />
+    <g fill="#2cfbe3" opacity=".45">
+      <rect x="1192" y="332" width="7" height="4"/>
+      <rect x="1208" y="350" width="7" height="4"/>
+      <rect x="1320" y="300" width="8" height="4"/>
+      <rect x="1340" y="330" width="8" height="4"/>
+      <rect x="1460" y="265" width="10" height="4"/>
+      <rect x="1490" y="300" width="10" height="4"/>
+      <rect x="1692" y="285" width="8" height="4"/>
+      <rect x="1718" y="315" width="8" height="4"/>
+    </g>
   </g>
 
-  <!-- وميض إلكتروني خفيف -->
-  <rect
-    class="flicker"
-    width="3840"
-    height="2160"
-    fill="#00ffd0"
-    opacity="0.012"
-    pointer-events="none"
-  />
+  <!-- Moon -->
+  <circle
+    cx="1535"
+    cy="160"
+    r="180"
+    fill="url(#moonGlow)"
+    filter="url(#bigGlow)"
+    class="pulse"/>
 
-  <!-- خط المسح المتحرك -->
+  <circle
+    cx="1535"
+    cy="160"
+    r="118"
+    fill="url(#moon)"
+    opacity=".96"/>
+
+  <g opacity=".22" fill="none" stroke="#d8ffff">
+    <path d="M1448 130c50-24 118-25 178 2"/>
+    <path d="M1438 165c62-20 145-15 192 7"/>
+    <path d="M1462 205c48-10 108-8 150 6"/>
+    <circle cx="1535" cy="160" r="93" stroke-dasharray="3 8"/>
+  </g>
+
+  <!-- HUD frame -->
+  <path
+    d="M28 52V22h300M1592 22h300v30M28 1028v30h300M1592 1058h300v-30"
+    fill="none"
+    stroke="url(#cyanStroke)"
+    stroke-width="2"/>
+
+  <path
+    d="M400 22H1510"
+    class="line dash"
+    opacity=".18"/>
+
+  <!-- Header -->
+  <g>
+    <circle
+      cx="55"
+      cy="47"
+      r="6"
+      fill="#32ffd5"
+      filter="url(#glow)"
+      class="blink"/>
+
+    <text x="72" y="53" class="title" font-size="20">
+      SYSTEM ONLINE
+    </text>
+
+    <text x="72" y="75" class="muted">
+      All systems operational
+    </text>
+
+    <text x="760" y="52" class="tiny">
+      // DEVELOPER DASHBOARD v4.0
+    </text>
+
+    <text x="1760" y="52" class="title" font-size="20">
+      23:47:52
+    </text>
+
+    <text x="1808" y="71" class="tiny">
+      UTC+0
+    </text>
+  </g>
+
+  <!-- Left profile -->
+  <g>
+    <path class="panel" d="M35 98H388l18 18v198H35Z"/>
+
+    <polygon
+      points="72,140 118,113 164,140 164,194 118,221 72,194"
+      fill="#081724"
+      stroke="#30f6dc"
+      stroke-width="2"/>
+
+    <polygon
+      points="82,145 118,124 154,145 154,188 118,209 82,188"
+      fill="#0b1724"
+      stroke="#ff4fc3"
+      stroke-opacity=".65"/>
+
+    <path
+      d="M102 185c8-34 48-34 52 0-12 14-40 14-52 0Z"
+      fill="#0b0e17"/>
+
+    <path
+      d="M96 178c8-45 48-64 66-14-11-12-19-16-31-15-16 1-26 12-35 29Z"
+      fill="#1d2c42"
+      stroke="#33d8ff"
+      stroke-opacity=".45"/>
+
+    <text x="190" y="145" class="value" font-size="24">
+      CyberDev
+    </text>
+
+    <text x="190" y="170" class="label">
+      Full Stack Developer
+    </text>
+
+    <text x="190" y="197" class="muted">
+      Neo Tokyo, 2099
+    </text>
+
+    <text x="190" y="223" class="muted">
+      code. deploy. repeat.
+    </text>
+
+    <text x="190" y="260" class="title" font-size="14">
+      GITHUB   TERMINAL   LINKEDIN
+    </text>
+  </g>
+
+  <!-- Level card -->
+  <g>
+    <rect
+      x="35"
+      y="326"
+      width="371"
+      height="78"
+      rx="6"
+      class="panel2"/>
+
+    <text x="70" y="352" class="title" font-size="14">
+      LEVEL 42
+    </text>
+
+    <rect
+      x="70"
+      y="370"
+      width="245"
+      height="8"
+      rx="4"
+      fill="#0a2931"/>
+
+    <rect
+      x="70"
+      y="370"
+      width="188"
+      height="8"
+      rx="4"
+      fill="#27ffd3"
+      filter="url(#glow)"/>
+
+    <text x="325" y="379" class="tiny">
+      7,200 XP
+    </text>
+  </g>
+
+  <!-- Left navigation -->
+  <g>
+    <path class="panel" d="M35 420H250V770H35Z"/>
+
+    <g font-size="15">
+      <rect
+        x="49"
+        y="440"
+        width="187"
+        height="46"
+        rx="4"
+        fill="#0c2632"
+        stroke="#23e4dc"
+        stroke-opacity=".55"/>
+
+      <rect
+        x="232"
+        y="440"
+        width="4"
+        height="46"
+        fill="#ff4fc3"/>
+
+      <text x="72" y="468" class="label">▦ DASHBOARD</text>
+      <text x="72" y="520" class="muted">▣ PROJECTS</text>
+      <text x="72" y="570" class="muted">⌘ REPOSITORIES</text>
+      <text x="72" y="620" class="muted">⌁ SNIPPETS</text>
+      <text x="72" y="670" class="muted">◈ ACTIVITY</text>
+      <text x="72" y="720" class="muted">⚙ SETTINGS</text>
+    </g>
+  </g>
+
+  <!-- Main code editor -->
+  <g>
+    <path class="panel" d="M430 98H1255l18 18V545H430Z"/>
+
+    <rect
+      x="446"
+      y="112"
+      width="130"
+      height="34"
+      rx="5"
+      fill="#0c2431"
+      stroke="#26dce1"
+      stroke-opacity=".5"/>
+
+    <circle
+      cx="468"
+      cy="129"
+      r="5"
+      fill="#35ffe0"
+      class="blink"/>
+
+    <text x="486" y="134" class="title" font-size="14">
+      main.py
+    </text>
+
+    <line
+      x1="446"
+      y1="156"
+      x2="1257"
+      y2="156"
+      stroke="#1b5664"
+      stroke-opacity=".45"/>
+
+    <g font-size="15">
+      <g fill="#4f7f91">
+        <text x="458" y="188">01</text>
+        <text x="458" y="216">02</text>
+        <text x="458" y="244">03</text>
+        <text x="458" y="286">05</text>
+        <text x="458" y="314">06</text>
+        <text x="458" y="342">07</text>
+        <text x="458" y="384">09</text>
+        <text x="458" y="412">10</text>
+        <text x="458" y="440">11</text>
+        <text x="458" y="482">13</text>
+        <text x="458" y="510">14</text>
+      </g>
+
+      <text x="500" y="188" fill="#ff66be">import</text>
+      <text x="560" y="188" fill="#d8f7ff">asyncio</text>
+
+      <text x="500" y="216" fill="#ff66be">from</text>
+      <text x="550" y="216" fill="#d8f7ff">core.engine</text>
+      <text x="670" y="216" fill="#ff66be">import</text>
+      <text x="730" y="216" fill="#38ffd9">Engine</text>
+
+      <text x="500" y="244" fill="#ff66be">from</text>
+      <text x="550" y="244" fill="#d8f7ff">utils.config</text>
+      <text x="670" y="244" fill="#ff66be">import</text>
+      <text x="730" y="244" fill="#38ffd9">settings</text>
+
+      <text x="500" y="286" fill="#ff66be">class</text>
+      <text x="548" y="286" fill="#38ffd9">Application</text>
+      <text x="650" y="286" fill="#d8f7ff">:</text>
+
+      <text x="530" y="314" fill="#ff66be">def</text>
+      <text x="570" y="314" fill="#ffd76a">__init__</text>
+      <text x="650" y="314" fill="#d8f7ff">(self):</text>
+
+      <text x="560" y="342" fill="#d8f7ff">
+        self.engine = Engine(settings)
+      </text>
+
+      <text x="530" y="384" fill="#ff66be">async def</text>
+      <text x="620" y="384" fill="#ffd76a">start</text>
+      <text x="670" y="384" fill="#d8f7ff">(self):</text>
+
+      <text x="560" y="412" fill="#ff66be">await</text>
+      <text x="620" y="412" fill="#d8f7ff">
+        self.engine.initialize()
+      </text>
+
+      <text x="560" y="440" fill="#ff66be">await</text>
+      <text x="620" y="440" fill="#d8f7ff">
+        self.engine.run()
+      </text>
+
+      <text x="500" y="482" fill="#ff66be">async def</text>
+      <text x="590" y="482" fill="#ffd76a">main</text>
+      <text x="635" y="482" fill="#d8f7ff">():</text>
+
+      <text x="530" y="510" fill="#d8f7ff">
+        app = Application()
+      </text>
+    </g>
+
+    <!-- Minimap -->
+    <g opacity=".45">
+      <rect
+        x="1175"
+        y="180"
+        width="48"
+        height="260"
+        fill="#06121a"/>
+
+      <g fill="#3fffdc">
+        <rect x="1182" y="188" width="31" height="2"/>
+        <rect x="1182" y="196" width="22" height="2"/>
+        <rect x="1182" y="207" width="35" height="2"/>
+        <rect x="1182" y="225" width="28" height="2"/>
+        <rect x="1182" y="245" width="38" height="2"/>
+        <rect x="1182" y="265" width="24" height="2"/>
+        <rect x="1182" y="285" width="34" height="2"/>
+        <rect x="1182" y="305" width="20" height="2"/>
+      </g>
+    </g>
+
+    <line
+      x1="446"
+      y1="520"
+      x2="1257"
+      y2="520"
+      stroke="#1c5663"
+      stroke-opacity=".5"/>
+
+    <circle cx="466" cy="535" r="5" fill="#2fff7f"/>
+
+    <text x="480" y="539" class="tiny">
+      No errors
+    </text>
+
+    <text x="560" y="539" class="tiny">
+      Python 3.11
+    </text>
+
+    <text x="670" y="539" class="tiny">
+      UTF-8
+    </text>
+
+    <text x="770" y="539" class="tiny">
+      Ln 18, Col 1
+    </text>
+
+    <text x="1158" y="539" class="title" font-size="11">
+      -- INSERT --
+    </text>
+  </g>
+
+  <!-- System cards -->
+  <g>
+    <g transform="translate(1288 265)">
+      <rect width="592" height="86" rx="6" class="panel2"/>
+
+      <text x="25" y="28" class="title" font-size="15">
+        CPU
+      </text>
+
+      <text x="25" y="61" class="value">
+        23%
+      </text>
+
+      <polyline
+        points="185,57 210,40 234,52 258,27 280,46 304,38 330,60 355,34 380,45 408,31"
+        fill="none"
+        stroke="#28f4db"
+        stroke-width="2"/>
+
+      <circle
+        cx="535"
+        cy="43"
+        r="26"
+        fill="none"
+        stroke="#123845"
+        stroke-width="6"/>
+
+      <circle
+        cx="535"
+        cy="43"
+        r="26"
+        fill="none"
+        stroke="#30ffe0"
+        stroke-width="6"
+        stroke-dasharray="95 70"
+        transform="rotate(-90 535 43)"
+        filter="url(#glow)"/>
+    </g>
+
+    <g transform="translate(1288 363)">
+      <rect width="592" height="86" rx="6" class="panel2"/>
+
+      <text x="25" y="28" class="title" font-size="15">
+        MEMORY
+      </text>
+
+      <text x="25" y="61" class="value">
+        61%
+      </text>
+
+      <polyline
+        points="185,55 210,48 230,62 252,32 276,40 300,18 326,44 350,30 380,54 408,38"
+        fill="none"
+        stroke="#28f4db"
+        stroke-width="2"/>
+
+      <circle
+        cx="535"
+        cy="43"
+        r="26"
+        fill="none"
+        stroke="#123845"
+        stroke-width="6"/>
+
+      <circle
+        cx="535"
+        cy="43"
+        r="26"
+        fill="none"
+        stroke="#30ffe0"
+        stroke-width="6"
+        stroke-dasharray="100 65"
+        transform="rotate(-90 535 43)"/>
+    </g>
+
+    <g transform="translate(1288 461)">
+      <rect width="592" height="86" rx="6" class="panel2"/>
+
+      <text x="25" y="28" class="title" font-size="15">
+        DISK
+      </text>
+
+      <text x="25" y="61" class="value">
+        34%
+      </text>
+
+      <polyline
+        points="185,52 210,45 235,58 260,27 285,50 310,41 337,63 360,33 384,52 408,43"
+        fill="none"
+        stroke="#28f4db"
+        stroke-width="2"/>
+
+      <circle
+        cx="535"
+        cy="43"
+        r="26"
+        fill="none"
+        stroke="#123845"
+        stroke-width="6"/>
+
+      <circle
+        cx="535"
+        cy="43"
+        r="26"
+        fill="none"
+        stroke="#30ffe0"
+        stroke-width="6"
+        stroke-dasharray="58 105"
+        transform="rotate(-90 535 43)"/>
+    </g>
+  </g>
+
+  <!-- Stats row -->
+  <g>
+    <g transform="translate(270 565)">
+      <rect width="188" height="150" rx="7" class="panel2"/>
+
+      <text x="20" y="28" class="title" font-size="14">
+        BUILD
+      </text>
+
+      <text x="20" y="72" class="value">
+        SUCCESS
+      </text>
+
+      <text x="20" y="95" class="muted">
+        2m 14s ago
+      </text>
+
+      <g transform="translate(20 112)" fill="#2fffd8">
+        <rect width="12" height="22"/>
+        <rect x="18" width="12" height="22"/>
+        <rect x="36" width="12" height="22"/>
+        <rect x="54" width="12" height="22"/>
+        <rect x="72" width="12" height="22"/>
+      </g>
+    </g>
+
+    <g transform="translate(470 565)">
+      <rect width="188" height="150" rx="7" class="panel2"/>
+
+      <text x="20" y="28" class="title" font-size="14">
+        GITHUB
+      </text>
+
+      <text x="20" y="75" class="value">
+        128
+      </text>
+
+      <text x="20" y="97" class="muted">
+        Commits
+      </text>
+
+      <g transform="translate(20 120)" fill="#28bfff">
+        <rect width="12" height="14" class="bar1"/>
+        <rect x="22" y="-10" width="12" height="24" class="bar2"/>
+        <rect x="44" y="-25" width="12" height="39" class="bar1"/>
+        <rect x="66" y="-8" width="12" height="22" class="bar2"/>
+        <rect x="88" y="-35" width="12" height="49" class="bar1"/>
+      </g>
+    </g>
+
+    <g transform="translate(670 565)">
+      <rect width="188" height="150" rx="7" class="panel2"/>
+
+      <text x="20" y="28" class="title" font-size="14">
+        COMMITS (7D)
+      </text>
+
+      <text x="20" y="75" class="value">
+        47
+      </text>
+
+      <text x="20" y="98" class="cyan" font-size="13">
+        +12.5%
+      </text>
+
+      <polyline
+        points="22,130 45,116 67,124 90,98 112,111 135,86 160,104"
+        fill="none"
+        stroke="#24d8ff"
+        stroke-width="3"/>
+    </g>
+
+    <g transform="translate(870 565)">
+      <rect
+        width="188"
+        height="150"
+        rx="7"
+        fill="url(#panel)"
+        stroke="#ff52c8"
+        stroke-opacity=".65"/>
+
+      <text x="20" y="28" class="pink" font-size="14" font-weight="700">
+        PULL REQUESTS
+      </text>
+
+      <text x="20" y="75" class="value">
+        8
+      </text>
+
+      <text x="20" y="98" class="muted">
+        Open
+      </text>
+
+      <g transform="translate(20 128)" fill="#ff4fc3">
+        <rect width="12" height="8"/>
+        <rect x="22" y="-15" width="12" height="23"/>
+        <rect x="44" y="-28" width="12" height="36"/>
+        <rect x="66" y="-10" width="12" height="18"/>
+        <rect x="88" y="-36" width="12" height="44"/>
+      </g>
+    </g>
+
+    <g transform="translate(1070 565)">
+      <rect width="188" height="150" rx="7" class="panel2"/>
+
+      <text x="20" y="28" class="title" font-size="14">
+        TESTS
+      </text>
+
+      <text x="20" y="75" class="value">
+        256
+      </text>
+
+      <text x="20" y="98" class="muted">
+        Passed
+      </text>
+
+      <polyline
+        points="22,130 44,118 66,121 88,95 112,106 138,83 160,102"
+        fill="none"
+        stroke="#2fffe0"
+        stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- API status -->
+  <g>
+    <rect
+      x="1288"
+      y="565"
+      width="592"
+      height="150"
+      rx="7"
+      class="panel2"/>
+
+    <text x="1315" y="595" class="title" font-size="15">
+      API STATUS
+    </text>
+
+    <circle
+      cx="1848"
+      cy="590"
+      r="5"
+      fill="#2fff8a"
+      class="blink"/>
+
+    <text x="1715" y="595" class="tiny">
+      ALL SYSTEMS GO
+    </text>
+
+    <g font-size="13">
+      <text x="1318" y="632" class="label">/api/v1/users</text>
+      <text x="1570" y="632" class="cyan">200 OK</text>
+      <text x="1660" y="632" class="muted">98ms</text>
+
+      <text x="1318" y="668" class="label">/api/v1/projects</text>
+      <text x="1570" y="668" class="cyan">200 OK</text>
+      <text x="1660" y="668" class="muted">112ms</text>
+
+      <text x="1318" y="704" class="label">/api/v1/analytics</text>
+      <text x="1570" y="704" class="cyan">200 OK</text>
+      <text x="1660" y="704" class="muted">95ms</text>
+    </g>
+  </g>
+
+  <!-- Bottom terminal -->
+  <g>
+    <rect
+      x="35"
+      y="740"
+      width="550"
+      height="280"
+      rx="8"
+      class="panel"/>
+
+    <text x="60" y="775" class="title" font-size="16">
+      &gt;_ TERMINAL
+    </text>
+
+    <line
+      x1="55"
+      y1="790"
+      x2="565"
+      y2="790"
+      stroke="#1d5f69"
+      stroke-opacity=".5"/>
+
+    <g font-size="14">
+      <text x="60" y="825" fill="#30ffd0">
+        neo@cyberdev:~/projects/app$
+      </text>
+
+      <text x="350" y="825" fill="#d9f8ff">
+        git status
+      </text>
+
+      <text x="60" y="855" class="label">
+        On branch main
+      </text>
+
+      <text x="60" y="885" class="label">
+        Your branch is up to date with 'origin/main'.
+      </text>
+
+      <text x="60" y="915" class="label">
+        nothing to commit, working tree clean
+      </text>
+
+      <text x="60" y="960" fill="#30ffd0">
+        neo@cyberdev:~/projects/app$
+      </text>
+
+      <rect
+        x="350"
+        y="947"
+        width="8"
+        height="16"
+        fill="#3fffe1"
+        class="blink"/>
+    </g>
+  </g>
+
+  <!-- Activity feed -->
+  <g>
+    <rect
+      x="600"
+      y="740"
+      width="600"
+      height="280"
+      rx="8"
+      class="panel"/>
+
+    <text x="625" y="775" class="title" font-size="16">
+      ACTIVITY FEED
+    </text>
+
+    <g font-size="13">
+      <text x="625" y="820" class="muted">2m ago</text>
+      <text x="725" y="820" class="label">Pushed to main</text>
+
+      <text x="625" y="855" class="muted">15m ago</text>
+      <text x="725" y="855" class="label">Pull request #128 opened</text>
+
+      <text x="625" y="890" class="muted">1h ago</text>
+      <text x="725" y="890" class="label">Issue #42 closed</text>
+
+      <text x="625" y="925" class="muted">2h ago</text>
+      <text x="725" y="925" class="label">Deployed to production</text>
+
+      <text x="625" y="960" class="muted">3h ago</text>
+      <text x="725" y="960" class="label">New commit 9f3a7b1</text>
+    </g>
+
+    <g transform="translate(1032 880)">
+      <circle
+        r="82"
+        fill="none"
+        stroke="#1fd7dc"
+        stroke-opacity=".35"/>
+
+      <circle
+        r="62"
+        fill="none"
+        stroke="#ff4fc3"
+        stroke-opacity=".28"
+        stroke-dasharray="4 10"
+        class="ring"/>
+
+      <ellipse
+        rx="82"
+        ry="30"
+        fill="none"
+        stroke="#27ffe0"
+        stroke-opacity=".35"/>
+
+      <ellipse
+        rx="30"
+        ry="82"
+        fill="none"
+        stroke="#27ffe0"
+        stroke-opacity=".25"/>
+
+      <circle
+        cx="45"
+        cy="-25"
+        r="5"
+        fill="#ff4fc3"
+        filter="url(#glow)"/>
+
+      <circle
+        cx="-32"
+        cy="20"
+        r="4"
+        fill="#2fffe0"
+        filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- Languages -->
+  <g>
+    <rect
+      x="1215"
+      y="740"
+      width="665"
+      height="280"
+      rx="8"
+      class="panel"/>
+
+    <text x="1240" y="775" class="title" font-size="16">
+      TOP LANGUAGES
+    </text>
+
+    <circle
+      cx="1370"
+      cy="880"
+      r="74"
+      fill="none"
+      stroke="#102a35"
+      stroke-width="26"/>
+
+    <circle
+      cx="1370"
+      cy="880"
+      r="74"
+      fill="none"
+      stroke="#2fffe0"
+      stroke-width="26"
+      stroke-dasharray="196 269"
+      transform="rotate(-90 1370 880)"/>
+
+    <circle
+      cx="1370"
+      cy="880"
+      r="74"
+      fill="none"
+      stroke="#2bbcff"
+      stroke-width="26"
+      stroke-dasharray="135 330"
+      stroke-dashoffset="-200"
+      transform="rotate(-90 1370 880)"/>
+
+    <circle
+      cx="1370"
+      cy="880"
+      r="74"
+      fill="none"
+      stroke="#ff4fc3"
+      stroke-width="26"
+      stroke-dasharray="82 383"
+      stroke-dashoffset="-340"
+      transform="rotate(-90 1370 880)"/>
+
+    <g font-size="14">
+      <text x="1490" y="835" class="label">Python</text>
+      <text x="1690" y="835" class="cyan">42.1%</text>
+
+      <text x="1490" y="870" class="label">TypeScript</text>
+      <text x="1690" y="870" fill="#2bbcff">28.7%</text>
+
+      <text x="1490" y="905" class="label">JavaScript</text>
+      <text x="1690" y="905" class="pink">17.3%</text>
+
+      <text x="1490" y="940" class="label">Rust / Other</text>
+      <text x="1690" y="940" class="muted">11.9%</text>
+    </g>
+
+    <text x="1490" y="985" fill="#d9f8ff" font-size="16">
+      “First, solve the problem.
+    </text>
+
+    <text x="1490" y="1008" fill="#d9f8ff" font-size="16">
+      Then, write the code.”
+    </text>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#35ffe0" filter="url(#glow)">
+    <circle cx="1140" cy="340" r="2.5" class="floatA"/>
+    <circle cx="1720" cy="220" r="2" class="floatB"/>
+    <circle cx="1510" cy="520" r="2.5" class="floatA"/>
+    <circle cx="1820" cy="400" r="2" class="floatB"/>
+    <circle cx="900" cy="720" r="2" class="floatA"/>
+  </g>
+
+  <!-- Scan and texture -->
   <rect
     class="scan"
     x="0"
-    y="-180"
-    width="3840"
-    height="180"
-    fill="url(#scanGradient)"
-    pointer-events="none"
-  />
+    y="-120"
+    width="1920"
+    height="120"
+    fill="url(#cyanStroke)"
+    opacity=".055"/>
 
-  <!-- خطوط شاشة خفيفة -->
   <rect
-    width="3840"
-    height="2160"
-    fill="url(#scanLines)"
-    pointer-events="none"
-  />
+    width="1920"
+    height="1080"
+    fill="url(#scanlines)"
+    pointer-events="none"/>
 
-  <!-- تعتيم الحواف -->
   <rect
-    width="3840"
-    height="2160"
-    fill="url(#vignette)"
-    pointer-events="none"
-  />
+    class="flicker"
+    width="1920"
+    height="1080"
+    fill="#37ffe0"
+    pointer-events="none"/>
 </svg>
