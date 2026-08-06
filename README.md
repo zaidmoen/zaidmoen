@@ -221,28 +221,30 @@ React JavaScript CSS React Router
 <!-- ========================= ACTIVITY GRAPH ========================= -->
 <!-- ========================= DEVELOPMENT ACTIVITY ========================= -->
 
-## ⚡ Development Activity
+<!-- ========================= DEVELOPMENT STATS ========================= -->
+
+## ⚡ Development Stats
 
 <div align="center">
 
   <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=zaidmoen&theme=tokyonight"
-    width="100%"
-    alt="Zaid's GitHub contribution activity"
+    src="https://github-readme-stats.vercel.app/api?username=zaidmoen&show_icons=true&hide_border=true&bg_color=0d1117&title_color=c084fc&icon_color=38bdf8&text_color=c9d1d9&rank_icon=github"
+    width="52%"
+    alt="Zaid's GitHub statistics"
+  />
+
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=zaidmoen&layout=compact&hide_border=true&bg_color=0d1117&title_color=c084fc&text_color=c9d1d9&langs_count=8"
+    width="43%"
+    alt="Zaid's most used languages"
   />
 
   <br/><br/>
 
   <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=zaidmoen&theme=tokyonight"
-    width="49%"
-    alt="Zaid's GitHub statistics"
-  />
-
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=zaidmoen&theme=tokyonight&utcOffset=3"
-    width="49%"
-    alt="Zaid's productive development time"
+    src="https://streak-stats.demolab.com?user=zaidmoen&theme=transparent&hide_border=true&background=0D1117&ring=C084FC&fire=38BDF8&currStreakLabel=818CF8&sideLabels=C9D1D9&currStreakNum=C9D1D9&sideNums=C9D1D9&dates=6E7681"
+    width="65%"
+    alt="Zaid's GitHub streak"
   />
 
 </div>
