@@ -1,0 +1,30 @@
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # كل يوم عند منتصف الليل UTC
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=#c084fc&color_dots=#ebedf0,#e9d5ff,#c084fc,#9333ea,#581c87
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#c084fc&color_dots=#161b22,#3b0764,#6b21a8,#9333ea,#c084fc
+            dist/github-contribution-grid-snake.gif?color_snake=#c084fc&color_dots=#161b22,#3b0764,#6b21a8,#9333ea,#c084fc
+      - uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

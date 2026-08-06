@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="3840"
+     height="2160"
+     viewBox="0 0 3840 2160"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">Cyberpunk Developer Dashboard 4K</title>
+
+  <desc id="desc">
+    Animated cyberpunk developer dashboard with subtle neon pulse,
+    scanline, particles and HUD effects.
+  </desc>
+
+  <defs>
+    <linearGradient id="scanGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00ffd0" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#00ffd0" stop-opacity="0.08"/>
+      <stop offset="0.5" stop-color="#7ffff0" stop-opacity="0.42"/>
+      <stop offset="0.55" stop-color="#00ffd0" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#00ffd0" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8ffff1" stop-opacity="0.24"/>
+      <stop offset="0.45" stop-color="#27f4cf" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#00d9b0" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.44"/>
+    </radialGradient>
+
+    <filter id="blurGlow"
+            x="-50%"
+            y="-50%"
+            width="200%"
+            height="200%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+
+    <filter id="smallGlow"
+            x="-100%"
+            y="-100%"
+            width="300%"
+            height="300%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="scanLines"
+             width="8"
+             height="8"
+             patternUnits="userSpaceOnUse">
+      <rect width="8"
+            height="4"
+            fill="#000000"
+            opacity="0.045"/>
+    </pattern>
+
+    <style>
+      .scan {
+        animation: scanMove 8s linear infinite;
+      }
+
+      .moon-pulse {
+        transform-origin: 3140px 455px;
+        animation: moonPulse 5s ease-in-out infinite;
+      }
+
+      .status-dot {
+        animation: blink 1.8s ease-in-out infinite;
+      }
+
+      .hud-line {
+        stroke-dasharray: 34 22;
+        animation: dashFlow 10s linear infinite;
+      }
+
+      .particle-a {
+        animation: floatA 7s ease-in-out infinite;
+      }
+
+      .particle-b {
+        animation: floatB 9s ease-in-out infinite;
+      }
+
+      .particle-c {
+        animation: floatC 6s ease-in-out infinite;
+      }
+
+      .flicker {
+        animation: flicker 6s steps(1, end) infinite;
+      }
+
+      @keyframes scanMove {
+        0% {
+          transform: translateY(-240px);
+          opacity: 0;
+        }
+
+        8% {
+          opacity: 0.9;
+        }
+
+        92% {
+          opacity: 0.9;
+        }
+
+        100% {
+          transform: translateY(2400px);
+          opacity: 0;
+        }
+      }
+
+      @keyframes moonPulse {
+        0%,
+        100% {
+          opacity: 0.38;
+          transform: scale(0.96);
+        }
+
+        50% {
+          opacity: 0.72;
+          transform: scale(1.05);
+        }
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 0.35;
+        }
+
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes dashFlow {
+        from {
+          stroke-dashoffset: 0;
+        }
+
+        to {
+          stroke-dashoffset: -224;
+        }
+      }
+
+      @keyframes floatA {
+        0%,
+        100% {
+          transform: translate(0, 0);
+          opacity: 0.28;
+        }
+
+        50% {
+          transform: translate(20px, -42px);
+          opacity: 0.95;
+        }
+      }
+
+      @keyframes floatB {
+        0%,
+        100% {
+          transform: translate(0, 0);
+          opacity: 0.2;
+        }
+
+        50% {
+          transform: translate(-26px, -58px);
+          opacity: 0.85;
+        }
+      }
+
+      @keyframes floatC {
+        0%,
+        100% {
+          transform: translate(0, 0);
+          opacity: 0.18;
+        }
+
+        50% {
+          transform: translate(12px, -34px);
+          opacity: 0.78;
+        }
+      }
+
+      @keyframes flicker {
+        0%,
+        7%,
+        9%,
+        12%,
+        100% {
+          opacity: 1;
+        }
+
+        8%,
+        10% {
+          opacity: 0.72;
+        }
+
+        11% {
+          opacity: 0.9;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- الصورة الأساسية -->
+  <image
+    href="cyberpunk_developer_dashboard_4k.png"
+    xlink:href="cyberpunk_developer_dashboard_4k.png"
+    x="0"
+    y="0"
+    width="3840"
+    height="2160"
+    preserveAspectRatio="xMidYMid slice"
+  />
+
+  <!-- نبض إضاءة القمر -->
+  <circle
+    class="moon-pulse"
+    cx="3140"
+    cy="455"
+    r="420"
+    fill="url(#moonGlow)"
+    filter="url(#blurGlow)"
+    pointer-events="none"
+  />
+
+  <!-- خط HUD متحرك -->
+  <path
+    class="hud-line"
+    d="M905 167 H2910"
+    fill="none"
+    stroke="#22f0c5"
+    stroke-width="3"
+    stroke-opacity="0.3"
+    pointer-events="none"
+  />
+
+  <!-- نقطة System Online -->
+  <circle
+    class="status-dot"
+    cx="93"
+    cy="71"
+    r="12"
+    fill="#39ffd3"
+    filter="url(#smallGlow)"
+    pointer-events="none"
+  />
+
+  <!-- نقاط ضوئية متحركة -->
+  <g fill="#42ffd8"
+     filter="url(#smallGlow)"
+     pointer-events="none">
+
+    <circle
+      class="particle-a"
+      cx="2840"
+      cy="1490"
+      r="5"
+    />
+
+    <circle
+      class="particle-b"
+      cx="3015"
+      cy="1660"
+      r="4"
+    />
+
+    <circle
+      class="particle-c"
+      cx="3340"
+      cy="1370"
+      r="6"
+    />
+
+    <circle
+      class="particle-a"
+      cx="3535"
+      cy="1540"
+      r="3"
+    />
+
+    <circle
+      class="particle-b"
+      cx="2725"
+      cy="1770"
+      r="4"
+    />
+
+    <circle
+      class="particle-c"
+      cx="3200"
+      cy="1840"
+      r="5"
+    />
+  </g>
+
+  <!-- وميض إلكتروني خفيف -->
+  <rect
+    class="flicker"
+    width="3840"
+    height="2160"
+    fill="#00ffd0"
+    opacity="0.012"
+    pointer-events="none"
+  />
+
+  <!-- خط المسح المتحرك -->
+  <rect
+    class="scan"
+    x="0"
+    y="-180"
+    width="3840"
+    height="180"
+    fill="url(#scanGradient)"
+    pointer-events="none"
+  />
+
+  <!-- خطوط شاشة خفيفة -->
+  <rect
+    width="3840"
+    height="2160"
+    fill="url(#scanLines)"
+    pointer-events="none"
+  />
+
+  <!-- تعتيم الحواف -->
+  <rect
+    width="3840"
+    height="2160"
+    fill="url(#vignette)"
+    pointer-events="none"
+  />
+</svg>
