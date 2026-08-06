@@ -225,29 +225,32 @@ React JavaScript CSS React Router
 
 <!-- ========================= DEVELOPMENT STATS ========================= -->
 
-## ⚡ Development Stats
+<!-- ========================= DEVELOPMENT HIGHLIGHTS ========================= -->
+
+## ⚡ Development Highlights
 
 <div align="center">
 
   <img
-    src="https://github-readme-stats.vercel.app/api?username=zaidmoen&show_icons=true&hide_border=true&bg_color=0d1117&title_color=c084fc&icon_color=38bdf8&text_color=c9d1d9&rank_icon=github"
-    width="52%"
-    alt="Zaid GitHub Stats"
+    src="https://github-readme-stats.vercel.app/api/pin/?username=zaidmoen&repo=apex-ai&theme=tokyonight&hide_border=true"
+    width="48%"
+    alt="APEX AI repository"
   />
 
   <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=zaidmoen&layout=compact&hide_border=true&bg_color=0d1117&title_color=c084fc&text_color=c9d1d9&langs_count=8"
-    width="43%"
-    alt="Zaid Top Languages"
+    src="https://github-readme-stats.vercel.app/api/pin/?username=zaidmoen&repo=Binaa_Pal&theme=tokyonight&hide_border=true"
+    width="48%"
+    alt="Binaa Pal repository"
   />
 
   <br/><br/>
 
-  <img
-    src="https://streak-stats.demolab.com?user=zaidmoen&theme=transparent&hide_border=true&background=0D1117&ring=C084FC&fire=38BDF8&currStreakLabel=818CF8&sideLabels=C9D1D9&currStreakNum=C9D1D9&sideNums=C9D1D9&dates=6E7681"
-    width="65%"
-    alt="Zaid GitHub Streak"
-  />
+  <a href="https://github.com/zaidmoen?tab=repositories">
+    <img
+      src="https://img.shields.io/badge/Explore_All_Projects-C084FC?style=for-the-badge&logo=github&logoColor=white"
+      alt="Explore repositories"
+    />
+  </a>
 
 </div>
 
@@ -256,7 +259,7 @@ React JavaScript CSS React Router
 <img
   src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png"
   width="100%"
-  alt="Animated Divider"
+  alt="Animated divider"
 />
 <!-- ========================= 3D CALENDAR ========================= -->
 🌌 3D Contribution Calendar
