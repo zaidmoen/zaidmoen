@@ -1,223 +1,253 @@
-<!-- Custom Animated Header -->
-<div align="center">
-  <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/header.svg" width="100%" alt="Zaid Mayyalleh - AI Student & Full Stack Developer"/>
-</div>
+<!-- ========================= HEADER ========================= -->
 
 <div align="center">
 
-<!-- Dynamic Typing -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=C084FC&center=true&vCenter=true&random=false&width=600&height=45&lines=%E2%9C%A8+Turning+Ideas+into+Intelligent+Code;%F0%9F%A7%A0+AI+%7C+Machine+Learning+%7C+Deep+Learning;%F0%9F%8C%90+React+%7C+Next.js+%7C+Node.js;%F0%9F%93%8A+Data+Science+%7C+Computer+Vision" alt="Typing SVG" /></a>
+  <img
+    src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/header.svg"
+    width="100%"
+    alt="Zaid Mayyalleh — Software Developer"
+  />
 
-<br/>
+  <br/>
 
-<!-- Social Badges with hover effect -->
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zaid-mayyalleh-307499376)
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:zaidmayalleh@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zaidmoen)
-[![Portfolio](https://img.shields.io/badge/Portfolio-c084fc?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+  <a href="https://git.io/typing-svg">
+    <img
+      src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=C084FC&center=true&vCenter=true&random=false&width=720&height=55&lines=Full-Stack+Developer+%7C+Computer+Science+Student;Building+Modern+and+Intelligent+Web+Applications;React+%7C+Node.js+%7C+Python+%7C+PostgreSQL;Turning+Ideas+into+Reliable+Software"
+      alt="Animated typing introduction"
+    />
+  </a>
 
-<br/>
+  <br/>
 
-<!-- Profile Views & Followers -->
-<img src="https://komarev.com/ghpvc/?username=zaidmoen&color=c084fc&style=flat-square&label=Profile+Views" alt="Profile Views" />
-<img src="https://img.shields.io/github/followers/zaidmoen?label=Followers&style=flat-square&color=818cf8&labelColor=1a1a2e" alt="Followers" />
+  <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376">
+    <img
+      src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"
+      alt="LinkedIn"
+    />
+  </a>
+
+  <a href="mailto:zaidmayalleh@gmail.com">
+    <img
+      src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"
+      alt="Email"
+    />
+  </a>
+
+  <a href="https://github.com/zaidmoen">
+    <img
+      src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+      alt="GitHub"
+    />
+  </a>
+
+  <br/><br/>
+
+  <img
+    src="https://komarev.com/ghpvc/?username=zaidmoen&color=c084fc&style=flat-square&label=Profile+Views"
+    alt="Profile views"
+  />
+
+  <img
+    src="https://img.shields.io/github/followers/zaidmoen?label=Followers&style=flat-square&color=818cf8&labelColor=161b22"
+    alt="GitHub followers"
+  />
 
 </div>
 
 <br/>
 
-<!-- Divider -->
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
+<img
+  src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png"
+  width="100%"
+  alt="Animated divider"
+/>
 
-## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> About Me
+<!-- ========================= ABOUT ========================= -->
+
+## 👨‍💻 About Me
 
 <table>
-<tr>
-<td width="50%" valign="top">
+  <tr>
+    <td width="55%" valign="top">
 
 ```python
-class Zaid:
+class ZaidMayyalleh:
     def __init__(self):
-        self.name     = "Zaid Mayyalleh"
-        self.role     = "AI Student & Web Dev"
+        self.role = "Full-Stack Developer"
+        self.education = "Computer Science Student"
         self.location = "Palestine 🇵🇸"
-        self.education = "University Student"
-        
-    @property
-    def skills(self):
-        return {
-            "ai": ["TensorFlow", "Scikit-Learn",
-                    "Computer Vision", "NLP"],
-            "web": ["React", "Next.js", 
-                     "Node.js", "TypeScript"],
-            "data": ["Pandas", "NumPy",
-                      "Matplotlib", "SQL"]
-        }
 
-    def __str__(self):
-        return "Building the future, one commit at a time."
+        self.focus = [
+            "Backend Architecture",
+            "Modern Web Applications",
+            "Artificial Intelligence",
+            "Problem Solving"
+        ]
+
+    def current_goal(self):
+        return "Build software that creates real value."
 ```
 
-</td>
-<td width="50%" valign="top">
+</td> <td width="45%" valign="top">
+Currently
+🎓 Studying Computer Science
+💻 Building full-stack web applications
+🧠 Learning AI and machine learning concepts
+🏗️ Interested in clean software architecture
+🤝 Open to internships and collaborations
+📚 Improving through practical team projects
+⚡ Focused on continuous development
+</td> </tr> </table> <br/>
 
-### ⚡ Quick Facts
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
 
-- 🎓 Studying **Artificial Intelligence** at university
-- 🔭 Currently working on **AI-powered web apps**
-- 🌱 Exploring **Deep Learning** & **Computer Vision**
-- 💡 Passionate about **integrating AI with modern web**
-- 🤝 Open for **collaboration** on interesting projects
-- 🎯 2025 Goals: Contribute to **Open Source** projects
-- ⚡ Fun fact: I debug with `print()` more than I should 😄
-
-</td>
-</tr>
-</table>
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
-
-## 🛠️ Tech Arsenal
-
+<!-- ========================= SKILLS ========================= -->
+🛠️ Technical Stack
 <div align="center">
-
-<table>
-<tr>
-<td align="center" width="33%">
-
-### 🤖 AI & Data Science
-<br/>
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
-
-</td>
-<td align="center" width="33%">
-
-### 🌐 Web Development
-<br/>
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-
-</td>
-<td align="center" width="33%">
-
-### ⚙️ Tools & DevOps
-<br/>
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
-
-</td>
-</tr>
-</table>
-
-</div>
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
-
-## 📊 Professional Dashboard
-
-<div align="center">
-
-<!-- Main Overview Card -->
-<img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.base.svg" alt="Base Metrics" width="100%" />
+Programming Languages
+<img src="https://skillicons.dev/icons?i=python,cpp,js,ts,html,css&theme=dark" alt="Programming languages"/>
 
 <br/><br/>
 
-<!-- Engineering & Activity Grid -->
-<table border="0">
-  <tr>
-    <td width="50%" valign="top">
-      <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.engineering.svg" alt="Engineering Metrics" width="100%" />
-    </td>
-    <td width="50%" valign="top">
-      <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.activity.svg" alt="Activity Metrics" width="100%" />
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-<!-- Streak Stats -->
-<img src="https://streak-stats.demolab.com?user=zaidmoen&theme=transparent&hide_border=true&ring=c084fc&fire=38bdf8&currStreakLabel=818cf8&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6e7681&background=0d1117" alt="GitHub Streak" />
-
-</div>
-
-<br/>
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
-
-## 🐍 Contribution Snake
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.gif" alt="Snake animation" />
-</div>
-
-<br/>
-
-## 📅 3D Contribution Calendar
-
-<div align="center">
-  <picture> 
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" /> 
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-green-animate.svg" /> 
-    <img alt="3D contribution calendar" src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" />
-  </picture>
-</div>
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
-
-## ⏱️ WakaTime Stats
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
-
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
-
-## 📫 Let's Connect
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376"><img src="https://img.shields.io/badge/-Zaid_Mayyalleh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:zaidmayalleh@gmail.com"><img src="https://img.shields.io/badge/-zaidmayalleh@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://github.com/zaidmoen"><img src="https://img.shields.io/badge/-zaidmoen-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+Frontend Development
+<img src="https://skillicons.dev/icons?i=react,vite,materialui,tailwind&theme=dark" alt="Frontend technologies"/>
 
 <br/><br/>
 
-```
- ╔══════════════════════════════════════════════════════════╗
- ║                                                          ║
- ║   "The best way to predict the future is to create it."  ║
- ║                                          — Peter Drucker  ║
- ║                                                          ║
- ╚══════════════════════════════════════════════════════════╝
-```
+Backend and Databases
+<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,mysql,supabase&theme=dark" alt="Backend technologies"/>
 
+<br/><br/>
+
+Tools and Workflow
+<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm,figma&theme=dark" alt="Development tools"/> </div> <br/>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
+
+<!-- ========================= FEATURED PROJECTS ========================= -->
+🚀 Featured Projects
+<div align="center"> <table> <tr> <td width="50%" valign="top">
+🧠 APEX AI
+
+AI-powered academic platform designed to help students manage, explore and solve technical questions.
+
+Highlights
+
+Question bank and solving workflow
+Repository-based backend architecture
+REST API integration
+AI-assisted learning features
+Team-based development workflow
+
+Stack
+
+React TypeScript Python FastAPI PostgreSQL
+
+</td> <td width="50%" valign="top">
+🏗️ Binaa Pal
+
+Full-stack platform connecting clients with skilled workers and service providers in Palestine.
+
+Highlights
+
+Worker and client profiles
+Service request workflow
+Reviews and administrative features
+Authentication and authorization
+Responsive user interface
+
+Stack
+
+React Node.js Express Sequelize Supabase
+
+</td> </tr> <tr> <td width="50%" valign="top">
+🎓 UniFlow
+
+University career-management platform designed to connect students, companies and career centers.
+
+Highlights
+
+Student career profiles
+Internship and job opportunities
+Certificates and CV management
+Company and administrator workflows
+Structured system analysis and design
+
+Stack
+
+System Design UML Database Design Web Development
+
+</td> <td width="50%" valign="top">
+🛒 Olive Hardware Store
+
+Responsive e-commerce interface for computer hardware and accessories.
+
+Highlights
+
+Product pages and categories
+Responsive reusable components
+Product filtering and pagination
+Shopping cart interface
+Collaborative Git workflow
+
+Stack
+
+React JavaScript CSS React Router
+
+</td> </tr> </table> </div> <br/> <div align="center"> <a href="https://github.com/zaidmoen?tab=repositories"> <img src="https://img.shields.io/badge/Explore_All_Repositories-C084FC?style=for-the-badge&logo=github&logoColor=white" alt="Explore repositories" /> </a> </div> <br/>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
+
+<!-- ========================= DASHBOARD ========================= -->
+📊 GitHub Dashboard
+<div align="center"> <!-- Single clean professional metrics card -->
+
+<img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.base.svg" width="95%" alt="Zaid GitHub metrics" />
+
+<br/><br/>
+
+<!-- Stats cards --> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=zaidmoen&show_icons=true&hide_border=true&bg_color=0D1117&title_color=C084FC&icon_color=818CF8&text_color=C9D1D9&ring_color=C084FC" /> <img width="49%" src="https://github-readme-stats.vercel.app/api?username=zaidmoen&show_icons=true&hide_border=true&title_color=7C3AED&icon_color=6366F1" alt="GitHub statistics" /> </picture> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=zaidmoen&layout=compact&hide_border=true&bg_color=0D1117&title_color=C084FC&text_color=C9D1D9" /> <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zaidmoen&layout=compact&hide_border=true&title_color=7C3AED" alt="Most used languages" /> </picture>
+
+<br/><br/>
+
+<!-- Animated streak -->
+
+<img src="https://streak-stats.demolab.com?user=zaidmoen&theme=transparent&hide_border=true&ring=C084FC&fire=38BDF8&currStreakLabel=818CF8&sideLabels=C9D1D9&currStreakNum=C9D1D9&sideNums=C9D1D9&dates=6E7681&background=0D1117" width="70%" alt="GitHub contribution streak" />
+
+</div> <br/>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
+
+<!-- ========================= ACTIVITY GRAPH ========================= -->
+📈 Development Activity
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=zaidmoen&bg_color=0d1117&color=c084fc&line=818cf8&point=38bdf8&area=true&hide_border=true&custom_title=Zaid's%20Contribution%20Activity" width="100%" alt="GitHub activity graph" />
+
+</div> <br/> <!-- ========================= SNAKE ========================= -->
+🐍 Contribution Journey
+<div align="center"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" /> <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" width="100%" alt="Animated contribution snake" /> </picture> </div> <br/>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
+
+<!-- ========================= 3D CALENDAR ========================= -->
+🌌 3D Contribution Calendar
+<div align="center"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-green-animate.svg" /> <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="Animated 3D contribution calendar" /> </picture> </div> <br/>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" alt="Animated divider" />
+
+<!-- ========================= CONTACT ========================= -->
+🤝 Let's Build Something Great
+<div align="center"> <p> I am open to internships, junior development opportunities,<br/> open-source collaboration and meaningful software projects. </p> <br/> <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376"> <img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" /> </a> <a href="mailto:zaidmayalleh@gmail.com"> <img src="https://img.shields.io/badge/Send_an_Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Send an email" /> </a> <a href="https://github.com/zaidmoen"> <img src="https://img.shields.io/badge/Follow_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Follow on GitHub" /> </a>
+
+<br/><br/>
+╔══════════════════════════════════════════════════════════╗
+║                                                          ║
+║       Build. Learn. Improve. Repeat.                      ║
+║                                                          ║
+╚══════════════════════════════════════════════════════════╝
 <br/>
 
-⭐ **If you find my work interesting, don't forget to star my repos!** ⭐
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:C084FC,50:818CF8,100:38BDF8&height=130&section=footer&animation=twinkling" width="100%" alt="Animated footer" />
 
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,9,5&height=120&section=footer&animation=twinkling" width="100%"/>
-
-</div>
+</div> ```
