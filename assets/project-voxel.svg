@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-labelledby="title desc">
+  <title id="title">Pinch Voxel Studio</title>
+  <desc id="desc">A gesture-controlled 3D voxel builder using real-time hand tracking.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080d19"/><stop offset="1" stop-color="#101c37"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#80a7ff"/><stop offset="1" stop-color="#b794f6"/></linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8aa8ff" stroke-opacity=".045"/></pattern>
+    <style>.overline{font:600 11px 'Segoe UI',Arial,sans-serif;letter-spacing:2.1px}.title{font:800 30px 'Segoe UI',Arial,sans-serif;letter-spacing:-.4px}.sub{font:500 12px 'Segoe UI',Arial,sans-serif;letter-spacing:1px}.micro{font:500 9px Consolas,monospace;letter-spacing:1.2px}.float{animation:f 4s ease-in-out infinite}@keyframes f{50%{transform:translateY(-7px)}}@media(prefers-reduced-motion:reduce){.float{animation:none}}</style>
+  </defs>
+  <rect x="1" y="1" width="638" height="238" rx="20" fill="url(#bg)" stroke="#80a7ff" stroke-opacity=".24"/>
+  <rect x="1" y="1" width="638" height="238" rx="20" fill="url(#grid)"/>
+  <path d="M32 34H145" stroke="url(#accent)" stroke-width="3"/>
+  <text x="32" y="62" class="overline" fill="#9ab4ff">02 / COMPUTER VISION</text>
+  <text x="32" y="113" class="title" fill="#f4f6ff">PINCH VOXEL</text>
+  <text x="32" y="143" class="sub" fill="#a9b5d3">GESTURE-CONTROLLED 3D BUILDER</text>
+  <text x="32" y="202" class="micro" fill="#65779f">MEDIAPIPE  ·  OPENCV  ·  REAL TIME</text>
+  <g transform="translate(504 121)">
+    <path d="M-78 45L0 90L78 45L0 0Z" fill="#111f3b" stroke="#80a7ff" stroke-opacity=".24"/>
+    <g class="float">
+      <path d="M-1-75L36-54L0-33L-37-54Z" fill="#263f78" stroke="#b4c8ff" stroke-opacity=".8"/>
+      <path d="M-37-54L0-33V10L-37-11Z" fill="#172c5c" stroke="#80a7ff" stroke-opacity=".62"/>
+      <path d="M36-54L0-33V10L36-11Z" fill="#241f55" stroke="#b794f6" stroke-opacity=".58"/>
+    </g>
+    <path d="M-65 20L-28 41L8 20L-28-1ZM13 21L50 42L84 22L48 1Z" fill="#152747" stroke="#80a7ff" stroke-opacity=".45"/>
+    <circle cx="0" cy="-33" r="5" fill="#b9caff" filter="url(#glow)"/>
+    <circle cx="68" cy="-61" r="17" fill="none" stroke="#b794f6" stroke-opacity=".38"/><circle cx="68" cy="-61" r="4" fill="#c6a7ff" filter="url(#glow)"/>
+    <path d="M51-51L25-38" stroke="#b794f6" stroke-opacity=".6" stroke-dasharray="4 5"/>
+  </g>
+</svg>
