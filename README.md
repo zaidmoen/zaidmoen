@@ -1,214 +1,122 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/header.svg" width="100%" alt="Zaid Mayyalleh — Full-Stack Developer" />
+<img src="./assets/header.svg" width="100%" alt="Zaid Mayyalleh — Full-stack engineer and intelligent systems builder" />
 
 <br />
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2600&pause=850&color=C084FC&center=true&vCenter=true&random=false&width=780&height=52&lines=Full-Stack+Developer+%7C+Computer+Science+Student;Building+Reliable+Web+and+AI-Powered+Products;React+%7C+Node.js+%7C+FastAPI+%7C+PostgreSQL;Clean+Architecture.+Real+Problems.+Useful+Software." alt="Typing introduction" />
-</a>
+**Product-minded full-stack developer · Computer Science @ An-Najah National University · Palestine**
 
-<br />
-
-<a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="mailto:zaidmayalleh@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-<a href="https://github.com/zaidmoen?tab=repositories"><img src="https://img.shields.io/badge/Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" /></a>
-
-<br /><br />
-
-<img src="https://komarev.com/ghpvc/?username=zaidmoen&style=flat-square&color=c084fc&label=Profile+Views" alt="Profile views" />
-<img src="https://img.shields.io/github/followers/zaidmoen?style=flat-square&label=Followers&color=818cf8&labelColor=161b22" alt="Followers" />
+<p>
+  <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:zaidmayyalleh@gmail.com">Email</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/zaidmoen?tab=repositories">All repositories</a>
+</p>
 
 </div>
 
----
+## Engineering with purpose
 
-## 👨‍💻 About Me
+I turn ambiguous ideas into useful, reliable software—from Arabic-first web products and secure APIs to computer-vision and machine-learning experiments. I care about clear architecture, honest user experiences, and the final details that make software feel finished.
 
-```python
-class ZaidMayyalleh:
-    role = "Full-Stack Developer"
-    education = "Computer Science Student"
-    location = "Palestine 🇵🇸"
+> My north star: build things that solve a real problem, explain their trade-offs, and leave the codebase better than I found it.
 
-    interests = [
-        "Backend architecture",
-        "Modern web applications",
-        "Artificial intelligence",
-        "Problem solving",
-    ]
-
-    current_goal = "Build reliable software that creates real value."
-```
-
-I enjoy turning ideas into practical products, improving existing systems, and working across both frontend and backend development. My current focus is building production-minded applications with clean architecture, strong APIs, and thoughtful user experiences.
-
-- 🎓 Computer Science student at **An-Najah National University**
-- 💻 Building full-stack applications with modern JavaScript and Python stacks
-- 🧠 Expanding my knowledge in AI, machine learning, and intelligent systems
-- 🏗️ Interested in clean code, scalable architecture, and maintainable products
-- 🤝 Open to internships, junior opportunities, and collaborative projects
-
----
-
-## 🛠️ Technical Stack
-
-<div align="center">
-
-### Languages
-<img src="https://skillicons.dev/icons?i=python,cpp,js,ts,html,css&theme=dark" alt="Languages" />
-
-### Frontend
-<img src="https://skillicons.dev/icons?i=react,vite,materialui,tailwind&theme=dark" alt="Frontend technologies" />
-
-### Backend & Databases
-<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,mysql,supabase&theme=dark" alt="Backend and databases" />
-
-### Tools
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,npm,figma&theme=dark" alt="Tools" />
-
-</div>
-
----
-
-## 🚀 Featured Work
+## Selected systems
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🧠 APEX AI
+<a href="https://github.com/zaidmoen/palestine-now-web"><img src="./assets/project-palestine-now.svg" width="100%" alt="Palestine Now — Arabic-first public-information product" /></a>
 
-An AI-powered academic platform that helps students explore, manage, and solve technical questions.
+**An Arabic-first public-information product experience.**
 
-**Key work**
-- Question bank and dedicated solving workflow
-- REST API integration between React and FastAPI
-- Repository-based backend architecture
-- AI-assisted learning capabilities
-- Collaborative Git and pull-request workflow
+Unified search, a personalized local feed, responsive RTL interfaces, accessibility support, lazy-loaded routes, and production quality checks—all presented with clear trust boundaries around demo data.
 
-**Stack:** React, TypeScript, Python, FastAPI, PostgreSQL
+`React 19` `Vite` `Tailwind CSS` `Framer Motion`
+
+[Explore the repository →](https://github.com/zaidmoen/palestine-now-web)
 
 </td>
 <td width="50%" valign="top">
 
-### 🏗️ Binaa Pal
+<a href="https://github.com/zaidmoen/cube_builder"><img src="./assets/project-voxel.svg" width="100%" alt="Pinch Voxel Studio — gesture-controlled 3D builder" /></a>
 
-A full-stack platform connecting clients with skilled workers and service providers in Palestine.
+**A 3D voxel builder controlled by hand gestures.**
 
-**Key work**
-- Worker and client profiles
-- Service request and review workflows
-- JWT-based authentication and authorization
-- Administrative features
-- Responsive reusable interfaces
+Real-time hand tracking, a smoothed interaction cursor, multi-layer building, material modes, undo, and scene persistence turn a webcam into a hands-free creative interface.
 
-**Stack:** React, Node.js, Express, Sequelize, Supabase
+`Python` `MediaPipe` `OpenCV` `Computer Vision`
+
+[Explore the repository →](https://github.com/zaidmoen/cube_builder)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 🎓 UniFlow
+<a href="https://github.com/zaidmoen/Books_manegment_MySQL"><img src="./assets/project-books-api.svg" width="100%" alt="Books Management API — FastAPI and raw MySQL backend" /></a>
 
-A university career-management platform connecting students, companies, career centers, and administrators.
+**A raw-SQL backend designed like a real service.**
 
-**Key work**
-- Career profiles, CVs, and certificates
-- Internship and job opportunity workflows
-- System requirements and UML design
-- Multi-actor platform architecture
-- Database and process modeling
+JWT authentication, role-based access, parameterized queries, relational constraints, versioned migrations, safe data backfills, REST endpoints, and a ready-to-use Postman collection.
 
-**Focus:** System Design, UML, Database Design, Web Development
+`FastAPI` `MySQL` `Pydantic` `JWT`
+
+[Explore the repository →](https://github.com/zaidmoen/Books_manegment_MySQL)
 
 </td>
 <td width="50%" valign="top">
 
-### 🛒 Olive Hardware Store
+<a href="https://github.com/zaidmoen/bank-marketing-ml-classification"><img src="./assets/project-ml-lab.svg" width="100%" alt="Bank Marketing ML Lab — multiclass machine-learning study" /></a>
 
-A responsive e-commerce interface for computer hardware and accessories.
+**An end-to-end multiclass machine-learning study.**
 
-**Key work**
-- Product categories and detail pages
-- Reusable React components
-- Filtering and pagination
-- Cart interface
-- Team-based Git workflow
+Data exploration, preprocessing, K-Means analysis, MLP and Gradient Boosting comparison, stratified cross-validation, tuning, and results communicated through notebooks and a written report.
 
-**Stack:** React, JavaScript, CSS, React Router
+`Python` `scikit-learn` `Jupyter` `Machine Learning`
+
+[Explore the repository →](https://github.com/zaidmoen/bank-marketing-ml-classification)
 
 </td>
 </tr>
 </table>
 
-<div align="center">
-  <a href="https://github.com/zaidmoen?tab=repositories">
-    <img src="https://img.shields.io/badge/Explore_All_Projects-C084FC?style=for-the-badge&logo=github&logoColor=white" alt="Explore all projects" />
-  </a>
-</div>
+## How I work
 
----
+| Lens | What it means in practice |
+| --- | --- |
+| **Product** | Start with the user problem, make assumptions visible, and avoid pretending demo behavior is production behavior. |
+| **Architecture** | Keep boundaries clear, data models intentional, APIs predictable, and migrations repeatable. |
+| **Delivery** | Work in focused branches, review the diff, test behavior, and document the path from setup to result. |
+| **Growth** | Learn in public through structured practice in SQL, Python, algorithms, AI, and system design. |
 
-## 📊 GitHub Overview
+## Current focus
 
-<div align="center">
+- Building **Apex Intelligence**, a collaborative academic platform for learning and problem solving.
+- Evolving **Palestine Now** from a strong product demo toward a trustworthy, source-backed platform.
+- Deepening backend engineering, databases, problem solving, and applied AI.
 
-<img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.base.svg" width="92%" alt="GitHub metrics" />
+## Toolbox
 
-<br /><br />
-
-<img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.engineering.svg" width="92%" alt="Engineering & Languages" />
-
-<br /><br />
-
-<img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/assets/metrics.activity.svg" width="92%" alt="Activity & Habits" />
-
-<br /><br />
-
-<img src="https://streak-stats.demolab.com?user=zaidmoen&theme=transparent&hide_border=true&ring=C084FC&fire=38BDF8&currStreakLabel=818CF8&sideLabels=C9D1D9&currStreakNum=C9D1D9&sideNums=C9D1D9&dates=6E7681" width="70%" alt="Contribution streak" />
-
-</div>
-
----
-
-## 🐍 Contribution Journey
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" />
-    <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution snake" />
-  </picture>
-</div>
-
----
-
-## 🌌 3D Contribution Calendar
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-green-animate.svg" />
-    <img src="https://raw.githubusercontent.com/zaidmoen/zaidmoen/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar" />
-  </picture>
-</div>
-
----
-
-## 🤝 Let’s Build Something Useful
+| Area | Technologies |
+| --- | --- |
+| **Languages** | Python · C++ · JavaScript · TypeScript · SQL · C# |
+| **Interfaces** | React · Vite · Tailwind CSS · Material UI · WPF |
+| **Backends** | FastAPI · Node.js · Express · REST APIs |
+| **Data** | MySQL · PostgreSQL · Supabase · schema design · migrations |
+| **Intelligence** | scikit-learn · MediaPipe · OpenCV · reinforcement learning |
+| **Workflow** | Git · GitHub · Postman · Figma · collaborative code review |
 
 <div align="center">
 
-I am open to internships, junior software-development opportunities, open-source collaboration, and meaningful technical projects.
+## Let’s build something useful
 
-<br />
+I’m open to internships, junior software-engineering roles, open-source work, and ambitious student collaborations.
 
-<a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" /></a>
-<a href="mailto:zaidmayalleh@gmail.com"><img src="https://img.shields.io/badge/Send_an_Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Send an email" /></a>
+[**Start a conversation on LinkedIn**](https://www.linkedin.com/in/zaid-mayyalleh-307499376) &nbsp;·&nbsp; [**Send me an email**](mailto:zaidmayyalleh@gmail.com)
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:C084FC,50:818CF8,100:38BDF8&height=125&section=footer&animation=twinkling" width="100%" alt="Footer" />
+<sub>Designed and maintained by Zaid Mayyalleh · Building from Palestine 🇵🇸</sub>
 
 </div>

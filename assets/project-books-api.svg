@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240" role="img" aria-labelledby="title desc">
+  <title id="title">Books Management API</title>
+  <desc id="desc">A FastAPI and raw MySQL service with authentication, authorization, and migrations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#100d08"/><stop offset="1" stop-color="#292010"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f7c86b"/><stop offset="1" stop-color="#f59e42"/></linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#f6ca74" stroke-opacity=".04"/></pattern>
+    <style>.overline{font:600 11px 'Segoe UI',Arial,sans-serif;letter-spacing:2.1px}.title{font:800 30px 'Segoe UI',Arial,sans-serif;letter-spacing:-.4px}.sub{font:500 12px 'Segoe UI',Arial,sans-serif;letter-spacing:1px}.micro{font:500 9px Consolas,monospace;letter-spacing:1.2px}.flow{animation:f 2.7s ease-in-out infinite}@keyframes f{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){.flow{animation:none}}</style>
+  </defs>
+  <rect x="1" y="1" width="638" height="238" rx="20" fill="url(#bg)" stroke="#f7c86b" stroke-opacity=".22"/>
+  <rect x="1" y="1" width="638" height="238" rx="20" fill="url(#grid)"/>
+  <path d="M32 34H145" stroke="url(#accent)" stroke-width="3"/>
+  <text x="32" y="62" class="overline" fill="#e1b75f">03 / BACKEND SYSTEMS</text>
+  <text x="32" y="113" class="title" fill="#fff9ec">BOOKS API</text>
+  <text x="32" y="143" class="sub" fill="#c7b99d">RAW SQL · AUTH · MIGRATIONS</text>
+  <text x="32" y="202" class="micro" fill="#8c7956">FASTAPI  ·  MYSQL  ·  PYDANTIC</text>
+  <g transform="translate(507 121)">
+    <path d="M-82-35H-44M-82 0H-44M-82 35H-44M43-35H82M43 0H82M43 35H82" stroke="#f7c86b" stroke-opacity=".32" stroke-width="2" stroke-dasharray="5 5"/>
+    <g fill="#1a160d" stroke="#f7c86b" stroke-opacity=".52"><rect x="-112" y="-48" width="30" height="26" rx="6"/><rect x="-112" y="-13" width="30" height="26" rx="6"/><rect x="-112" y="22" width="30" height="26" rx="6"/><rect x="82" y="-48" width="30" height="26" rx="6"/><rect x="82" y="-13" width="30" height="26" rx="6"/><rect x="82" y="22" width="30" height="26" rx="6"/></g>
+    <ellipse cx="0" cy="-48" rx="43" ry="16" fill="#342713" stroke="#ffd886"/>
+    <path d="M-43-48V45C-43 54-24 61 0 61S43 54 43 45V-48" fill="#211a0e" stroke="#f7c86b" stroke-opacity=".68"/>
+    <path d="M-43-16C-43-7-24 0 0 0S43-7 43-16M-43 15C-43 24-24 31 0 31S43 24 43 15" fill="none" stroke="#f7c86b" stroke-opacity=".38"/>
+    <ellipse cx="0" cy="-48" rx="29" ry="8" fill="#130f08"/>
+    <circle cx="0" cy="-48" r="4" fill="#ffe6a8" filter="url(#glow)" class="flow"/>
+  </g>
+</svg>
