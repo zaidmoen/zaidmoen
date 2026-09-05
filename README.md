@@ -70,7 +70,7 @@ My projects range from Arabic-first web experiences to gesture-controlled interf
 
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stats/github-details-mobile.svg" />
-  <img src="./assets/stats/github-details.svg" width="100%" alt="Primary language shares by public original repository count, and monthly public PRs opened over the last 12 calendar months. Current month is partial." />
+  <img src="./assets/stats/github-details.svg" width="100%" alt="Primary language shares by public original repository count, and monthly commit activity over the last 12 calendar months. Current month is partial." />
 </picture>
 
 <sub>Public GitHub data · Refreshed daily · Language shares describe repositories, not proficiency. [Data & definitions](docs/profile-maintenance.md#statistics)</sub>
