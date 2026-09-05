@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="164" viewBox="0 0 1120 164" role="img" aria-labelledby="title desc">
+<title id="title">Build. Refine. Repeat.</title><desc id="desc">Full-stack development, backend systems, and applied AI. Decorative motion respects reduced-motion preferences.</desc>
+<defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#101e33"/><stop offset="1" stop-color="#060d19"/></linearGradient>
+<linearGradient id="blue"><stop offset="0" stop-color="#2377f5"/><stop offset="1" stop-color="#72d9ff"/></linearGradient>
+</defs><rect width="1120" height="164" rx="18" fill="url(#bg)"/><rect x="1" y="1" width="1118" height="162" rx="17" fill="none" stroke="#283f5e"/>
+<defs><clipPath id="edge"><rect width="1120" height="164" rx="18"/></clipPath></defs><style>
+@keyframes orbit {to {transform:rotate(360deg)}}
+@keyframes sweep {0%,15%{transform:translateX(-160px);opacity:0}25%{opacity:.9}80%{opacity:.9}100%{transform:translateX(1160px);opacity:0}}
+@keyframes first {0%,27%,100%{opacity:1;transform:translateY(0)}31%,94%{opacity:0;transform:translateY(-6px)}}
+@keyframes second {0%,29%,65%,100%{opacity:0;transform:translateY(6px)}34%,60%{opacity:1;transform:translateY(0)}}
+@keyframes third {0%,62%,97%,100%{opacity:0;transform:translateY(6px)}68%,92%{opacity:1;transform:translateY(0)}}
+.orbit{transform-origin:991px 81px;animation:orbit 22s linear infinite}
+.sweep{animation:sweep 8s ease-in-out infinite}
+.role-one{animation:first 15s ease-in-out infinite}
+.role-two{opacity:0;animation:second 15s ease-in-out infinite}
+.role-three{opacity:0;animation:third 15s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.orbit,.sweep,.role-one,.role-two,.role-three{animation:none}.sweep,.role-two,.role-three{display:none}.role-one{opacity:1}}
+</style><text x="34" y="37" font-family="DejaVu Sans,Arial,sans-serif" font-size="11" fill="#87baff" font-weight="600" letter-spacing="2.8">THE BUILD LOOP</text><text x="34" y="82" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" fill="#ebf3ff" font-weight="700" >Build. Refine. Repeat.</text><g class="role-one"><text x="35" y="119" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#adc6e6" font-weight="400" >Full-stack development  /  Thoughtful interfaces</text></g><g class="role-two"><text x="35" y="119" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#adc6e6" font-weight="400" >Backend systems  /  Clear architecture</text></g><g class="role-three"><text x="35" y="119" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#adc6e6" font-weight="400" >Applied AI  /  Creative problem solving</text></g><g fill="none" stroke="#447db7"><circle cx="991" cy="81" r="44" opacity=".3"/><circle cx="991" cy="81" r="61" opacity=".14"/></g><g class="orbit" fill="none" stroke="#6ac5ff" stroke-width="2"><path d="M991 20a61 61 0 0 1 61 61"/><circle cx="991" cy="20" r="4" fill="#b1e4ff"/><path d="M991 125a44 44 0 0 1-44-44"/></g><text x="991" y="89" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#e0eeff" font-weight="600" text-anchor="middle">ZM</text><g clip-path="url(#edge)"><path d="M0 162H1120" stroke="#285185"/><path class="sweep" d="M0 162H155" stroke="#75c9ff" stroke-width="3"/></g></svg>

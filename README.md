@@ -1,6 +1,8 @@
 <div align="center">
   <img src="./assets/hero-cinematic.jpg" width="100%" alt="Zaid Mayyalleh — Full-stack development and applied AI. Based in Palestine." />
   <br /><br />
+  <img src="./assets/motion-strip.svg" width="100%" alt="Build. Refine. Repeat. Full-stack development, backend systems, and applied AI." />
+  <br /><br />
   <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376"><strong>LinkedIn</strong></a>
   &nbsp;&nbsp; / &nbsp;&nbsp;
   <a href="mailto:zaidmayyalleh@gmail.com"><strong>Email</strong></a>
@@ -57,7 +59,25 @@ My projects range from Arabic-first web experiences to gesture-controlled interf
 
 <br />
 
-## 02 / Engineering toolkit
+## 02 / Engineering in numbers
+
+<a href="https://github.com/zaidmoen?tab=repositories">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/stats/github-overview-mobile.svg" />
+  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub overview: original repositories, stars, authored PRs, and merged PRs. Last refresh is printed on the card." />
+</picture>
+</a>
+
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/stats/github-details-mobile.svg" />
+  <img src="./assets/stats/github-details.svg" width="100%" alt="Primary language shares by public original repository count, and monthly public PRs opened over the last 12 calendar months. Current month is partial." />
+</picture>
+
+<sub>Public GitHub data · Refreshed daily · Language shares describe repositories, not proficiency. [Data & definitions](docs/profile-maintenance.md#statistics)</sub>
+
+<br />
+
+## 03 / Engineering toolkit
 
 | Domain | Technologies I work with |
 | :--- | :--- |
@@ -69,7 +89,7 @@ My projects range from Arabic-first web experiences to gesture-controlled interf
 
 <br />
 
-## 03 / Beyond the code
+## 04 / Beyond the code
 
 **Better foundations.** Deepening Python, object-oriented design, SOLID principles, SQL, and algorithms through hands-on practice.
 
