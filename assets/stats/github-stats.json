@@ -1,16 +1,16 @@
 {
   "user": "zaidmoen",
-  "updated_at": "2026-09-05T08:03:27Z",
+  "updated_at": "2026-09-05T08:14:15Z",
   "scope": "Public data only; repository metrics exclude forks.",
   "original_repositories": 21,
   "stars": 21,
   "followers": 14,
   "pull_requests": 13,
-  "merged_pull_requests": 12,
+  "merged_pull_requests": 13,
   "languages": [
     {
       "name": "Python",
-      "repositories": 6
+      "repositories": 7
     },
     {
       "name": "Jupyter Notebook",
@@ -37,7 +37,7 @@
       "repositories": 1
     }
   ],
-  "repositories_without_language": 3,
+  "repositories_without_language": 2,
   "monthly_pull_requests": [
     {
       "month": "2025-10",
