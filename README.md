@@ -1,122 +1,100 @@
 <div align="center">
-
-<img src="./assets/header.svg" width="100%" alt="Zaid Mayyalleh — Full-stack engineer and intelligent systems builder" />
+  <img src="./assets/header.svg" width="100%" alt="Zaid Mayyalleh — Full-stack development and applied AI. Based in Palestine." />
+  <br /><br />
+  <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376"><strong>LinkedIn</strong></a>
+  &nbsp;&nbsp; / &nbsp;&nbsp;
+  <a href="mailto:zaidmayyalleh@gmail.com"><strong>Email</strong></a>
+  &nbsp;&nbsp; / &nbsp;&nbsp;
+  <a href="https://github.com/zaidmoen?tab=repositories"><strong>Explore my work</strong></a>
+</div>
 
 <br />
 
-**Product-minded full-stack developer · Computer Science @ An-Najah National University · Palestine**
+### Turning ideas into software people can use.
 
-<p>
-  <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376">LinkedIn</a>
-  &nbsp;·&nbsp;
-  <a href="mailto:zaidmayyalleh@gmail.com">Email</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/zaidmoen?tab=repositories">All repositories</a>
-</p>
+I'm **Zaid**, a Computer Science student at **An-Najah National University**, building across web development, backend systems, and applied AI. I enjoy the work between a first idea and a finished experience: shaping the interface, designing the data, and making the pieces work together.
 
-</div>
+My projects range from Arabic-first web experiences to gesture-controlled interfaces and Python APIs. Alongside them, I'm building **Apex Intelligence**, a student community and learning platform centered on programming and problem solving.
 
-## Engineering with purpose
+<br />
 
-I turn ambiguous ideas into useful, reliable software—from Arabic-first web products and secure APIs to computer-vision and machine-learning experiments. I care about clear architecture, honest user experiences, and the final details that make software feel finished.
-
-> My north star: build things that solve a real problem, explain their trade-offs, and leave the codebase better than I found it.
-
-## Selected systems
+## Selected work
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-<a href="https://github.com/zaidmoen/palestine-now-web"><img src="./assets/project-palestine-now.svg" width="100%" alt="Palestine Now — Arabic-first public-information product" /></a>
-
-**An Arabic-first public-information product experience.**
-
-Unified search, a personalized local feed, responsive RTL interfaces, accessibility support, lazy-loaded routes, and production quality checks—all presented with clear trust boundaries around demo data.
-
-`React 19` `Vite` `Tailwind CSS` `Framer Motion`
-
-[Explore the repository →](https://github.com/zaidmoen/palestine-now-web)
-
+<a href="https://github.com/zaidmoen/palestine-now-web"><img src="./assets/project-palestine-now.svg" width="100%" alt="01 — Palestine Now. Arabic-first web experience." /></a>
+<h3>Information, designed around place.</h3>
+<p>An Arabic-first public-information interface exploring local discovery, search, and responsive RTL design.</p>
+<p><strong>Focus:</strong> Product experience · Frontend architecture</p>
+<a href="https://github.com/zaidmoen/palestine-now-web">Explore Palestine Now ↗</a>
 </td>
 <td width="50%" valign="top">
-
-<a href="https://github.com/zaidmoen/cube_builder"><img src="./assets/project-voxel.svg" width="100%" alt="Pinch Voxel Studio — gesture-controlled 3D builder" /></a>
-
-**A 3D voxel builder controlled by hand gestures.**
-
-Real-time hand tracking, a smoothed interaction cursor, multi-layer building, material modes, undo, and scene persistence turn a webcam into a hands-free creative interface.
-
-`Python` `MediaPipe` `OpenCV` `Computer Vision`
-
-[Explore the repository →](https://github.com/zaidmoen/cube_builder)
-
+<a href="https://github.com/zaidmoen/cube_builder"><img src="./assets/project-voxel.svg" width="100%" alt="02 — Pinch Voxel Studio. Gesture-controlled 3D building." /></a>
+<h3>Your hands become the interface.</h3>
+<p>A creative coding project that combines hand tracking and computer vision to build a gesture-controlled voxel experience.</p>
+<p><strong>Focus:</strong> Computer vision · Human–computer interaction</p>
+<a href="https://github.com/zaidmoen/cube_builder">Explore Pinch Voxel Studio ↗</a>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
-<a href="https://github.com/zaidmoen/Books_manegment_MySQL"><img src="./assets/project-books-api.svg" width="100%" alt="Books Management API — FastAPI and raw MySQL backend" /></a>
-
-**A raw-SQL backend designed like a real service.**
-
-JWT authentication, role-based access, parameterized queries, relational constraints, versioned migrations, safe data backfills, REST endpoints, and a ready-to-use Postman collection.
-
-`FastAPI` `MySQL` `Pydantic` `JWT`
-
-[Explore the repository →](https://github.com/zaidmoen/Books_manegment_MySQL)
-
+<a href="https://github.com/zaidmoen/Books_manegment_MySQL"><img src="./assets/project-books-api.svg" width="100%" alt="03 — Books Management API. Python, FastAPI, and MySQL." /></a>
+<h3>Beyond the CRUD endpoint.</h3>
+<p>A book-management backend for practicing raw SQL, authentication, relational data, reviews, and database migrations.</p>
+<p><strong>Focus:</strong> API design · Data integrity</p>
+<a href="https://github.com/zaidmoen/Books_manegment_MySQL">Explore Books Management API ↗</a>
 </td>
 <td width="50%" valign="top">
-
-<a href="https://github.com/zaidmoen/bank-marketing-ml-classification"><img src="./assets/project-ml-lab.svg" width="100%" alt="Bank Marketing ML Lab — multiclass machine-learning study" /></a>
-
-**An end-to-end multiclass machine-learning study.**
-
-Data exploration, preprocessing, K-Means analysis, MLP and Gradient Boosting comparison, stratified cross-validation, tuning, and results communicated through notebooks and a written report.
-
-`Python` `scikit-learn` `Jupyter` `Machine Learning`
-
-[Explore the repository →](https://github.com/zaidmoen/bank-marketing-ml-classification)
-
+<a href="https://github.com/zaidmoen/bank-marketing-ml-classification"><img src="./assets/project-ml-lab.svg" width="100%" alt="04 — Bank Marketing ML. A machine-learning classification study." /></a>
+<h3>From data to a defensible result.</h3>
+<p>A machine-learning study exploring bank-marketing data through preprocessing, classification, and model evaluation.</p>
+<p><strong>Focus:</strong> Applied ML · Experimentation</p>
+<a href="https://github.com/zaidmoen/bank-marketing-ml-classification">Explore the ML study ↗</a>
 </td>
 </tr>
 </table>
 
-## How I work
+<br />
 
-| Lens | What it means in practice |
-| --- | --- |
-| **Product** | Start with the user problem, make assumptions visible, and avoid pretending demo behavior is production behavior. |
-| **Architecture** | Keep boundaries clear, data models intentional, APIs predictable, and migrations repeatable. |
-| **Delivery** | Work in focused branches, review the diff, test behavior, and document the path from setup to result. |
-| **Growth** | Learn in public through structured practice in SQL, Python, algorithms, AI, and system design. |
+## Engineering toolkit
 
-## Current focus
+| Domain | Technologies I work with |
+| :--- | :--- |
+| **Languages** | Python · TypeScript · JavaScript · C++ · SQL |
+| **Web** | React · Vite · Tailwind CSS · Material UI |
+| **Backend & data** | FastAPI · MySQL · PostgreSQL · Supabase · REST APIs |
+| **Applied AI** | scikit-learn · OpenCV · MediaPipe · Jupyter |
+| **Development** | Git · GitHub · Postman · Figma |
 
-- Building **Apex Intelligence**, a collaborative academic platform for learning and problem solving.
-- Evolving **Palestine Now** from a strong product demo toward a trustworthy, source-backed platform.
-- Deepening backend engineering, databases, problem solving, and applied AI.
+<br />
 
-## Toolbox
+## What I'm building toward
 
-| Area | Technologies |
-| --- | --- |
-| **Languages** | Python · C++ · JavaScript · TypeScript · SQL · C# |
-| **Interfaces** | React · Vite · Tailwind CSS · Material UI · WPF |
-| **Backends** | FastAPI · Node.js · Express · REST APIs |
-| **Data** | MySQL · PostgreSQL · Supabase · schema design · migrations |
-| **Intelligence** | scikit-learn · MediaPipe · OpenCV · reinforcement learning |
-| **Workflow** | Git · GitHub · Postman · Figma · collaborative code review |
+**Better foundations.** Deepening Python, object-oriented design, SOLID principles, SQL, and algorithms through hands-on practice.
+
+**Better products.** Connecting clear interfaces with thoughtful backend design, useful documentation, and behavior that can be tested.
+
+**A stronger community.** Growing Apex Intelligence through collaborative projects, shared learning, and problem solving.
+
+<details>
+<summary><strong>A few principles behind the work</strong></summary>
+<br />
+
+- Start with the problem and make the assumptions explicit.
+- Prefer clear responsibilities and readable code over unnecessary complexity.
+- Review changes in focused branches and test the behavior that matters.
+- Document how to run the project, what it does, and where its limitations are.
+
+</details>
+
+<br />
+<hr />
 
 <div align="center">
-
-## Let’s build something useful
-
-I’m open to internships, junior software-engineering roles, open-source work, and ambitious student collaborations.
-
-[**Start a conversation on LinkedIn**](https://www.linkedin.com/in/zaid-mayyalleh-307499376) &nbsp;·&nbsp; [**Send me an email**](mailto:zaidmayyalleh@gmail.com)
-
-<sub>Designed and maintained by Zaid Mayyalleh · Building from Palestine 🇵🇸</sub>
-
+  <h3>Have something worth building?</h3>
+  <p>Open to internships, junior developer opportunities, and meaningful collaborations.</p>
+  <p><a href="mailto:zaidmayyalleh@gmail.com"><strong>Let's talk ↗</strong></a> &nbsp; · &nbsp; <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376">Connect on LinkedIn</a></p>
+  <br />
+  <sub>Zaid Mayyalleh &nbsp; / &nbsp; Built with intention. From Palestine.</sub>
 </div>
