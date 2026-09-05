@@ -13,6 +13,7 @@ import math
 import os
 from pathlib import Path
 import re
+from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -43,10 +44,14 @@ def month_keys(now: datetime) -> list[str]:
     return [f'{i // 12:04d}-{i % 12 + 1:02d}' for i in range(index - 11, index + 1)]
 
 
+def original_repos(user: str, repos: list[dict]) -> list[dict]:
+    return [r for r in repos if not r['fork'] and not r['private']
+            and r['owner']['login'].casefold() == user.casefold()]
+
+
 def summarize(user: str, repos: list[dict], followers: int, pull_requests: int,
-              merged: int, monthly: list[dict], now: datetime) -> dict:
-    original = [r for r in repos if not r['fork'] and not r['private']
-                and r['owner']['login'].casefold() == user.casefold()]
+              merged: int, monthly_commits: list[dict], now: datetime) -> dict:
+    original = original_repos(user, repos)
     languages = Counter(r['language'] for r in original if r.get('language'))
     return {
         'user': user, 'updated_at': now.strftime('%Y-%m-%dT%H:%M:%SZ'),
@@ -57,11 +62,44 @@ def summarize(user: str, repos: list[dict], followers: int, pull_requests: int,
         'languages': [{'name': name, 'repositories': count}
                       for name, count in sorted(languages.items(), key=lambda pair: (-pair[1], pair[0]))],
         'repositories_without_language': sum(not r.get('language') for r in original),
-        'monthly_pull_requests': monthly,
+        'monthly_commits': monthly_commits,
         'sources': [f'https://api.github.com/users/{user}',
                     f'https://api.github.com/users/{user}/repos',
-                    'https://api.github.com/search/issues'],
+                    'https://api.github.com/search/issues',
+                    f'https://api.github.com/repos/{user}/{{repo}}/commits'],
     }
+
+
+def fetch_monthly_commits(user: str, original: list[dict], months: list[str]) -> list[dict]:
+    """Count commits authored by `user` in their own original repositories, by month.
+
+    Uses the per-repository commits endpoint (not /search/commits) so a single
+    expired or missing token never affects more than the current repository,
+    and empty repositories (409 Conflict) are simply skipped.
+    """
+    since = f'{months[0]}-01T00:00:00Z'
+    window = set(months)
+    histogram = Counter()
+    for repo in original:
+        page = 1
+        while True:
+            query = urlencode({'author': user, 'since': since, 'per_page': 100, 'page': page})
+            try:
+                batch = api(f'/repos/{user}/{repo["name"]}/commits?{query}')
+            except HTTPError as error:
+                if error.code == 409:
+                    break  # Empty repository: no commits to count yet.
+                raise
+            if not batch:
+                break
+            for commit in batch:
+                date = (commit.get('commit') or {}).get('author', {}).get('date')
+                if date and date[:7] in window:
+                    histogram[date[:7]] += 1
+            if len(batch) < 100:
+                break
+            page += 1
+    return [{'month': month, 'count': histogram[month]} for month in months]
 
 
 def fetch_snapshot(user: str) -> dict:
@@ -79,30 +117,7 @@ def fetch_snapshot(user: str) -> dict:
     total = search_count(base)
     merged = search_count(base + ' is:merged')
     months = month_keys(now)
-    query = base + f' created:>={months[0]}-01'
-    histogram = Counter()
-    page = 1
-    seen = set()
-    expected = None
-    while True:
-        result = api('/search/issues?' + urlencode({'q': query, 'per_page': 100,
-                                                     'sort': 'created', 'order': 'asc', 'page': page}))
-        if result.get('incomplete_results'):
-            raise RuntimeError('Incomplete activity search: retaining previous snapshot')
-        expected = result['total_count']
-        if expected > 1000:
-            # Search caps accessible results at 1,000. Never silently truncate.
-            raise RuntimeError('Activity exceeds the search window; partition the query before refreshing')
-        for item in result['items']:
-            if item['id'] not in seen:
-                seen.add(item['id'])
-                histogram[item['created_at'][:7]] += 1
-        if len(result['items']) < 100:
-            break
-        page += 1
-    if len(seen) != expected:
-        raise RuntimeError('Activity changed during pagination; retry the refresh')
-    monthly = [{'month': month, 'count': histogram[month]} for month in months]
+    monthly = fetch_monthly_commits(user, original_repos(user, repos), months)
     return summarize(user, repos, profile['followers'], total, merged, monthly, now)
 
 
@@ -165,9 +180,9 @@ def language_card(s):
 
 
 def activity_card(s):
-    points = s['monthly_pull_requests']
-    body = txt(28, 40, 'Pull request rhythm', 24, weight=600)
-    body += txt(28, 68, 'Public PRs opened · trailing 12 calendar months', 12, '#91aac9')
+    points = s['monthly_commits']
+    body = txt(28, 40, 'Commit activity', 24, weight=600)
+    body += txt(28, 68, 'Commits authored · trailing 12 calendar months', 12, '#91aac9')
     top = max(1, max((p['count'] for p in points), default=0))
     scale = max(2, math.ceil(top / 2) * 2)
     bottom, chart_height = 273, 153
@@ -178,13 +193,13 @@ def activity_card(s):
     for i, point in enumerate(points):
         x = 60 + i * 39
         height = chart_height * point['count'] / scale
-        body += f'<rect x="{x}" y="{bottom-height:.2f}" width="23" height="{height:.2f}" rx="4" fill="url(#blue)"><title>{escape(point["month"])}: {point["count"]} pull requests</title></rect>'
+        body += f'<rect x="{x}" y="{bottom-height:.2f}" width="23" height="{height:.2f}" rx="4" fill="url(#blue)"><title>{escape(point["month"])}: {point["count"]} commits</title></rect>'
         if point['count']:
             body += txt(x+11.5, bottom-height-10, point['count'], 12, '#d2e9ff', extra='text-anchor="middle"')
         month = datetime.strptime(point['month'], '%Y-%m').strftime('%b')
         body += txt(x+11.5, 297, month, 10, '#91aac9', extra='text-anchor="middle"')
     body += txt(28, 345, f"{points[0]['month']} – {points[-1]['month']} · Current month is partial", 11, '#819abb')
-    return panel('Monthly public pull requests', 'PRs created by the profile owner; the current month is partial. This is not a commit or contribution count.', body, 560, 373)
+    return panel('Monthly commit activity', 'Commits authored by the profile owner across original public repositories; the current month is partial. This is not a full contributions graph — private-repository and forked-repository commits are excluded.', body, 560, 373)
 
 
 
@@ -213,7 +228,7 @@ def details_card(s, mobile=False):
         x, y = (0, i * 389) if mobile else (i * 576, 0)
         parts.append(card.replace('<svg ', f'<svg x="{x}" y="{y}" ', 1))
     w, h = (560, 762) if mobile else (1136, 373)
-    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Repository languages and monthly public pull requests">' + ''.join(parts) + '</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Repository languages and monthly commit activity">' + ''.join(parts) + '</svg>'
 
 
 def render(s, output):
