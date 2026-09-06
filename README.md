@@ -64,7 +64,7 @@ My projects range from Arabic-first web experiences to gesture-controlled interf
 <a href="https://github.com/zaidmoen?tab=repositories">
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stats/github-overview-mobile.svg" />
-  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub overview: original repositories, stars, authored PRs, and merged PRs. Last refresh is printed on the card." />
+  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub overview: original repositories, stars, public commits, and commits authored over the last 12 months. Last refresh is printed on the card." />
 </picture>
 </a>
 

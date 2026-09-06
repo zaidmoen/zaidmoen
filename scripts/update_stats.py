@@ -32,8 +32,8 @@ def api(path: str) -> object:
         return json.load(response)
 
 
-def search_count(query: str) -> int:
-    result = api('/search/issues?' + urlencode({'q': query, 'per_page': 1}))
+def search_count(endpoint: str, query: str) -> int:
+    result = api(endpoint + '?' + urlencode({'q': query, 'per_page': 1}))
     if result.get('incomplete_results'):
         raise RuntimeError('Incomplete GitHub search: retaining the previous snapshot')
     return result['total_count']
@@ -49,8 +49,8 @@ def original_repos(user: str, repos: list[dict]) -> list[dict]:
             and r['owner']['login'].casefold() == user.casefold()]
 
 
-def summarize(user: str, repos: list[dict], followers: int, pull_requests: int,
-              merged: int, monthly_commits: list[dict], now: datetime) -> dict:
+def summarize(user: str, repos: list[dict], followers: int, public_commits: int,
+              monthly_commits: list[dict], now: datetime) -> dict:
     original = original_repos(user, repos)
     languages = Counter(r['language'] for r in original if r.get('language'))
     return {
@@ -58,14 +58,16 @@ def summarize(user: str, repos: list[dict], followers: int, pull_requests: int,
         'scope': 'Public data only; repository metrics exclude forks.',
         'original_repositories': len(original),
         'stars': sum(r['stargazers_count'] for r in original),
-        'followers': followers, 'pull_requests': pull_requests, 'merged_pull_requests': merged,
+        'followers': followers,
+        'public_commits': public_commits,
+        'commits_last_12_months': sum(item['count'] for item in monthly_commits),
         'languages': [{'name': name, 'repositories': count}
                       for name, count in sorted(languages.items(), key=lambda pair: (-pair[1], pair[0]))],
         'repositories_without_language': sum(not r.get('language') for r in original),
         'monthly_commits': monthly_commits,
         'sources': [f'https://api.github.com/users/{user}',
                     f'https://api.github.com/users/{user}/repos',
-                    'https://api.github.com/search/issues',
+                    'https://api.github.com/search/commits',
                     f'https://api.github.com/repos/{user}/{{repo}}/commits'],
     }
 
@@ -113,12 +115,10 @@ def fetch_snapshot(user: str) -> dict:
         if len(batch) < 100:
             break
         page += 1
-    base = f'author:{user} type:pr is:public'
-    total = search_count(base)
-    merged = search_count(base + ' is:merged')
+    public_commits = search_count('/search/commits', f'author:{user}')
     months = month_keys(now)
     monthly = fetch_monthly_commits(user, original_repos(user, repos), months)
-    return summarize(user, repos, profile['followers'], total, merged, monthly, now)
+    return summarize(user, repos, profile['followers'], public_commits, monthly, now)
 
 
 def txt(x, y, value, size=18, color='#ebf3ff', weight=400, extra=''):
@@ -141,14 +141,15 @@ def overview(s):
     body += txt(1086, 41, 'PUBLIC DATA', 11, '#91aac9', extra='text-anchor="end"')
     body += '<path d="M34 63H1086" stroke="#233a58"/>'
     metrics = [('original_repositories', 'Original repositories'), ('stars', 'Stars received'),
-               ('pull_requests', 'Pull requests opened'), ('merged_pull_requests', 'Pull requests merged')]
+               ('public_commits', 'Public commits'), ('commits_last_12_months', 'Commits · last 12 months')]
     for i, (key, label) in enumerate(metrics):
         x = 34 + i * 276
-        body += txt(x, 131, f'{s[key]:,}', 48, weight=700)
+        color = '#72d9ff' if key in {'public_commits', 'commits_last_12_months'} else '#ebf3ff'
+        body += txt(x, 131, f'{s[key]:,}', 48, color, 700)
         body += txt(x, 162, label, 14, '#9fb5d2')
         if i < 3:
             body += f'<path d="M{x+246} 90V170" stroke="#243952"/>'
-    body += txt(34, 207, f"{s['followers']} followers  /  Public original repositories and public authored PRs", 12, '#88a2c2')
+    body += txt(34, 207, f"{s['followers']} followers  /  Public repositories and authored commit activity", 12, '#88a2c2')
     stamp = datetime.fromisoformat(s['updated_at'].replace('Z', '+00:00')).strftime('%d %b %Y · %H:%M UTC')
     body += txt(1086, 207, stamp, 11, '#88a2c2', extra='text-anchor="end"')
     return panel('GitHub engineering snapshot', s['scope'] + f" Updated {s['updated_at']}.", body, 1120, 235)
@@ -206,10 +207,11 @@ def activity_card(s):
 def overview_mobile(s):
     body = txt(28, 36, 'GITHUB / ENGINEERING SNAPSHOT', 12, '#82baff', 600)
     metrics = [('original_repositories', 'Original repositories'), ('stars', 'Stars received'),
-               ('pull_requests', 'PRs opened'), ('merged_pull_requests', 'PRs merged')]
+               ('public_commits', 'Public commits'), ('commits_last_12_months', 'Commits · last 12 months')]
     for i, (key, label) in enumerate(metrics):
         x, y = 28 + (i % 2) * 274, 104 + (i // 2) * 111
-        body += txt(x, y, f'{s[key]:,}', 42, weight=700)
+        color = '#72d9ff' if key in {'public_commits', 'commits_last_12_months'} else '#ebf3ff'
+        body += txt(x, y, f'{s[key]:,}', 42, color, 700)
         body += txt(x, y+29, label, 14, '#9fb5d2')
     body += txt(28, 283, f"{s['followers']} followers · Public data · Repository forks excluded", 12, '#88a2c2')
     stamp = datetime.fromisoformat(s['updated_at'].replace('Z', '+00:00')).strftime('%d %b %Y · %H:%M UTC')

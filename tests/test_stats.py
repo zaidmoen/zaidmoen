@@ -18,7 +18,7 @@ def repo(language='Python', stars=2, fork=False, private=False, owner='zaidmoen'
 
 
 def snapshot(repos=()):
-    return stats.summarize('zaidmoen', list(repos), 14, 13, 12,
+    return stats.summarize('zaidmoen', list(repos), 14, 321,
                            [{'month': m, 'count': 0} for m in stats.month_keys(NOW)], NOW)
 
 
@@ -50,26 +50,19 @@ class StatisticsTests(unittest.TestCase):
         self.assertIn('Other', svg)
         self.assertIn('3 repos · 37.5%', svg)
 
-    def test_incomplete_search_is_an_error(self):
+    def test_commit_metrics_are_rendered_in_overview(self):
+        monthly = [{'month': m, 'count': 2} for m in stats.month_keys(NOW)]
+        data = stats.summarize('zaidmoen', [repo()], 14, 321, monthly, NOW)
+        svg = stats.overview(data)
+        self.assertEqual(data['commits_last_12_months'], 24)
+        self.assertIn('Public commits', svg)
+        self.assertIn('Commits · last 12 months', svg)
+        self.assertNotIn('Pull requests', svg)
+
+    def test_incomplete_commit_search_is_an_error(self):
         with patch.object(stats, 'api', return_value={'incomplete_results': True, 'total_count': 1}):
             with self.assertRaises(RuntimeError):
-                stats.search_count('author:zaidmoen type:pr')
-
-    def test_activity_pagination_preserves_all_items(self):
-        month = datetime.now(timezone.utc).strftime('%Y-%m')
-        items = [{'id': n, 'created_at': month + '-01T00:00:00Z'} for n in range(101)]
-        def fake(path):
-            if path == '/users/zaidmoen':
-                return {'followers': 14}
-            if path.startswith('/users/zaidmoen/repos'):
-                return []
-            if 'sort=created' in path:
-                return {'incomplete_results': False, 'total_count': 101,
-                        'items': items[100:] if 'page=2' in path else items[:100]}
-            return {'incomplete_results': False, 'total_count': 101}
-        with patch.object(stats, 'api', side_effect=fake):
-            result = stats.fetch_snapshot('zaidmoen')
-        self.assertEqual(sum(row['count'] for row in result['monthly_pull_requests']), 101)
+                stats.search_count('/search/commits', 'author:zaidmoen')
 
     def test_render_outputs_use_same_snapshot(self):
         data = snapshot([repo()])

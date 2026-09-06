@@ -11,12 +11,12 @@ The daily **Refresh profile statistics** workflow uses GitHub's REST API and the
 | Original repositories | Public repositories owned by `zaidmoen`, excluding forks; archived repositories are included. |
 | Stars received | Sum of stars on those original repositories. |
 | Followers | The public follower count on the account. |
-| Pull requests opened | Public PRs authored by `zaidmoen`, across repositories. |
-| Pull requests merged | Public authored PRs with merged status. |
+| Public commits | Commits returned by GitHub commit search for author `zaidmoen` in repositories visible publicly. |
+| Commits · last 12 months | Commits authored by `zaidmoen` in owned, public, original repositories during the latest 12 calendar months. |
 | Repository languages | One detected primary language per public original repository. Percentages use repositories with a detected language as the denominator. Repositories with no language are reported separately. These percentages are not proficiency, time spent, or lines of code. |
-| Pull request rhythm | Public authored PRs grouped by their creation month for the latest 12 calendar months. The current month is partial; zero months are retained. It is not a commits/contributions graph. |
+| Commit activity | Public authored commits in owned original repositories, grouped by month for the latest 12 calendar months. The current month is partial; zero months are retained. It is not a full contributions graph because private and forked repositories are excluded. |
 
-The compact snapshot is saved in `assets/stats/github-stats.json`. API errors, incomplete search results, or search-window truncation cause the job to fail without publishing a partial refresh. Previous cards remain available with their original timestamp. GitHub search indexing can lag new PRs and merges.
+The compact snapshot is saved in `assets/stats/github-stats.json`. API errors or incomplete search results cause the job to fail without publishing a partial refresh. Previous cards remain available with their original timestamp. GitHub search indexing can lag new commits.
 
 ### Run locally
 

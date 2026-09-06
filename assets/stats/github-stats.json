@@ -1,16 +1,16 @@
 {
   "user": "zaidmoen",
-  "updated_at": "2026-09-05T08:14:15Z",
+  "updated_at": "2026-09-06T10:58:43Z",
   "scope": "Public data only; repository metrics exclude forks.",
-  "original_repositories": 21,
-  "stars": 21,
+  "original_repositories": 22,
+  "stars": 24,
   "followers": 14,
-  "pull_requests": 13,
-  "merged_pull_requests": 13,
+  "public_commits": 290,
+  "commits_last_12_months": 205,
   "languages": [
     {
       "name": "Python",
-      "repositories": 7
+      "repositories": 8
     },
     {
       "name": "Jupyter Notebook",
@@ -38,7 +38,7 @@
     }
   ],
   "repositories_without_language": 2,
-  "monthly_pull_requests": [
+  "monthly_commits": [
     {
       "month": "2025-10",
       "count": 0
@@ -61,36 +61,37 @@
     },
     {
       "month": "2026-03",
-      "count": 0
+      "count": 24
     },
     {
       "month": "2026-04",
-      "count": 1
+      "count": 40
     },
     {
       "month": "2026-05",
-      "count": 0
+      "count": 2
     },
     {
       "month": "2026-06",
-      "count": 0
+      "count": 7
     },
     {
       "month": "2026-07",
-      "count": 0
+      "count": 8
     },
     {
       "month": "2026-08",
-      "count": 0
+      "count": 91
     },
     {
       "month": "2026-09",
-      "count": 12
+      "count": 33
     }
   ],
   "sources": [
     "https://api.github.com/users/zaidmoen",
     "https://api.github.com/users/zaidmoen/repos",
-    "https://api.github.com/search/issues"
+    "https://api.github.com/search/commits",
+    "https://api.github.com/repos/zaidmoen/{repo}/commits"
   ]
 }
