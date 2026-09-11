@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+<title id="title">Tools I work with</title><desc id="desc">Languages: Python, JavaScript, TypeScript, C++, SQL. Web and backend: React, FastAPI, Django, MySQL, Supabase. AI and workflow: OpenCV, MediaPipe, scikit-learn, Git.</desc>
+<defs>
+<radialGradient id="halo"><stop stop-color="#384529" stop-opacity=".7"/><stop offset="1" stop-color="#101210" stop-opacity="0"/></radialGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f2e9"/><stop offset=".5" stop-color="#85966b"/><stop offset="1" stop-color="#d1ff73"/></linearGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#232a20" stroke-width=".65"/></pattern>
+<clipPath id="bounds"><rect width="600" height="360" rx="20"/></clipPath>
+</defs><style>
+.orbit{animation:orbit 32s linear infinite;transform-box:fill-box;transform-origin:center}
+.float{animation:float 7s ease-in-out infinite}
+.flow{stroke-dasharray:12 180;animation:flow 10s linear infinite}
+.breathe{animation:breathe 5s ease-in-out infinite}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-9px)}}
+@keyframes flow{to{stroke-dashoffset:-384}}
+@keyframes breathe{50%{opacity:.45}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<g clip-path="url(#bounds)"><rect width="600" height="360" fill="#101210"/><text x="28" y="47" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" letter-spacing="2">01</text><text x="75" y="47" fill="#9ba394" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" letter-spacing="2">LANGUAGES</text><text x="28" y="83" fill="#f1f2e9" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" >Python / JavaScript / TypeScript / C++ / SQL</text><path d="M28 105L572 105" stroke="#30372d" fill="none" /><text x="28" y="159" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" letter-spacing="2">02</text><text x="75" y="159" fill="#9ba394" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" letter-spacing="2">WEB &amp; BACKEND</text><text x="28" y="195" fill="#f1f2e9" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" >React / FastAPI / Django / MySQL / Supabase</text><path d="M28 217L572 217" stroke="#30372d" fill="none" /><text x="28" y="271" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" letter-spacing="2">03</text><text x="75" y="271" fill="#9ba394" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" letter-spacing="2">AI &amp; WORKFLOW</text><text x="28" y="307" fill="#f1f2e9" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" >OpenCV / MediaPipe / scikit-learn / Git</text></g>
+<rect x=".5" y=".5" width="599" height="359" rx="20" fill="none" stroke="#30372d"/>
+</svg>
