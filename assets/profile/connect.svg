@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="224" viewBox="0 0 1200 224" role="img" aria-labelledby="title desc">
+<title id="title">Let&#x27;s make it happen — contact Zaid</title><desc id="desc">Let&#x27;s make it happen — contact Zaid</desc>
+<defs>
+<radialGradient id="halo"><stop stop-color="#384529" stop-opacity=".7"/><stop offset="1" stop-color="#101210" stop-opacity="0"/></radialGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f2e9"/><stop offset=".5" stop-color="#85966b"/><stop offset="1" stop-color="#d1ff73"/></linearGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#232a20" stroke-width=".65"/></pattern>
+<clipPath id="bounds"><rect width="1200" height="224" rx="20"/></clipPath>
+</defs><style>
+.orbit{animation:orbit 32s linear infinite;transform-box:fill-box;transform-origin:center}
+.float{animation:float 7s ease-in-out infinite}
+.flow{stroke-dasharray:12 180;animation:flow 10s linear infinite}
+.breathe{animation:breathe 5s ease-in-out infinite}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-9px)}}
+@keyframes flow{to{stroke-dashoffset:-384}}
+@keyframes breathe{50%{opacity:.45}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<g clip-path="url(#bounds)"><rect width="1200" height="224" fill="#101210"/><text x="30" y="43" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" letter-spacing="2">HAVE SOMETHING WORTH BUILDING?</text><text x="28" y="116" fill="#f1f2e9" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="700" letter-spacing="-2">Let&#x27;s make it happen.</text><text x="30" y="179" fill="#9ba394" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="400" >Internships / Junior roles / Collaboration</text><text x="1080" y="139" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="82" font-weight="400" class="float">↗</text></g>
+<rect x=".5" y=".5" width="1199" height="223" rx="20" fill="none" stroke="#30372d"/>
+</svg>

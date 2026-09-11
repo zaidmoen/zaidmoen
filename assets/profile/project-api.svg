@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="242" viewBox="0 0 1200 242" role="img" aria-labelledby="title desc">
+<title id="title">Books Management API</title><desc id="desc">Relational data. Explicit permissions. Raw SQL. FastAPI / MySQL / JWT. Decorative illustration; not a product screenshot.</desc>
+<defs>
+<radialGradient id="halo"><stop stop-color="#384529" stop-opacity=".7"/><stop offset="1" stop-color="#101210" stop-opacity="0"/></radialGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f2e9"/><stop offset=".5" stop-color="#85966b"/><stop offset="1" stop-color="#d1ff73"/></linearGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#232a20" stroke-width=".65"/></pattern>
+<clipPath id="bounds"><rect width="1200" height="242" rx="20"/></clipPath>
+</defs><style>
+.orbit{animation:orbit 32s linear infinite;transform-box:fill-box;transform-origin:center}
+.float{animation:float 7s ease-in-out infinite}
+.flow{stroke-dasharray:12 180;animation:flow 10s linear infinite}
+.breathe{animation:breathe 5s ease-in-out infinite}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-9px)}}
+@keyframes flow{to{stroke-dashoffset:-384}}
+@keyframes breathe{50%{opacity:.45}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<g clip-path="url(#bounds)"><rect width="1200" height="242" fill="#101210"/><text x="30" y="39" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" letter-spacing="2">01 / BACKEND ENGINEERING</text><text x="30" y="101" fill="#f1f2e9" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="700" letter-spacing="-1.5">Books Management API</text><text x="30" y="141" fill="#9ba394" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="400" >Relational data. Explicit permissions. Raw SQL.</text><text x="30" y="205" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" >FastAPI / MySQL / JWT</text><g transform="translate(805 28)"><rect x="25" y="58" width="70" height="64" rx="10" fill="#1c2318" stroke="#617344"/><text x="60" y="95" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="middle">API</text><rect x="131" y="58" width="70" height="64" rx="10" fill="#1c2318" stroke="#617344"/><text x="166" y="95" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="middle">AUTH</text><rect x="237" y="58" width="70" height="64" rx="10" fill="#1c2318" stroke="#617344"/><text x="272" y="95" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="middle">SQL</text><path d="M95 90H131M201 90H237M60 124v25H271v-25" fill="none" stroke="#54643f"/><path class="flow" d="M60 149H272V90H60" fill="none" stroke="#d1ff73" stroke-width="2"/><text x="101" y="32" fill="#9ba394" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" letter-spacing="2">REQUEST / RESPONSE</text></g><text x="1142" y="205" fill="#d1ff73" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="400" >↗</text></g>
+<rect x=".5" y=".5" width="1199" height="241" rx="20" fill="none" stroke="#30372d"/>
+</svg>
