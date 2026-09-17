@@ -1,6 +1,6 @@
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/profile/hero-mobile.svg" />
-  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Software developer based in Palestine. Thoughtful interfaces. Solid foundations." />
+  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Software developer based in Palestine. Curiosity into code." />
 </picture>
 
 <p align="center">
@@ -12,11 +12,11 @@
 
 <br />
 
-### Good software starts with a clear idea.
+### Turning what I learn into things you can use.
 
 I'm **Zaid**, a student at **An-Najah National University** in Palestine, building across **full-stack development, backend systems, and applied AI**.
 
-My work ranges from APIs with carefully modeled data to interfaces you can control with your hands. I care about clear responsibilities in code, useful product details, and understanding what happens beneath the abstraction.
+From relational APIs to gesture-controlled interfaces, I enjoy connecting the pieces and understanding how they work. My focus is readable code, useful features, and strong foundations.
 
 Currently growing **Apex Intelligence**, sharpening my Python and system-design foundations, and turning what I learn into projects you can explore below.
 
@@ -26,7 +26,7 @@ Currently growing **Apex Intelligence**, sharpening my Python and system-design 
 
 <sub>01 / A selection of things I've built and explored.</sub>
 
-<br /><br />
+<br />
 
 <a href="https://github.com/zaidmoen/Books_manegment_MySQL">
   <picture>
@@ -92,7 +92,7 @@ A classification study exploring **data preprocessing, model comparison, and eva
 
 <sub>02 / Tools I use across projects and ongoing learning.</sub>
 
-<br /><br />
+<br />
 
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/profile/stack-mobile.svg" />
@@ -105,7 +105,7 @@ A classification study exploring **data preprocessing, model comparison, and eva
 
 <sub>03 / The work behind the work.</sub>
 
-<br /><br />
+<br />
 
 <a href="https://github.com/zaidmoen?tab=repositories">
   <picture>
@@ -121,12 +121,12 @@ A classification study exploring **data preprocessing, model comparison, and eva
 
 <sub>Public data · Scheduled daily refresh · Language shares reflect repository counts, not proficiency. <a href="./docs/profile-maintenance.md#statistics">Metric definitions</a>.</sub>
 
-<br /><br />
+<br />
 
 <a href="mailto:zmayyalleh@gmail.com">
   <picture>
     <source media="(max-width: 640px)" srcset="./assets/profile/connect-mobile.svg" />
-    <img src="./assets/profile/connect.svg" width="100%" alt="Let's make it happen. Open to internships, junior roles, and collaboration. Email Zaid." />
+    <img src="./assets/profile/connect.svg" width="100%" alt="Good ideas deserve great execution. Open to internships, junior roles, and collaboration. Email Zaid." />
   </picture>
 </a>
 
