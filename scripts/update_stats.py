@@ -18,7 +18,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-COLORS = ['#67e8f9', '#7da8ff', '#c4b5fd', '#f9a8d4', '#38bdf8', '#94a3b8']
+COLORS = ['#ff794b', '#e8c999', '#d6cfc2', '#cda98e', '#ad9981', '#858077']
 
 
 def api(path: str) -> object:
@@ -121,7 +121,7 @@ def fetch_snapshot(user: str) -> dict:
     return summarize(user, repos, profile['followers'], public_commits, monthly, now)
 
 
-def txt(x, y, value, size=18, color='#edf4ff', weight=400, extra=''):
+def txt(x, y, value, size=18, color='#f2efe8', weight=400, extra=''):
     return (f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" '
             f'font-size="{size}" fill="{color}" font-weight="{weight}" {extra}>'
             f'{escape(str(value))}</text>')
@@ -130,34 +130,34 @@ def txt(x, y, value, size=18, color='#edf4ff', weight=400, extra=''):
 def panel(title, description, body, width, height):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 <title id="title">{escape(title)}</title><desc id="desc">{escape(description)}</desc>
-<defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#101b30"/><stop offset="1" stop-color="#080f20"/></linearGradient>
-<linearGradient id="blue"><stop offset="0" stop-color="#5186ef"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
-</defs><rect width="{width}" height="{height}" rx="18" fill="url(#bg)"/><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="17" fill="none" stroke="#23334d"/>
+<defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#1c1c1c"/><stop offset="1" stop-color="#141414"/></linearGradient>
+<linearGradient id="blue"><stop offset="0" stop-color="#bc5333"/><stop offset="1" stop-color="#ff794b"/></linearGradient>
+</defs><rect width="{width}" height="{height}" rx="18" fill="url(#bg)"/><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="17" fill="none" stroke="#363431"/>
 {body}</svg>'''
 
 
 def overview(s):
-    body = txt(34, 41, 'GITHUB / BY THE COMMITS', 13, '#67e8f9', 600, 'letter-spacing="2"')
-    body += txt(1086, 41, 'PUBLIC DATA', 11, '#a0b2cc', extra='text-anchor="end"')
-    body += '<path d="M34 63H1086" stroke="#23334d"/>'
+    body = txt(34, 41, 'GITHUB / BY THE COMMITS', 13, '#ff794b', 600, 'letter-spacing="2"')
+    body += txt(1086, 41, 'PUBLIC DATA', 11, '#aaa69e', extra='text-anchor="end"')
+    body += '<path d="M34 63H1086" stroke="#363431"/>'
     metrics = [('original_repositories', 'Original repositories'), ('stars', 'Stars received'),
                ('public_commits', 'Public commits'), ('commits_last_12_months', 'Commits · last 12 months')]
     for i, (key, label) in enumerate(metrics):
         x = 34 + i * 276
-        color = '#67e8f9' if key in {'public_commits', 'commits_last_12_months'} else '#edf4ff'
+        color = '#ff794b' if key in {'public_commits', 'commits_last_12_months'} else '#f2efe8'
         body += txt(x, 131, f'{s[key]:,}', 48, color, 700)
-        body += txt(x, 162, label, 14, '#b7c7dc')
+        body += txt(x, 162, label, 14, '#c8c1b5')
         if i < 3:
-            body += f'<path d="M{x+246} 90V170" stroke="#23334d"/>'
-    body += txt(34, 207, f"{s['followers']} followers  /  Public repositories and authored commit activity", 12, '#a0b2cc')
+            body += f'<path d="M{x+246} 90V170" stroke="#363431"/>'
+    body += txt(34, 207, f"{s['followers']} followers  /  Public repositories and authored commit activity", 12, '#aaa69e')
     stamp = datetime.fromisoformat(s['updated_at'].replace('Z', '+00:00')).strftime('%d %b %Y · %H:%M UTC')
-    body += txt(1086, 207, stamp, 11, '#a0b2cc', extra='text-anchor="end"')
+    body += txt(1086, 207, stamp, 11, '#aaa69e', extra='text-anchor="end"')
     return panel('GitHub engineering snapshot', s['scope'] + f" Updated {s['updated_at']}.", body, 1120, 235)
 
 
 def language_card(s):
     body = txt(28, 40, 'Repository languages', 24, weight=600)
-    body += txt(28, 68, 'Primary language per public original repository', 12, '#a0b2cc')
+    body += txt(28, 68, 'Primary language per public original repository', 12, '#aaa69e')
     langs = s['languages']
     display = langs[:5]
     if len(langs) > 5:
@@ -169,53 +169,53 @@ def language_card(s):
         body += f'<rect x="{start:.2f}" y="94" width="{width:.2f}" height="13" fill="{COLORS[i]}"/>'
         start += width
     if not total:
-        body += txt(28, 144, 'No language data available.', 15, '#a0b2cc')
+        body += txt(28, 144, 'No language data available.', 15, '#aaa69e')
     for i, entry in enumerate(display):
         y = 143 + i * 29
         pct = 100 * entry['repositories'] / total
         body += f'<circle cx="34" cy="{y-5}" r="4" fill="{COLORS[i]}"/>'
         body += txt(49, y, entry['name'], 14)
-        body += txt(532, y, f"{entry['repositories']} repos · {pct:.1f}%", 13, '#b7c7dc', extra='text-anchor="end"')
-    body += txt(28, 345, f"{total} classified · {s['repositories_without_language']} without a detected language", 11, '#a0b2cc')
+        body += txt(532, y, f"{entry['repositories']} repos · {pct:.1f}%", 13, '#c8c1b5', extra='text-anchor="end"')
+    body += txt(28, 345, f"{total} classified · {s['repositories_without_language']} without a detected language", 11, '#aaa69e')
     return panel('Repository language distribution', 'Repository counts, not lines of code or skill ratings.', body, 560, 373)
 
 
 def activity_card(s):
     points = s['monthly_commits']
     body = txt(28, 40, 'Commit activity', 24, weight=600)
-    body += txt(28, 68, 'Commits authored · trailing 12 calendar months', 12, '#a0b2cc')
+    body += txt(28, 68, 'Commits authored · trailing 12 calendar months', 12, '#aaa69e')
     top = max(1, max((p['count'] for p in points), default=0))
     scale = max(2, math.ceil(top / 2) * 2)
     bottom, chart_height = 273, 153
     for count in [0, scale // 2, scale]:
         y = bottom - chart_height * count / scale
-        body += f'<path d="M50 {y:.2f}H532" stroke="#23334d" stroke-dasharray="3 5"/>'
-        body += txt(37, y + 4, count, 11, '#a0b2cc', extra='text-anchor="end"')
+        body += f'<path d="M50 {y:.2f}H532" stroke="#363431" stroke-dasharray="3 5"/>'
+        body += txt(37, y + 4, count, 11, '#aaa69e', extra='text-anchor="end"')
     for i, point in enumerate(points):
         x = 60 + i * 39
         height = chart_height * point['count'] / scale
         body += f'<rect x="{x}" y="{bottom-height:.2f}" width="23" height="{height:.2f}" rx="4" fill="url(#blue)"><title>{escape(point["month"])}: {point["count"]} commits</title></rect>'
         if point['count']:
-            body += txt(x+11.5, bottom-height-10, point['count'], 12, '#d8f5ff', extra='text-anchor="middle"')
+            body += txt(x+11.5, bottom-height-10, point['count'], 12, '#ffdbc8', extra='text-anchor="middle"')
         month = datetime.strptime(point['month'], '%Y-%m').strftime('%b')
-        body += txt(x+11.5, 297, month, 10, '#a0b2cc', extra='text-anchor="middle"')
-    body += txt(28, 345, f"{points[0]['month']} – {points[-1]['month']} · Current month is partial", 11, '#a0b2cc')
+        body += txt(x+11.5, 297, month, 10, '#aaa69e', extra='text-anchor="middle"')
+    body += txt(28, 345, f"{points[0]['month']} – {points[-1]['month']} · Current month is partial", 11, '#aaa69e')
     return panel('Monthly commit activity', 'Commits authored by the profile owner across original public repositories; the current month is partial. This is not a full contributions graph — private-repository and forked-repository commits are excluded.', body, 560, 373)
 
 
 
 def overview_mobile(s):
-    body = txt(28, 36, 'GITHUB / BY THE COMMITS', 12, '#67e8f9', 600)
+    body = txt(28, 36, 'GITHUB / BY THE COMMITS', 12, '#ff794b', 600)
     metrics = [('original_repositories', 'Original repositories'), ('stars', 'Stars received'),
                ('public_commits', 'Public commits'), ('commits_last_12_months', 'Commits · last 12 months')]
     for i, (key, label) in enumerate(metrics):
         x, y = 28 + (i % 2) * 274, 104 + (i // 2) * 111
-        color = '#67e8f9' if key in {'public_commits', 'commits_last_12_months'} else '#edf4ff'
+        color = '#ff794b' if key in {'public_commits', 'commits_last_12_months'} else '#f2efe8'
         body += txt(x, y, f'{s[key]:,}', 42, color, 700)
-        body += txt(x, y+29, label, 14, '#b7c7dc')
-    body += txt(28, 283, f"{s['followers']} followers · Public data · Repository forks excluded", 12, '#a0b2cc')
+        body += txt(x, y+29, label, 14, '#c8c1b5')
+    body += txt(28, 283, f"{s['followers']} followers · Public data · Repository forks excluded", 12, '#aaa69e')
     stamp = datetime.fromisoformat(s['updated_at'].replace('Z', '+00:00')).strftime('%d %b %Y · %H:%M UTC')
-    body += txt(28, 313, 'Updated ' + stamp, 12, '#a0b2cc')
+    body += txt(28, 313, 'Updated ' + stamp, 12, '#aaa69e')
     return panel('GitHub engineering snapshot', s['scope'], body, 560, 338)
 
 

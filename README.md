@@ -1,87 +1,83 @@
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/profile/hero-mobile.svg" />
-  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Software developer based in Palestine. Curiosity into code." />
+  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Full-stack developer in Palestine. Built on curiosity. Refined through code." />
 </picture>
 
 <p align="center">
-  <a href="#selected-work">Selected work</a> &nbsp; / &nbsp;
-  <a href="#toolkit">Toolkit</a> &nbsp; / &nbsp;
-  <a href="#by-the-commits">GitHub activity</a> &nbsp; / &nbsp;
+  <a href="#selected-work">Selected work</a> &nbsp; · &nbsp;
+  <a href="#toolkit">Toolkit</a> &nbsp; · &nbsp;
+  <a href="#github-activity">Activity</a> &nbsp; · &nbsp;
   <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376/">LinkedIn ↗</a>
 </p>
 
 <br />
 
-### Turning what I learn into things you can use.
+I'm **Zaid**, a student at **An-Najah National University**, Palestine. I build across **full-stack development, backend systems, and applied AI**.
 
-I'm **Zaid**, a student at **An-Najah National University** in Palestine, building across **full-stack development, backend systems, and applied AI**.
-
-From relational APIs to gesture-controlled interfaces, I enjoy connecting the pieces and understanding how they work. My focus is readable code, useful features, and strong foundations.
-
-Currently growing **Apex Intelligence**, sharpening my Python and system-design foundations, and turning what I learn into projects you can explore below.
+I enjoy making the pieces work together: clear APIs, thoughtful interfaces, and experiments that turn into useful projects. Currently growing **Apex Intelligence** and strengthening my Python and system-design foundations.
 
 <br />
 
 ## Selected work
 
-<sub>01 / A selection of things I've built and explored.</sub>
+<sub>01 / From data and APIs to interfaces you can control with your hands.</sub>
 
 <br />
 
 <a href="https://github.com/zaidmoen/Books_manegment_MySQL">
-  <picture>
-    <source media="(max-width: 640px)" srcset="./assets/profile/project-api-mobile.svg" />
-    <img src="./assets/profile/project-api.svg" width="100%" alt="Books Management API — FastAPI, MySQL and JWT. Explore the repository." />
-  </picture>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/profile/project-api-mobile.svg" />
+  <img src="./assets/profile/project-api.svg" width="100%" alt="Books Management API — FastAPI, MySQL, and JWT. Explore the repository." />
+</picture>
 </a>
 
-Schools, classes, books, and reviews in a relational backend. **Parameterized SQL, role-based access, and versioned migrations.**
+<sub>Parameterized SQL · Role-based access · Versioned migrations</sub>
 
-<br />
+<br /><br />
 
 <a href="https://github.com/zaidmoen/cube_builder">
-  <picture>
-    <source media="(max-width: 640px)" srcset="./assets/profile/project-voxel-mobile.svg" />
-    <img src="./assets/profile/project-voxel.svg" width="100%" alt="Pinch Voxel Studio — Python, OpenCV and MediaPipe. Explore the repository." />
-  </picture>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/profile/project-voxel-mobile.svg" />
+  <img src="./assets/profile/project-voxel.svg" width="100%" alt="Pinch Voxel Studio — A gesture-controlled voxel editor using Python, OpenCV, and MediaPipe." />
+</picture>
 </a>
 
-A webcam-driven voxel editor with **hand tracking, pinch gestures, isometric rendering, and scene persistence**.
+<sub>Hand tracking · Pinch gestures · Isometric rendering · Scene persistence</sub>
 
-<br />
+<br /><br />
 
 <a href="https://github.com/zaidmoen/palestine-now-web">
-  <picture>
-    <source media="(max-width: 640px)" srcset="./assets/profile/project-web-mobile.svg" />
-    <img src="./assets/profile/project-web.svg" width="100%" alt="Palestine Now — React, Vite and Tailwind CSS. Explore the repository." />
-  </picture>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/profile/project-web-mobile.svg" />
+  <img src="./assets/profile/project-web.svg" width="100%" alt="Palestine Now — An Arabic-first local discovery demo built with React, Vite, and Tailwind CSS." />
+</picture>
 </a>
 
-An Arabic-first product demo for local discovery, with **unified search, personalized feeds, and accessible RTL layouts**. Uses sample data.
+<sub>Search · Personalized feeds · Accessible RTL layouts · Demo with sample data</sub>
 
-<br />
+<br /><br />
 
 <a href="https://github.com/zaidmoen/bank-marketing-ml-classification">
-  <picture>
-    <source media="(max-width: 640px)" srcset="./assets/profile/project-ml-mobile.svg" />
-    <img src="./assets/profile/project-ml.svg" width="100%" alt="Bank Marketing ML — Python, scikit-learn and Jupyter. Explore the repository." />
-  </picture>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/profile/project-ml-mobile.svg" />
+  <img src="./assets/profile/project-ml.svg" width="100%" alt="Bank Marketing ML — Preprocessing, model comparison, and evaluation with Python and scikit-learn." />
+</picture>
 </a>
 
-A classification study exploring **data preprocessing, model comparison, and evaluation** on bank-marketing data.
+<sub>Data preprocessing · Classification · Model comparison · Evaluation</sub>
 
-<br />
+<br /><br />
 
 <details>
-<summary><strong>Also on my workbench ↗</strong></summary>
+<summary><strong>More from the workbench ↗</strong></summary>
 
 <br />
 
-| Project | What you'll find |
+| Project | What I explored |
 | :--- | :--- |
-| [Django TaskFlow API](https://github.com/zaidmoen/Django-taskflow-api) | Task CRUD, search, filters, and a dashboard with an API debugger. |
-| [Dynamic Programming](https://github.com/zaidmoen/Dynamic-Programming) | Knapsack, LCS, coin change, tree algorithms, and worked examples. |
-| [Advanced Python](https://github.com/zaidmoen/Advanced_Python) | OOP, SOLID principles, and practical Python exercises. |
+| [Django TaskFlow API](https://github.com/zaidmoen/Django-taskflow-api) | Task CRUD, search, filters, and an API debugger. |
+| [Dynamic Programming](https://github.com/zaidmoen/Dynamic-Programming) | Knapsack, LCS, coin change, and tree algorithms. |
+| [Advanced Python](https://github.com/zaidmoen/Advanced_Python) | OOP, SOLID principles, and practical exercises. |
 | [Python vs. Java: Multiple Inheritance](https://github.com/zaidmoen/Python-vs-Java-Multiple-Inheritance) | The diamond problem, Python's MRO, and Java's approach. |
 
 </details>
@@ -101,39 +97,46 @@ A classification study exploring **data preprocessing, model comparison, and eva
 
 <br />
 
-## By the commits
+## GitHub activity
 
-<sub>03 / The work behind the work.</sub>
+<sub>03 / Small iterations. Steady progress.</sub>
 
 <br />
 
 <a href="https://github.com/zaidmoen?tab=repositories">
-  <picture>
-    <source media="(max-width: 640px)" srcset="./assets/stats/github-overview-mobile.svg" />
-    <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub statistics: original repositories, stars received, public commits, and commits over the last 12 calendar months. The card shows its last successful refresh." />
-  </picture>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/stats/github-overview-mobile.svg" />
+  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub statistics: original repositories, stars received, public commits, and commits over the last 12 calendar months. Includes the last successful refresh time." />
+</picture>
 </a>
 
-<picture>
-  <source media="(max-width: 640px)" srcset="./assets/stats/github-details-mobile.svg" />
-  <img src="./assets/stats/github-details.svg" width="100%" alt="Primary languages by repository count, plus monthly authored commits in original public repositories. The current month is partial." />
-</picture>
-
-<sub>Public data · Scheduled daily refresh · Language shares reflect repository counts, not proficiency. <a href="./docs/profile-maintenance.md#statistics">Metric definitions</a>.</sub>
+<details>
+<summary><strong>Explore languages &amp; monthly activity</strong></summary>
 
 <br />
 
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/stats/github-details-mobile.svg" />
+  <img src="./assets/stats/github-details.svg" width="100%" alt="Repository language distribution and monthly authored commits in original public repositories. The current month is partial." />
+</picture>
+
+</details>
+
+<sub>Public data · Scheduled daily refresh · Language shares use repository counts, not proficiency. <a href="./docs/profile-maintenance.md#statistics">Metric definitions</a>.</sub>
+
+<br /><br />
+
 <a href="mailto:zmayyalleh@gmail.com">
-  <picture>
-    <source media="(max-width: 640px)" srcset="./assets/profile/connect-mobile.svg" />
-    <img src="./assets/profile/connect.svg" width="100%" alt="Good ideas deserve great execution. Open to internships, junior roles, and collaboration. Email Zaid." />
-  </picture>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/profile/connect-mobile.svg" />
+  <img src="./assets/profile/connect.svg" width="100%" alt="Have an idea? Let's build it. Open to internships, junior roles, and collaboration. Email Zaid." />
+</picture>
 </a>
 
 <p align="center">
-  <a href="mailto:zmayyalleh@gmail.com"><strong>Email me ↗</strong></a> &nbsp; / &nbsp;
-  <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376/"><strong>Connect on LinkedIn ↗</strong></a> &nbsp; / &nbsp;
+  <a href="mailto:zmayyalleh@gmail.com"><strong>Email ↗</strong></a> &nbsp; · &nbsp;
+  <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376/"><strong>LinkedIn ↗</strong></a> &nbsp; · &nbsp;
   <a href="https://github.com/zaidmoen?tab=repositories"><strong>All repositories ↗</strong></a>
 </p>
 
-<p align="center"><sub>ZAID MAYYALLEH &nbsp; · &nbsp; BUILT WITH CARE, FROM PALESTINE.</sub></p>
+<p align="center"><sub>ZAID MAYYALLEH &nbsp; / &nbsp; MADE WITH INTENT, FROM PALESTINE.</sub></p>
