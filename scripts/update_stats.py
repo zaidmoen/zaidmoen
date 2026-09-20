@@ -18,7 +18,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-COLORS = ['#ff794b', '#e8c999', '#d6cfc2', '#cda98e', '#ad9981', '#858077']
+COLORS = ['#c8102e', '#e0bbb9', '#d6cfc2', '#b9aaa1', '#968b83', '#77736d']
 
 
 def api(path: str) -> object:
@@ -130,21 +130,19 @@ def txt(x, y, value, size=18, color='#f2efe8', weight=400, extra=''):
 def panel(title, description, body, width, height):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 <title id="title">{escape(title)}</title><desc id="desc">{escape(description)}</desc>
-<defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#1c1c1c"/><stop offset="1" stop-color="#141414"/></linearGradient>
-<linearGradient id="blue"><stop offset="0" stop-color="#bc5333"/><stop offset="1" stop-color="#ff794b"/></linearGradient>
-</defs><rect width="{width}" height="{height}" rx="18" fill="url(#bg)"/><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="17" fill="none" stroke="#363431"/>
+<rect width="{width}" height="{height}" rx="2" fill="#11110f"/><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="1" fill="none" stroke="#3a3935"/>
 {body}</svg>'''
 
 
 def overview(s):
-    body = txt(34, 41, 'GITHUB / BY THE COMMITS', 13, '#ff794b', 600, 'letter-spacing="2"')
+    body = txt(34, 41, 'GITHUB / BY THE COMMITS', 13, '#c8102e', 600, 'letter-spacing="2"')
     body += txt(1086, 41, 'PUBLIC DATA', 11, '#aaa69e', extra='text-anchor="end"')
     body += '<path d="M34 63H1086" stroke="#363431"/>'
     metrics = [('original_repositories', 'Original repositories'), ('stars', 'Stars received'),
                ('public_commits', 'Public commits'), ('commits_last_12_months', 'Commits · last 12 months')]
     for i, (key, label) in enumerate(metrics):
         x = 34 + i * 276
-        color = '#ff794b' if key in {'public_commits', 'commits_last_12_months'} else '#f2efe8'
+        color = '#c8102e' if key in {'public_commits', 'commits_last_12_months'} else '#f4f1ea'
         body += txt(x, 131, f'{s[key]:,}', 48, color, 700)
         body += txt(x, 162, label, 14, '#c8c1b5')
         if i < 3:
@@ -194,7 +192,7 @@ def activity_card(s):
     for i, point in enumerate(points):
         x = 60 + i * 39
         height = chart_height * point['count'] / scale
-        body += f'<rect x="{x}" y="{bottom-height:.2f}" width="23" height="{height:.2f}" rx="4" fill="url(#blue)"><title>{escape(point["month"])}: {point["count"]} commits</title></rect>'
+        body += f'<rect x="{x}" y="{bottom-height:.2f}" width="23" height="{height:.2f}" rx="1" fill="#c8102e"><title>{escape(point["month"])}: {point["count"]} commits</title></rect>'
         if point['count']:
             body += txt(x+11.5, bottom-height-10, point['count'], 12, '#ffdbc8', extra='text-anchor="middle"')
         month = datetime.strptime(point['month'], '%Y-%m').strftime('%b')
@@ -205,12 +203,12 @@ def activity_card(s):
 
 
 def overview_mobile(s):
-    body = txt(28, 36, 'GITHUB / BY THE COMMITS', 12, '#ff794b', 600)
+    body = txt(28, 36, 'GITHUB / BY THE COMMITS', 12, '#c8102e', 600)
     metrics = [('original_repositories', 'Original repositories'), ('stars', 'Stars received'),
                ('public_commits', 'Public commits'), ('commits_last_12_months', 'Commits · last 12 months')]
     for i, (key, label) in enumerate(metrics):
         x, y = 28 + (i % 2) * 274, 104 + (i // 2) * 111
-        color = '#ff794b' if key in {'public_commits', 'commits_last_12_months'} else '#f2efe8'
+        color = '#c8102e' if key in {'public_commits', 'commits_last_12_months'} else '#f4f1ea'
         body += txt(x, y, f'{s[key]:,}', 42, color, 700)
         body += txt(x, y+29, label, 14, '#c8c1b5')
     body += txt(28, 283, f"{s['followers']} followers · Public data · Repository forks excluded", 12, '#aaa69e')

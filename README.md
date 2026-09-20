@@ -12,15 +12,15 @@
 
 <br />
 
-I'm **Zaid**, a student at **An-Najah National University**, Palestine. I build across **full-stack development, backend systems, and applied AI**.
+I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National University** in Palestine. I build across **backend engineering, full-stack development, and applied AI**.
 
-I enjoy making the pieces work together: clear APIs, thoughtful interfaces, and experiments that turn into useful projects. Currently growing **Apex Intelligence** and strengthening my Python and system-design foundations.
+My favorite work sits where solid engineering meets a useful idea: clear APIs, thoughtful interfaces, and experiments that become working products. I’m currently building **Apex Intelligence** and sharpening my Python and system-design foundations.
 
 <br />
 
 ## Selected work
 
-<sub>01 / From data and APIs to interfaces you can control with your hands.</sub>
+<sub>01 / Practical systems, carefully built.</sub>
 
 <br />
 
@@ -86,7 +86,7 @@ I enjoy making the pieces work together: clear APIs, thoughtful interfaces, and 
 
 ## Toolkit
 
-<sub>02 / Tools I use across projects and ongoing learning.</sub>
+<sub>02 / A focused toolkit for shipping ideas.</sub>
 
 <br />
 
@@ -99,7 +99,7 @@ I enjoy making the pieces work together: clear APIs, thoughtful interfaces, and 
 
 ## GitHub activity
 
-<sub>03 / Small iterations. Steady progress.</sub>
+<sub>03 / Consistency over noise.</sub>
 
 <br />
 

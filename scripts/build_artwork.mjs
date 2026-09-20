@@ -4,20 +4,20 @@ import { fileURLToPath } from 'node:url';
 
 function buildArtwork() {
   const files = {};
-  const C = { ink: "#141414", panel: "#1c1c1c", paper: "#f2efe8", muted: "#aaa69e", line: "#363431", orange: "#ff794b" };
+  // Swiss-inspired system: neutral surfaces, one restrained red accent, and a strict grid.
+  const C = { ink: "#11110f", panel: "#1a1a18", paper: "#f4f1ea", muted: "#aaa79f", line: "#3a3935", orange: "#c8102e" };
   const escape = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
   const t = (x,y,value,size=20,color=C.paper,weight=400,extra="") => `<text x="${x}" y="${y}" font-family="Arial,Helvetica,sans-serif" font-size="${size}" font-weight="${weight}" fill="${color}" ${extra}>${escape(value)}</text>`;
   const label = (x,y,value,color=C.muted,size=12) => t(x,y,value,size,color,500,'letter-spacing="1.7"');
-  const box = (x,y,w,h,fill=C.panel,r=12,stroke="none") => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}"/>`;
+  const box = (x,y,w,h,fill=C.panel,r=2,stroke="none") => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}"/>`;
   const path = (d,color=C.line,width=1,extra="") => `<path d="${d}" stroke="${color}" stroke-width="${width}" fill="none" ${extra}/>`;
   const dot = (x,y,r,color=C.orange) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${color}"/>`;
   const pill = (x,y,value,width) => box(x,y,width,30,"#242321",15,C.line)+t(x+14,y+20,value,12,C.paper);
   function save(name,w,h,title,body,description=title) {
     files[`assets/profile/${name}.svg`] = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc">
 <title id="title">${escape(title)}</title><desc id="desc">${escape(description)}</desc>
-<defs><clipPath id="bounds"><rect width="${w}" height="${h}" rx="18"/></clipPath><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#44413c"/></pattern><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf7"/><stop offset=".48" stop-color="#96918b"/><stop offset="1" stop-color="#e9e4da"/></linearGradient></defs>
-<style>.float{animation:float 8s ease-in-out infinite}.pulse{animation:pulse 5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-6px)}}@keyframes pulse{50%{opacity:.35}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
-<g clip-path="url(#bounds)">${box(0,0,w,h,C.ink,18)}${body}</g>${box(.5,.5,w-1,h-1,"none",18,C.line)}</svg>\n`;
+<defs><clipPath id="bounds"><rect width="${w}" height="${h}" rx="2"/></clipPath></defs>
+<g clip-path="url(#bounds)">${box(0,0,w,h,C.ink,2)}${body}</g>${box(.5,.5,w-1,h-1,"none",2,C.line)}</svg>\n`;
   }
   // Project a twisted ribbon and sort its faces by depth for a metallic sculpture.
   function sculpture(cx,cy,scale=1) {
@@ -36,7 +36,7 @@ function buildArtwork() {
       faces.push({depth:points.reduce((s,p)=>s+p[2],0)/4,svg:`<path d="M${points.map(p=>`${p[0].toFixed(2)} ${p[1].toFixed(2)}`).join("L")}Z" fill="${color}" stroke="${color}" stroke-width=".5"/>`});
     }
     faces.sort((a,b)=>a.depth-b.depth);
-    return `<g transform="translate(${cx} ${cy}) scale(${scale})"><ellipse cy="162" rx="125" ry="11" fill="#0b0b0b"/><circle r="215" fill="none" stroke="${C.line}"/><circle r="188" fill="none" stroke="${C.line}" stroke-dasharray="2 10"/>${path("M-236 0H-215M215 0H236M0-236V-215M0 215V236","#747068")}${dot(215,0,4)}<g class="float">${faces.map(f=>f.svg).join("")}</g>${label(-50,232,"BUILD / REFINE",C.muted,10)}</g>`;
+    return `<g transform="translate(${cx} ${cy}) scale(${scale})"><ellipse cy="162" rx="125" ry="11" fill="#0b0b0b"/><circle r="215" fill="none" stroke="${C.line}"/><circle r="188" fill="none" stroke="${C.line}" stroke-dasharray="2 10"/>${path("M-236 0H-215M215 0H236M0-236V-215M0 215V236","#747068")}${dot(215,0,4)}<g>${faces.map(f=>f.svg).join("")}</g>${label(-50,232,"BUILD / REFINE",C.muted,10)}</g>`;
   }
   function cube(x,y,s=35) {
     return `<g transform="translate(${x} ${y})"><path d="M0 ${-s}L${s} ${-s/2} 0 0 ${-s} ${-s/2}Z" fill="#fff2df"/><path d="M${-s} ${-s/2}L0 0V${s}L${-s} ${s/2}Z" fill="#d04c2b"/><path d="M0 0L${s} ${-s/2}V${s/2}L0 ${s}Z" fill="#ff976c"/></g>`;
@@ -59,7 +59,7 @@ function buildArtwork() {
         b+=path(`M${62+i*29} ${104-i*14.5}L${222+i*29} ${184-i*14.5}`,"#cf6345");
       }
       b+=cube(195,142,36)+cube(267,142,36)+cube(231,124,36);
-      b+=`<g class="float">${cube(195,70,36)}</g>`;
+      b+=`<g>${cube(195,70,36)}</g>`;
       b+=path("M114 67H94V87M302 172H322V152","#ffe6d2",2);
       b+=label(22,226,"HAND TRACKING / 3D CANVAS","#ffe6d2",10);
     } else if(kind==="web") {
