@@ -1,6 +1,6 @@
 # Profile maintenance
 
-The profile uses an original charcoal, ivory, and burnt-orange visual system: oversized typography, a metallic ribbon sculpture, illustrated project covers, and matching repository-hosted statistics. It does not load JavaScript, remote fonts, or third-party statistics images in the README.
+The profile uses an original Swiss-inspired charcoal, ivory, and red visual system: oversized typography, a precise editorial grid, illustrated project covers, and matching repository-hosted statistics. It does not load JavaScript, remote fonts, or third-party statistics images in the README.
 
 ## Statistics
 
@@ -45,8 +45,8 @@ node scripts/build_artwork.mjs
 
 - **Hero:** oversized name typography beside a mathematically projected twisted ribbon. Depth-sorted polygon faces create a metallic surface with orange edges. The name and positioning stay still.
 - **Projects:** custom vector illustrations for relational API components, voxel construction, an RTL interface, and a classification model. Desktop covers pair text with illustration; mobile covers stack them. These are decorative illustrations, not product screenshots or measured data.
-- **Motion:** subtle CSS vertical movement on the ribbon and floating voxel. No JavaScript, SMIL, external images, remote fonts, or third-party rendering services are required.
-- **Accessibility:** all animated SVGs respect `prefers-reduced-motion: reduce`; they remain complete and readable with animation disabled. Each image has a title, description, and README alt text.
+- **Motion:** the artwork is intentionally static. No JavaScript, SMIL, external images, remote fonts, or third-party rendering services are required.
+- **Accessibility:** each image has a title, description, and README alt text. The static artwork avoids nonessential motion.
 - **Responsive layout:** README `<picture>` elements select dedicated mobile artwork at viewport widths up to 640px. Projects use a single column, so neither text nor cards depend on a fixed two-column table. The toolkit uses three desktop panels and stacks them vertically on mobile.
 - **Theme:** the artwork has its own dark background and readable colors in both GitHub appearance modes. The README's native text follows GitHub's selected theme.
 
