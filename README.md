@@ -1,6 +1,6 @@
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/profile/hero-mobile.svg" />
-  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Full-stack developer in Palestine. Built on curiosity. Refined through code." />
+  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Software engineer focused on backend engineering, full-stack development, and applied AI." />
 </picture>
 
 <p align="center">
