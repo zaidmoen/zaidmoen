@@ -4,6 +4,7 @@
 </picture>
 
 <p align="center">
+  <a href="#about-me">About me</a> &nbsp; · &nbsp;
   <a href="#selected-work">Selected work</a> &nbsp; · &nbsp;
   <a href="#toolkit">Toolkit</a> &nbsp; · &nbsp;
   <a href="#github-activity">Activity</a> &nbsp; · &nbsp;
@@ -12,9 +13,24 @@
 
 <br />
 
-I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National University** in Palestine. I build across **backend engineering, full-stack development, and applied AI**.
+## About me
 
-My favorite work sits where solid engineering meets a useful idea: clear APIs, thoughtful interfaces, and experiments that become working products. I’m currently building **Apex Intelligence** and sharpening my Python and system-design foundations.
+<table>
+  <tr>
+    <td width="62%" valign="middle">
+      <p>I'm <strong>Zaid Mayyalleh</strong>, a Computer Science student at <strong>An-Najah National University</strong> in Palestine. I build across backend engineering, full-stack development, and applied AI.</p>
+      <p>I enjoy turning practical ideas into reliable software: clear APIs, useful interfaces, and projects that are easy to understand and improve.</p>
+      <ul>
+        <li><strong>Currently building:</strong> Apex Intelligence</li>
+        <li><strong>Focused on:</strong> Python, backend systems, and applied AI</li>
+        <li><strong>Interested in:</strong> thoughtful products and research-driven projects</li>
+      </ul>
+    </td>
+    <td width="38%" align="center" valign="middle">
+      <img src="./assets/profile/neon-artwork.jpg" width="100%" alt="A lone swordsman beneath a glowing magenta moon, with a bright pink blade crossing a dark landscape." />
+    </td>
+  </tr>
+</table>
 
 <br />
 
