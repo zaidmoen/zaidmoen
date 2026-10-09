@@ -1,16 +1,16 @@
 {
   "user": "zaidmoen",
-  "updated_at": "2026-10-08T12:06:48Z",
+  "updated_at": "2026-10-09T11:58:40Z",
   "scope": "Public data only; repository metrics exclude forks.",
   "original_repositories": 32,
-  "stars": 33,
+  "stars": 38,
   "followers": 23,
-  "public_commits": 513,
-  "commits_last_12_months": 428,
+  "public_commits": 569,
+  "commits_last_12_months": 484,
   "languages": [
     {
       "name": "Python",
-      "repositories": 12
+      "repositories": 11
     },
     {
       "name": "C++",
@@ -19,6 +19,10 @@
     {
       "name": "Jupyter Notebook",
       "repositories": 5
+    },
+    {
+      "name": "JavaScript",
+      "repositories": 2
     },
     {
       "name": "Pawn",
@@ -34,10 +38,6 @@
     },
     {
       "name": "HTML",
-      "repositories": 1
-    },
-    {
-      "name": "JavaScript",
       "repositories": 1
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "month": "2026-10",
-      "count": 35
+      "count": 91
     }
   ],
   "sources": [
