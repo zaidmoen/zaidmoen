@@ -4,7 +4,7 @@
 </picture>
 
 <p align="center">
-  <a href="#about-me">About me</a> &nbsp; · &nbsp;
+  <a href="#about-me">About</a> &nbsp; · &nbsp;
   <a href="#selected-work">Selected work</a> &nbsp; · &nbsp;
   <a href="#toolkit">Toolkit</a> &nbsp; · &nbsp;
   <a href="#github-activity">Activity</a> &nbsp; · &nbsp;
@@ -15,72 +15,50 @@
 
 ## About me
 
-<table>
-  <tr>
-    <td width="62%" valign="middle">
-      <p>I'm <strong>Zaid Mayyalleh</strong>, a Computer Science student at <strong>An-Najah National University</strong> in Palestine. I build across backend engineering, full-stack development, and applied AI.</p>
-      <p>I enjoy turning practical ideas into reliable software: clear APIs, useful interfaces, and projects that are easy to understand and improve.</p>
-      <ul>
-        <li><strong>Currently building:</strong> Apex Intelligence</li>
-        <li><strong>Focused on:</strong> Python, backend systems, and applied AI</li>
-        <li><strong>Interested in:</strong> thoughtful products and research-driven projects</li>
-      </ul>
-    </td>
-    <td width="38%" align="center" valign="middle">
-      <img src="./assets/profile/neon-artwork.jpg" width="100%" alt="A lone swordsman beneath a glowing magenta moon, with a bright pink blade crossing a dark landscape." />
-    </td>
-  </tr>
-</table>
+I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National University** in Palestine. I like building software where the details matter: a clear API, data that stays consistent, and an interface people can actually use.
+
+- **Backend engineering:** Django, Python, relational data, authentication, and business rules.
+- **In practice:** backend training at Harri and leading the technical committee at the NAI AI Association.
+- **Beyond the API:** information retrieval, applied machine learning, and product ideas that move into working code.
 
 <br />
 
 ## Selected work
 
-<sub>01 / Practical systems, carefully built.</sub>
+<sub>01 / Real workflows, deliberate engineering.</sub>
 
 <br />
 
-<a href="https://github.com/zaidmoen/Books_manegment_MySQL">
+<a href="https://github.com/zaidmoen/employee-hub-api">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile/project-api-mobile.svg" />
-  <img src="./assets/profile/project-api.svg" width="100%" alt="Books Management API — FastAPI, MySQL, and JWT. Explore the repository." />
+  <source media="(max-width: 640px)" srcset="./assets/featured/employee-hub-mobile.svg" />
+  <img src="./assets/featured/employee-hub.svg" width="100%" alt="Employee Hub API: a layered Django backend for employee records, shifts, attendance, and payroll. Explore the repository." />
 </picture>
 </a>
 
-<sub>Parameterized SQL · Role-based access · Versioned migrations</sub>
+<sub>Controller → component → repository · Hourly rate history · Shift validation · Attendance and payroll</sub>
 
 <br /><br />
 
-<a href="https://github.com/zaidmoen/cube_builder">
+<a href="https://github.com/zaidmoen/NAI-membership-system">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile/project-voxel-mobile.svg" />
-  <img src="./assets/profile/project-voxel.svg" width="100%" alt="Pinch Voxel Studio — A gesture-controlled voxel editor using Python, OpenCV, and MediaPipe." />
+  <source media="(max-width: 640px)" srcset="./assets/featured/nai-membership-mobile.svg" />
+  <img src="./assets/featured/nai-membership.svg" width="100%" alt="NAI Membership: student registration, payment confirmation, and an administrator dashboard. Explore the repository." />
 </picture>
 </a>
 
-<sub>Hand tracking · Pinch gestures · Isometric rendering · Scene persistence</sub>
+<sub>Public registration · Staff dashboard · Payment status · Django, React, and PostgreSQL</sub>
 
 <br /><br />
 
-<a href="https://github.com/zaidmoen/palestine-now-web">
+<a href="https://github.com/zaidmoen/IRForge">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile/project-web-mobile.svg" />
-  <img src="./assets/profile/project-web.svg" width="100%" alt="Palestine Now — An Arabic-first local discovery demo built with React, Vite, and Tailwind CSS." />
+  <source media="(max-width: 640px)" srcset="./assets/featured/irforge-mobile.svg" />
+  <img src="./assets/featured/irforge.svg" width="100%" alt="IRForge: a Python information retrieval engine with an inverted index, Boolean AND, and exact phrase search. Explore the repository." />
 </picture>
 </a>
 
-<sub>Search · Personalized feeds · Accessible RTL layouts · Demo with sample data</sub>
-
-<br /><br />
-
-<a href="https://github.com/zaidmoen/bank-marketing-ml-classification">
-<picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile/project-ml-mobile.svg" />
-  <img src="./assets/profile/project-ml.svg" width="100%" alt="Bank Marketing ML — Preprocessing, model comparison, and evaluation with Python and scikit-learn." />
-</picture>
-</a>
-
-<sub>Data preprocessing · Classification · Model comparison · Evaluation</sub>
+<sub>Tokenization · Positional postings · Boolean AND · Exact phrase queries</sub>
 
 <br /><br />
 
@@ -89,12 +67,13 @@
 
 <br />
 
-| Project | What I explored |
+| Project | What it demonstrates |
 | :--- | :--- |
-| [Django TaskFlow API](https://github.com/zaidmoen/Django-taskflow-api) | Task CRUD, search, filters, and an API debugger. |
-| [Dynamic Programming](https://github.com/zaidmoen/Dynamic-Programming) | Knapsack, LCS, coin change, and tree algorithms. |
-| [Advanced Python](https://github.com/zaidmoen/Advanced_Python) | OOP, SOLID principles, and practical exercises. |
-| [Python vs. Java: Multiple Inheritance](https://github.com/zaidmoen/Python-vs-Java-Multiple-Inheritance) | The diamond problem, Python's MRO, and Java's approach. |
+| [IR Logarithmic Merging](https://github.com/zaidmoen/IR-Logarithmic-Merging) | A C++ dynamic inverted index with disk generations and streaming merges. |
+| [Books Management API](https://github.com/zaidmoen/Books_manegment_MySQL) | A FastAPI and MySQL backend with JWT authentication. |
+| [Pinch Voxel Studio](https://github.com/zaidmoen/cube_builder) | A hand-tracked voxel editor built with OpenCV and MediaPipe. |
+| [Palestine Now](https://github.com/zaidmoen/palestine-now-web) | An Arabic-first local discovery demo with sample data. |
+| [Bank Marketing ML](https://github.com/zaidmoen/bank-marketing-ml-classification) | Preprocessing, classification, and model evaluation. |
 
 </details>
 
