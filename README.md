@@ -1,6 +1,6 @@
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/profile/hero-mobile.svg" />
-  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Software engineer focused on backend engineering, full-stack development, and applied AI." />
+  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Backend engineering and applied AI. Thoughtful systems. Built with intent." />
 </picture>
 
 <p align="center">
@@ -25,7 +25,7 @@ I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National Univer
 
 ## Selected work
 
-<sub>01 / Real workflows, deliberate engineering.</sub>
+<sub>01 / Selected systems. Practical problems.</sub>
 
 <br />
 
@@ -81,7 +81,7 @@ I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National Univer
 
 ## Toolkit
 
-<sub>02 / A focused toolkit for shipping ideas.</sub>
+<sub>02 / Tools behind the work.</sub>
 
 <br />
 
@@ -94,7 +94,7 @@ I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National Univer
 
 ## GitHub activity
 
-<sub>03 / Consistency over noise.</sub>
+<sub>03 / A record of the work.</sub>
 
 <br />
 
@@ -124,7 +124,7 @@ I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National Univer
 <a href="mailto:zmayyalleh@gmail.com">
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/profile/connect-mobile.svg" />
-  <img src="./assets/profile/connect.svg" width="100%" alt="Have an idea? Let's build it. Open to internships, junior roles, and collaboration. Email Zaid." />
+  <img src="./assets/profile/connect.svg" width="100%" alt="Good ideas. Thoughtful execution. Open to internships, junior roles, and collaboration. Email Zaid." />
 </picture>
 </a>
 
@@ -134,4 +134,4 @@ I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National Univer
   <a href="https://github.com/zaidmoen?tab=repositories"><strong>All repositories ↗</strong></a>
 </p>
 
-<p align="center"><sub>ZAID MAYYALLEH &nbsp; / &nbsp; MADE WITH INTENT, FROM PALESTINE.</sub></p>
+<p align="center"><sub>ZAID MAYYALLEH &nbsp; / &nbsp; THOUGHTFUL SYSTEMS. BUILT WITH INTENT.</sub></p>
