@@ -1,11 +1,11 @@
 {
   "user": "zaidmoen",
-  "updated_at": "2026-10-31T10:59:08Z",
+  "updated_at": "2026-11-01T11:54:24Z",
   "scope": "Public data only; repository metrics exclude forks.",
   "original_repositories": 38,
   "stars": 43,
-  "followers": 23,
-  "public_commits": 701,
+  "followers": 24,
+  "public_commits": 703,
   "commits_last_12_months": 616,
   "languages": [
     {
@@ -47,10 +47,6 @@
   ],
   "repositories_without_language": 2,
   "monthly_commits": [
-    {
-      "month": "2025-11",
-      "count": 0
-    },
     {
       "month": "2025-12",
       "count": 0
@@ -94,6 +90,10 @@
     {
       "month": "2026-10",
       "count": 223
+    },
+    {
+      "month": "2026-11",
+      "count": 0
     }
   ],
   "sources": [
