@@ -1,16 +1,16 @@
 {
   "user": "zaidmoen",
-  "updated_at": "2026-11-25T15:47:40Z",
+  "updated_at": "2026-11-26T15:28:21Z",
   "scope": "Public data only; repository metrics exclude forks.",
   "original_repositories": 41,
   "stars": 48,
   "followers": 25,
-  "public_commits": 873,
-  "commits_last_12_months": 773,
+  "public_commits": 942,
+  "commits_last_12_months": 839,
   "languages": [
     {
       "name": "Python",
-      "repositories": 18
+      "repositories": 17
     },
     {
       "name": "C++",
@@ -22,7 +22,7 @@
     },
     {
       "name": "TypeScript",
-      "repositories": 3
+      "repositories": 4
     },
     {
       "name": "JavaScript",
@@ -93,7 +93,7 @@
     },
     {
       "month": "2026-11",
-      "count": 31
+      "count": 97
     }
   ],
   "sources": [
