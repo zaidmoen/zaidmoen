@@ -1,64 +1,61 @@
-<img src="./assets/cinematic/zaid-cinematic-banner.gif" width="100%" alt="Zaid Mayyalleh - Animated Portfolio Banner" />
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/terminal/hero-mobile.svg" />
+  <img src="./assets/terminal/hero.svg" width="100%" alt="Zaid Mayyalleh — Backend Engineering / Applied Intelligence. Building what comes next." />
+</picture>
 
 <p align="center">
   <a href="#about">About</a> &nbsp; · &nbsp;
-  <a href="#selected-work">Projects</a> &nbsp; · &nbsp;
+  <a href="#selected-work">Selected work</a> &nbsp; · &nbsp;
   <a href="#technical-toolkit">Toolkit</a> &nbsp; · &nbsp;
   <a href="#github-activity">Activity</a> &nbsp; · &nbsp;
-  <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376/">LinkedIn ↗</a>
+  <a href="#contact">Contact</a>
 </p>
 
 ## About
 
-I'm **Zaid Mayyalleh**, a Computer Science student at An-Najah National University, Palestine, with a focus on backend engineering, applied AI and product development.
+I'm **Zaid Mayyalleh**, a Computer Science student at An-Najah National University, Palestine, focused on backend engineering, applied AI and developer tooling.
 
-I enjoy turning complicated problems into software that is understandable, maintainable and useful — from APIs and data models to search engines, automation and intelligent applications.
-
-| Focus | In practice |
-| :--- | :--- |
-| Backend engineering | APIs, relational databases, authentication and system design |
-| Applied AI | Machine learning, information retrieval and decision-support systems |
-| Technical leadership | Technical committee lead at NAI AI Association; backend training at Harri |
+I care about clear architecture, reliable systems and software that solves real problems. My experience includes backend training at Harri and technical committee leadership at NAI AI Association.
 
 ## Selected work
 
-<sub>01 / SYSTEMS, INTELLIGENCE &amp; PRODUCTS</sub>
+<sub>01 / PROJECTS &amp; SYSTEMS</sub>
 
 <a href="https://github.com/zaidmoen/apex-flowguard">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/signature/flow-mobile.svg" />
-  <img src="./assets/signature/flow.svg" width="100%" alt="APEX FlowGuard: Pressure-based leak detection and hydraulic simulation." />
+  <source media="(max-width: 640px)" srcset="./assets/terminal/flow-mobile.svg" />
+  <img src="./assets/terminal/flow.svg" width="100%" alt="APEX FlowGuard — Leak detection and hydraulic decision support" />
 </picture>
 </a>
 
-**[APEX FlowGuard](https://github.com/zaidmoen/apex-flowguard)** — Pressure-based leak detection and hydraulic simulation.
+**[APEX FlowGuard](https://github.com/zaidmoen/apex-flowguard)** — Leak detection & hydraulic decision support.
 
 <a href="https://github.com/zaidmoen/telecomguard-ai">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/signature/ml-mobile.svg" />
-  <img src="./assets/signature/ml.svg" width="100%" alt="TelecomGuard AI: Curated datasets and a classification comparison platform." />
+  <source media="(max-width: 640px)" srcset="./assets/terminal/ml-mobile.svg" />
+  <img src="./assets/terminal/ml.svg" width="100%" alt="TelecomGuard AI — Telecom churn and ML model comparison platform" />
 </picture>
 </a>
 
-**[TelecomGuard AI](https://github.com/zaidmoen/telecomguard-ai)** — Curated datasets and a classification comparison platform.
+**[TelecomGuard AI](https://github.com/zaidmoen/telecomguard-ai)** — Telecom churn & ML model comparison platform.
 
 <a href="https://github.com/zaidmoen/nai-ai-hub">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/signature/hub-mobile.svg" />
-  <img src="./assets/signature/hub.svg" width="100%" alt="NAI AI Hub: AI resource discovery, model exploration and learning paths." />
+  <source media="(max-width: 640px)" srcset="./assets/terminal/hub-mobile.svg" />
+  <img src="./assets/terminal/hub.svg" width="100%" alt="NAI AI Hub — AI resource discovery, model arena and learning paths" />
 </picture>
 </a>
 
-**[NAI AI Hub](https://github.com/zaidmoen/nai-ai-hub)** — AI resource discovery, model exploration and learning paths.
+**[NAI AI Hub](https://github.com/zaidmoen/nai-ai-hub)** — AI resource discovery, model arena & learning paths.
 
 <a href="https://github.com/zaidmoen/library-release-orchestrator">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/signature/git-mobile.svg" />
-  <img src="./assets/signature/git.svg" width="100%" alt="Release Orchestrator: Dependency-aware planning for shared-library releases." />
+  <source media="(max-width: 640px)" srcset="./assets/terminal/git-mobile.svg" />
+  <img src="./assets/terminal/git.svg" width="100%" alt="Library Release Orchestrator — Dependency-aware planning for shared-library releases" />
 </picture>
 </a>
 
-**[Release Orchestrator](https://github.com/zaidmoen/library-release-orchestrator)** — Dependency-aware planning for shared-library releases.
+**[Library Release Orchestrator](https://github.com/zaidmoen/library-release-orchestrator)** — Dependency-aware planning for shared-library releases.
 
 <details>
 <summary><strong>Explore more projects ↗</strong></summary>
@@ -76,21 +73,21 @@ I enjoy turning complicated problems into software that is understandable, maint
 
 ## Technical toolkit
 
-<sub>02 / TOOLS BEHIND THE WORK</sub>
+<sub>02 / TECHNOLOGIES &amp; PRACTICE</sub>
 
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile/stack-mobile.svg" />
-  <img src="./assets/profile/stack.svg" width="100%" alt="Python, JavaScript, TypeScript, C++, SQL, Django, FastAPI, React, MySQL, Supabase, OpenCV, MediaPipe, scikit-learn and Git." />
+  <source media="(max-width: 640px)" srcset="./assets/terminal/toolkit-mobile.svg" />
+  <img src="./assets/terminal/toolkit.svg" width="100%" alt="Python, Django, FastAPI, React, TypeScript, C++, PostgreSQL, MySQL, Supabase, SQL, scikit-learn, OpenCV, MediaPipe, information retrieval, Git, APIs and system design." />
 </picture>
 
 ## GitHub activity
 
-<sub>03 / A RECORD OF THE WORK</sub>
+<sub>03 / PUBLIC DEVELOPMENT ACTIVITY</sub>
 
 <a href="https://github.com/zaidmoen?tab=repositories">
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stats/github-overview-mobile.svg" />
-  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub statistics with the last successful refresh time." />
+  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub statistics and last successful refresh." />
 </picture>
 </a>
 
@@ -104,19 +101,19 @@ I enjoy turning complicated problems into software that is understandable, maint
 
 </details>
 
-<sub>Public data · Scheduled daily refresh · Language shares reflect repository counts, not proficiency. [Metric definitions](./docs/profile-maintenance.md#statistics).</sub>
+<sub>Public data · Scheduled daily refresh · Language shares reflect repository counts, not proficiency. <a href="./docs/profile-maintenance.md#statistics">Metric definitions</a>.</sub>
 
-## Let's connect
+## Contact
 
-<picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile/connect-mobile.svg" />
-  <img src="./assets/profile/connect.svg" width="100%" alt="Good ideas. Thoughtful execution. Open to internships, junior roles and collaboration." />
-</picture>
+```text
+❯ connect --collaborate
+  Open to internships, junior roles and engineering collaboration.
+```
 
 <p align="center">
   <a href="mailto:zmayyalleh@gmail.com"><strong>Email ↗</strong></a> &nbsp; · &nbsp;
   <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376/"><strong>LinkedIn ↗</strong></a> &nbsp; · &nbsp;
-  <a href="https://github.com/zaidmoen?tab=repositories"><strong>All repositories ↗</strong></a>
+  <a href="https://github.com/zaidmoen?tab=repositories"><strong>Repositories ↗</strong></a>
 </p>
 
-<p align="center"><sub>ZAID MAYYALLEH / ENGINEERING SOFTWARE WITH PURPOSE.</sub></p>
+<p align="center"><sub>RELIABLE SOFTWARE, DESIGNED WITH INTENT.</sub></p>
