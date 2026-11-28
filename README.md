@@ -1,7 +1,4 @@
-<picture>
-  <source media="(max-width: 640px)" srcset="./assets/cinematic/orbital-hero-mobile.svg" />
-  <img src="./assets/cinematic/orbital-hero.svg" width="100%" alt="Zaid Mayyalleh — Backend engineering and applied AI. Building systems. Exploring intelligence." />
-</picture>
+<img src="./assets/cinematic/zaid-cinematic-banner.gif" width="100%" alt="Zaid Mayyalleh - Animated Portfolio Banner" />
 
 <p align="center">
   <a href="#about">About</a> &nbsp; · &nbsp;
