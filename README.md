@@ -1,6 +1,6 @@
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/signature/hero-mobile.svg" />
-  <img src="./assets/signature/hero.svg" width="100%" alt="Zaid Mayyalleh — Backend engineering and applied AI. Engineering software with purpose." />
+  <source media="(max-width: 640px)" srcset="./assets/cinematic/orbital-hero-mobile.svg" />
+  <img src="./assets/cinematic/orbital-hero.svg" width="100%" alt="Zaid Mayyalleh — Backend engineering and applied AI. Building systems. Exploring intelligence." />
 </picture>
 
 <p align="center">

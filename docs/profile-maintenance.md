@@ -46,7 +46,7 @@ python3 scripts/update_stats.py --from-snapshot assets/stats/github-stats.json
 
 - **Hero:** oversized name typography beside an original geometric ZM monogram, framed by nested diamonds. The desktop layout becomes a stacked composition on mobile.
 - **Projects:** conceptual vector illustrations for backend layers, membership processing, and information retrieval. These are not product screenshots or measured data.
-- **Motion:** intentionally static. No JavaScript, SMIL, external images, or remote fonts.
+- **Motion:** original artwork is intentionally static; the active cinematic hero uses SVG CSS keyframes. No JavaScript, external images, or remote fonts.
 - **Accessibility:** each image has a title, description, and README alt text. Critical biographical and project information also appears as native README text.
 - **Responsive layout:** README picture elements select dedicated mobile artwork up to 640px. Cards are stacked in a single column.
 - **Theme:** each image has its own background and works in both GitHub appearance modes. Native README text follows GitHub's theme.
@@ -55,7 +55,7 @@ Edit the generator, then rebuild. Artwork colors live in `scripts/build_artwork.
 
 ### Signature portfolio artwork
 
-The active hero and four featured project cards are standalone, editable SVGs in `assets/signature/` with separate desktop and mobile variants. They use the existing charcoal and champagne-gold palette. The legacy artwork generator does not overwrite these new files. Edit the SVGs directly when updating copy or project illustrations. The diagrams are conceptual, not screenshots or quantitative results.
+The active cinematic hero is hosted in `assets/cinematic/` with separate desktop and mobile variants. It uses self-contained SVG CSS keyframes for the orbiting particles, rotating wireframe sphere, data pulses, and entrance motion. A `prefers-reduced-motion` rule disables all animations; the composition is still readable when static. No scripts, external fonts or services are required. The previous signature hero is retained in `assets/signature/`, alongside the four active featured project cards. They use the existing charcoal and champagne-gold palette. The legacy artwork generator does not overwrite these new files. Edit the SVGs directly when updating copy or project illustrations. The diagrams are conceptual, not screenshots or quantitative results.
 
 ## Content and links
 
