@@ -1,132 +1,120 @@
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile/hero-mobile.svg" />
-  <img src="./assets/profile/hero.svg" width="100%" alt="Zaid Mayyalleh — Backend engineering and applied AI. Thoughtful systems. Built with intent." />
+  <source media="(max-width: 640px)" srcset="./assets/signature/hero-mobile.svg" />
+  <img src="./assets/signature/hero.svg" width="100%" alt="Zaid Mayyalleh — Backend engineering and applied AI. Engineering software with purpose." />
 </picture>
 
 <p align="center">
-  <a href="#about-me">About</a> &nbsp; · &nbsp;
-  <a href="#selected-work">Selected work</a> &nbsp; · &nbsp;
-  <a href="#toolkit">Toolkit</a> &nbsp; · &nbsp;
+  <a href="#about">About</a> &nbsp; · &nbsp;
+  <a href="#selected-work">Projects</a> &nbsp; · &nbsp;
+  <a href="#technical-toolkit">Toolkit</a> &nbsp; · &nbsp;
   <a href="#github-activity">Activity</a> &nbsp; · &nbsp;
   <a href="https://www.linkedin.com/in/zaid-mayyalleh-307499376/">LinkedIn ↗</a>
 </p>
 
-<br />
+## About
 
-## About me
+I'm **Zaid Mayyalleh**, a Computer Science student at An-Najah National University, Palestine, with a focus on backend engineering, applied AI and product development.
 
-I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National University** in Palestine. I like building software where the details matter: a clear API, data that stays consistent, and an interface people can actually use.
+I enjoy turning complicated problems into software that is understandable, maintainable and useful — from APIs and data models to search engines, automation and intelligent applications.
 
-- **Backend engineering:** Django, Python, relational data, authentication, and business rules.
-- **In practice:** backend training at Harri and leading the technical committee at the NAI AI Association.
-- **Beyond the API:** information retrieval, applied machine learning, and product ideas that move into working code.
-
-<br />
+| Focus | In practice |
+| :--- | :--- |
+| Backend engineering | APIs, relational databases, authentication and system design |
+| Applied AI | Machine learning, information retrieval and decision-support systems |
+| Technical leadership | Technical committee lead at NAI AI Association; backend training at Harri |
 
 ## Selected work
 
-<sub>01 / Selected systems. Practical problems.</sub>
+<sub>01 / SYSTEMS, INTELLIGENCE &amp; PRODUCTS</sub>
 
-<br />
-
-<a href="https://github.com/zaidmoen/employee-hub-api">
+<a href="https://github.com/zaidmoen/apex-flowguard">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/featured/employee-hub-mobile.svg" />
-  <img src="./assets/featured/employee-hub.svg" width="100%" alt="Employee Hub API: a layered Django backend for employee records, shifts, attendance, and payroll. Explore the repository." />
+  <source media="(max-width: 640px)" srcset="./assets/signature/flow-mobile.svg" />
+  <img src="./assets/signature/flow.svg" width="100%" alt="APEX FlowGuard: Pressure-based leak detection and hydraulic simulation." />
 </picture>
 </a>
 
-<sub>Controller → component → repository · Hourly rate history · Shift validation · Attendance and payroll</sub>
+**[APEX FlowGuard](https://github.com/zaidmoen/apex-flowguard)** — Pressure-based leak detection and hydraulic simulation.
 
-<br /><br />
-
-<a href="https://github.com/zaidmoen/NAI-membership-system">
+<a href="https://github.com/zaidmoen/telecomguard-ai">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/featured/nai-membership-mobile.svg" />
-  <img src="./assets/featured/nai-membership.svg" width="100%" alt="NAI Membership: student registration, payment confirmation, and an administrator dashboard. Explore the repository." />
+  <source media="(max-width: 640px)" srcset="./assets/signature/ml-mobile.svg" />
+  <img src="./assets/signature/ml.svg" width="100%" alt="TelecomGuard AI: Curated datasets and a classification comparison platform." />
 </picture>
 </a>
 
-<sub>Public registration · Staff dashboard · Payment status · Django, React, and PostgreSQL</sub>
+**[TelecomGuard AI](https://github.com/zaidmoen/telecomguard-ai)** — Curated datasets and a classification comparison platform.
 
-<br /><br />
-
-<a href="https://github.com/zaidmoen/IRForge">
+<a href="https://github.com/zaidmoen/nai-ai-hub">
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/featured/irforge-mobile.svg" />
-  <img src="./assets/featured/irforge.svg" width="100%" alt="IRForge: a Python information retrieval engine with an inverted index, Boolean AND, and exact phrase search. Explore the repository." />
+  <source media="(max-width: 640px)" srcset="./assets/signature/hub-mobile.svg" />
+  <img src="./assets/signature/hub.svg" width="100%" alt="NAI AI Hub: AI resource discovery, model exploration and learning paths." />
 </picture>
 </a>
 
-<sub>Tokenization · Positional postings · Boolean AND · Exact phrase queries</sub>
+**[NAI AI Hub](https://github.com/zaidmoen/nai-ai-hub)** — AI resource discovery, model exploration and learning paths.
 
-<br /><br />
+<a href="https://github.com/zaidmoen/library-release-orchestrator">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/signature/git-mobile.svg" />
+  <img src="./assets/signature/git.svg" width="100%" alt="Release Orchestrator: Dependency-aware planning for shared-library releases." />
+</picture>
+</a>
+
+**[Release Orchestrator](https://github.com/zaidmoen/library-release-orchestrator)** — Dependency-aware planning for shared-library releases.
 
 <details>
-<summary><strong>More from the workbench ↗</strong></summary>
+<summary><strong>Explore more projects ↗</strong></summary>
 
-<br />
-
-| Project | What it demonstrates |
+| Repository | Focus |
 | :--- | :--- |
-| [IR Logarithmic Merging](https://github.com/zaidmoen/IR-Logarithmic-Merging) | A C++ dynamic inverted index with disk generations and streaming merges. |
-| [Books Management API](https://github.com/zaidmoen/Books_manegment_MySQL) | A FastAPI and MySQL backend with JWT authentication. |
-| [Pinch Voxel Studio](https://github.com/zaidmoen/cube_builder) | A hand-tracked voxel editor built with OpenCV and MediaPipe. |
-| [Palestine Now](https://github.com/zaidmoen/palestine-now-web) | An Arabic-first local discovery demo with sample data. |
-| [Bank Marketing ML](https://github.com/zaidmoen/bank-marketing-ml-classification) | Preprocessing, classification, and model evaluation. |
+| [Employee Hub API](https://github.com/zaidmoen/employee-hub-api) | Layered Django backend for shifts, attendance and payroll |
+| [NAI Membership System](https://github.com/zaidmoen/NAI-membership-system) | Student registration and administration |
+| [IRForge](https://github.com/zaidmoen/IRForge) | Inverted indexing, Boolean and exact phrase search |
+| [IR Logarithmic Merging](https://github.com/zaidmoen/IR-Logarithmic-Merging) | Dynamic inverted indexing in C++ |
+| [Pinch Voxel Studio](https://github.com/zaidmoen/cube_builder) | Hand-tracked voxel editing with computer vision |
+| [Bank Marketing ML](https://github.com/zaidmoen/bank-marketing-ml-classification) | Classification and model evaluation |
 
 </details>
 
-<br />
+## Technical toolkit
 
-## Toolkit
-
-<sub>02 / Tools behind the work.</sub>
-
-<br />
+<sub>02 / TOOLS BEHIND THE WORK</sub>
 
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/profile/stack-mobile.svg" />
-  <img src="./assets/profile/stack.svg" width="100%" alt="Languages: Python, JavaScript, TypeScript, C++, SQL. Web and backend: React, FastAPI, Django, MySQL, Supabase. AI and workflow: OpenCV, MediaPipe, scikit-learn, Git." />
+  <img src="./assets/profile/stack.svg" width="100%" alt="Python, JavaScript, TypeScript, C++, SQL, Django, FastAPI, React, MySQL, Supabase, OpenCV, MediaPipe, scikit-learn and Git." />
 </picture>
-
-<br />
 
 ## GitHub activity
 
-<sub>03 / A record of the work.</sub>
-
-<br />
+<sub>03 / A RECORD OF THE WORK</sub>
 
 <a href="https://github.com/zaidmoen?tab=repositories">
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stats/github-overview-mobile.svg" />
-  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub statistics: original repositories, stars received, public commits, and commits over the last 12 calendar months. Includes the last successful refresh time." />
+  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub statistics with the last successful refresh time." />
 </picture>
 </a>
 
 <details>
 <summary><strong>Explore languages &amp; monthly activity</strong></summary>
 
-<br />
-
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stats/github-details-mobile.svg" />
-  <img src="./assets/stats/github-details.svg" width="100%" alt="Repository language distribution and monthly authored commits in original public repositories. The current month is partial." />
+  <img src="./assets/stats/github-details.svg" width="100%" alt="Repository language distribution and monthly authored public commits." />
 </picture>
 
 </details>
 
-<sub>Public data · Scheduled daily refresh · Language shares use repository counts, not proficiency. <a href="./docs/profile-maintenance.md#statistics">Metric definitions</a>.</sub>
+<sub>Public data · Scheduled daily refresh · Language shares reflect repository counts, not proficiency. [Metric definitions](./docs/profile-maintenance.md#statistics).</sub>
 
-<br /><br />
+## Let's connect
 
-<a href="mailto:zmayyalleh@gmail.com">
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/profile/connect-mobile.svg" />
-  <img src="./assets/profile/connect.svg" width="100%" alt="Good ideas. Thoughtful execution. Open to internships, junior roles, and collaboration. Email Zaid." />
+  <img src="./assets/profile/connect.svg" width="100%" alt="Good ideas. Thoughtful execution. Open to internships, junior roles and collaboration." />
 </picture>
-</a>
 
 <p align="center">
   <a href="mailto:zmayyalleh@gmail.com"><strong>Email ↗</strong></a> &nbsp; · &nbsp;
@@ -134,4 +122,4 @@ I'm **Zaid Mayyalleh**, a Computer Science student at **An-Najah National Univer
   <a href="https://github.com/zaidmoen?tab=repositories"><strong>All repositories ↗</strong></a>
 </p>
 
-<p align="center"><sub>ZAID MAYYALLEH &nbsp; / &nbsp; THOUGHTFUL SYSTEMS. BUILT WITH INTENT.</sub></p>
+<p align="center"><sub>ZAID MAYYALLEH / ENGINEERING SOFTWARE WITH PURPOSE.</sub></p>
