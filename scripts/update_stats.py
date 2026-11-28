@@ -244,7 +244,7 @@ def calendar_summary(days):
 
 
 def calendar_svg(s, mobile=False):
-    width, height = (560, 695) if mobile else (1120, 375)
+    width, height = (560, 695) if mobile else (1120, 465)
     parts = []
 
     def text(x, y, value, size=14, color='#F5F7FA', weight=400, mono=False, anchor='start'):
@@ -331,10 +331,19 @@ def calendar_svg(s, mobile=False):
             text(width-24, y, f"{entry['count']} commits", 12, '#4FD1C5', anchor='end')
         text(24, 674, 'Daily intensity: 0 / 1–2 / 3–5 / 6–10 / 11+ commits', 11, '#98A2B3')
     else:
+        text(24, 335, 'ACTIVITY OVERVIEW', 11, '#98A2B3', mono=True)
         for i, (label, value) in enumerate(metrics):
-            x = 24+i*355
-            text(x, 330, label, 10, '#98A2B3', mono=True)
-            text(x, 356, value, 22, '#9AA7FF', 700)
+            x = 24+i*185
+            rect(x, 349, 174, 70, '#11161D', '#242D3A')
+            text(x+12, 368, label, 10, '#98A2B3', mono=True)
+            text(x+12, 398, value, 23, '#9AA7FF', 700)
+        parts.append('<path d="M590 324V435" stroke="#242D3A"/>')
+        text(614, 335, 'TOP ACTIVE REPOSITORIES', 11, '#98A2B3', mono=True)
+        for i, entry in enumerate(s.get('active_repositories', [])[:3]):
+            y = 358+i*24
+            text(614, y, entry['name'][:44], 14)
+            text(width-24, y, f"{entry['count']} commits", 12, '#4FD1C5', anchor='end')
+        text(24, 445, 'Daily intensity: 0 / 1–2 / 3–5 / 6–10 / 11+ commits', 11, '#98A2B3')
     return finish(height, f"{summary['total']} authored commits, {summary['active']} active days, {summary['longest']} day longest streak. Public original owned repositories only, not the complete GitHub contributions graph.")
 
 
