@@ -59,6 +59,21 @@ class StatisticsTests(unittest.TestCase):
         self.assertIn('Commits · last 12 months', svg)
         self.assertNotIn('Pull requests', svg)
 
+    def test_terminal_dashboard_and_mobile_rendering(self):
+        data = snapshot([repo()])
+        points = data['monthly_commits']
+        points[-2]['count'], points[-1]['count'] = 5, 9
+        data['commits_last_12_months'] = 14
+        for render in (stats.overview, stats.overview_mobile, stats.activity_card,
+                       stats.language_card, stats.details_card):
+            svg = render(data)
+            ET.fromstring(svg)
+            self.assertNotIn('{{', svg)
+        ET.fromstring(stats.details_card(data, mobile=True))
+        self.assertIn('Followers', stats.overview(data))
+        self.assertIn('Current month · partial', stats.activity_card(data))
+        self.assertIn(points[-2]['month'] + ' / 5', stats.activity_card(data))
+
     def test_incomplete_commit_search_is_an_error(self):
         with patch.object(stats, 'api', return_value={'incomplete_results': True, 'total_count': 1}):
             with self.assertRaises(RuntimeError):

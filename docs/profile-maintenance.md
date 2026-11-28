@@ -4,7 +4,7 @@ The active profile uses **Terminal Identity**: dark blue-black surfaces, neutral
 
 ## Statistics
 
-The daily **Refresh profile statistics** workflow uses GitHub's REST API and the built-in `GITHUB_TOKEN`. No personal token or paid service is needed. It is scheduled for **05:23 UTC**; GitHub may delay scheduled runs. The overview shows the actual last successful refresh, not a live counter.
+The daily **Refresh profile statistics** workflow uses GitHub's REST API and the built-in `GITHUB_TOKEN`. No personal token or paid service is needed. It is scheduled for **05:23 UTC**; GitHub may delay scheduled runs. The Terminal Analytics dashboard shows the actual last successful refresh, not a live counter. Its five metric cards, monthly bar chart (current month outlined as partial) and repository-language distribution are visible directly in the README. The peak month is the highest completed month; it excludes the current partial month. Monthly counts use default-branch history from the per-repository commits endpoint.
 
 | Metric | Definition |
 | --- | --- |

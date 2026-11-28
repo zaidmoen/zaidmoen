@@ -82,26 +82,21 @@ I care about clear architecture, reliable systems and software that solves real 
 
 ## GitHub activity
 
-<sub>03 / PUBLIC DEVELOPMENT ACTIVITY</sub>
+<sub>03 / ENGINEERING ANALYTICS</sub>
 
 <a href="https://github.com/zaidmoen?tab=repositories">
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stats/github-overview-mobile.svg" />
-  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public GitHub statistics and last successful refresh." />
+  <img src="./assets/stats/github-overview.svg" width="100%" alt="Public commits, commits in owned repositories over 12 months, original repositories, stars, followers and last successful refresh." />
 </picture>
 </a>
 
-<details>
-<summary><strong>Explore languages &amp; monthly activity</strong></summary>
-
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stats/github-details-mobile.svg" />
-  <img src="./assets/stats/github-details.svg" width="100%" alt="Repository language distribution and monthly authored public commits." />
+  <img src="./assets/stats/github-details.svg" width="100%" alt="Monthly authored commits with the current partial month highlighted, and primary language distribution by original public repository count." />
 </picture>
 
-</details>
-
-<sub>Public data · Scheduled daily refresh · Language shares reflect repository counts, not proficiency. <a href="./docs/profile-maintenance.md#statistics">Metric definitions</a>.</sub>
+<sub>Public metrics only · Daily refresh · Monthly activity excludes private repos and forks and reflects default-branch commit history. <a href="./docs/profile-maintenance.md#statistics">Metric definitions</a>.</sub>
 
 ## Contact
 
