@@ -84,6 +84,15 @@ I care about clear architecture, reliable systems and software that solves real 
 
 <sub>03 / ENGINEERING ANALYTICS</sub>
 
+<a href="https://github.com/zaidmoen?tab=overview">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/stats/github-calendar-mobile.svg" />
+  <img src="./assets/stats/github-calendar.svg" width="100%" alt="Rolling 365-day public commit calendar, active days, longest streak and busiest day." />
+</picture>
+</a>
+
+<sub>Commit calendar · Authored commits in owned original public repositories, not the full GitHub contribution count.</sub>
+
 <a href="https://github.com/zaidmoen?tab=repositories">
 <picture>
   <source media="(max-width: 640px)" srcset="./assets/stats/github-overview-mobile.svg" />

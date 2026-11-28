@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from html import escape
 import json
 import math
@@ -72,16 +72,13 @@ def summarize(user: str, repos: list[dict], followers: int, public_commits: int,
     }
 
 
-def fetch_monthly_commits(user: str, original: list[dict], months: list[str]) -> list[dict]:
-    """Count commits authored by `user` in their own original repositories, by month.
-
-    Uses the per-repository commits endpoint (not /search/commits) so a single
-    expired or missing token never affects more than the current repository,
-    and empty repositories (409 Conflict) are simply skipped.
-    """
-    since = f'{months[0]}-01T00:00:00Z'
+def fetch_commit_activity(user: str, original: list[dict], months: list[str], now: datetime):
+    """Collect monthly and daily authored commit counts from default-branch history."""
+    end = now.date()
+    start = end - timedelta(days=364)
+    since = min(f'{months[0]}-01', start.isoformat()) + 'T00:00:00Z'
     window = set(months)
-    histogram = Counter()
+    monthly, daily, repositories = Counter(), Counter(), Counter()
     for repo in original:
         page = 1
         while True:
@@ -90,18 +87,31 @@ def fetch_monthly_commits(user: str, original: list[dict], months: list[str]) ->
                 batch = api(f'/repos/{user}/{repo["name"]}/commits?{query}')
             except HTTPError as error:
                 if error.code == 409:
-                    break  # Empty repository: no commits to count yet.
+                    break
                 raise
             if not batch:
                 break
             for commit in batch:
-                date = (commit.get('commit') or {}).get('author', {}).get('date')
-                if date and date[:7] in window:
-                    histogram[date[:7]] += 1
+                value = (commit.get('commit') or {}).get('author', {}).get('date')
+                if not value:
+                    continue
+                day = datetime.fromisoformat(value.replace('Z', '+00:00')).astimezone(timezone.utc).date()
+                if day > end:
+                    continue
+                key = day.isoformat()
+                if key[:7] in window:
+                    monthly[key[:7]] += 1
+                if start <= day <= end:
+                    daily[key] += 1
+                    repositories[repo['name']] += 1
             if len(batch) < 100:
                 break
             page += 1
-    return [{'month': month, 'count': histogram[month]} for month in months]
+    days = [{'date': (start + timedelta(days=i)).isoformat(),
+             'count': daily[(start + timedelta(days=i)).isoformat()]} for i in range(365)]
+    return ([{'month': month, 'count': monthly[month]} for month in months], days,
+            [{'name': name, 'count': count}
+             for name, count in sorted(repositories.items(), key=lambda p: (-p[1], p[0]))])
 
 
 def fetch_snapshot(user: str) -> dict:
@@ -117,8 +127,10 @@ def fetch_snapshot(user: str) -> dict:
         page += 1
     public_commits = search_count('/search/commits', f'author:{user}')
     months = month_keys(now)
-    monthly = fetch_monthly_commits(user, original_repos(user, repos), months)
-    return summarize(user, repos, profile['followers'], public_commits, monthly, now)
+    monthly, daily, active_repositories = fetch_commit_activity(user, original_repos(user, repos), months, now)
+    snapshot = summarize(user, repos, profile['followers'], public_commits, monthly, now)
+    snapshot.update(daily_commits=daily, active_repositories=active_repositories)
+    return snapshot
 
 
 
@@ -216,6 +228,117 @@ def details_card(s, mobile=False):
     return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Monthly commit activity and repository languages">' + ''.join(parts) + '</svg>'
 
 
+
+# Calendar metrics are derived from a complete rolling daily snapshot, never from monthly estimates.
+HEAT_COLORS = ('#18212C', '#303C65', '#5062A5', '#8294ED', '#4FD1C5')
+
+
+def calendar_summary(days):
+    active = sum(item['count'] > 0 for item in days)
+    longest = streak = 0
+    for item in days:
+        streak = streak + 1 if item['count'] > 0 else 0
+        longest = max(longest, streak)
+    return {'total': sum(item['count'] for item in days), 'active': active,
+            'longest': longest, 'peak': max((item['count'] for item in days), default=0)}
+
+
+def calendar_svg(s, mobile=False):
+    width, height = (560, 695) if mobile else (1120, 375)
+    parts = []
+
+    def text(x, y, value, size=14, color='#F5F7FA', weight=400, mono=False, anchor='start'):
+        font = 'Consolas,Liberation Mono,monospace' if mono else 'Arial,Helvetica,sans-serif'
+        parts.append(f'<text x="{x}" y="{y}" font-family="{font}" font-size="{size}" fill="{color}" font-weight="{weight}" text-anchor="{anchor}">{escape(str(value))}</text>')
+
+    def rect(x, y, w, h, fill='#11161D', stroke='none', radius=5):
+        parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{radius}" fill="{fill}" stroke="{stroke}"/>')
+
+    def line(x1, y, x2):
+        parts.append(f'<path d="M{x1} {y}H{x2}" fill="none" stroke="#242D3A"/>')
+
+    def finish(h, description):
+        body = ''.join(parts)
+        return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{h}" viewBox="0 0 {width} {h}" role="img" aria-labelledby="title desc">'
+                f'<title id="title">Public commit activity calendar</title><desc id="desc">{escape(description)}</desc>{body}</svg>')
+
+    days = s.get('daily_commits')
+    if not days:
+        rect(.5, .5, width-1, 124, '#0B0F14', '#242D3A', 12)
+        text(24, 35, '❯ git activity --calendar', 14, '#9AA7FF', 600, True)
+        text(24, 66, 'Daily history not yet available', 20, weight=600)
+        text(24, 91, 'The next successful statistics refresh will populate this calendar.', 13, '#98A2B3')
+        return finish(125, 'Daily history is not available in this snapshot.')
+
+    first = datetime.strptime(days[0]['date'], '%Y-%m-%d').date()
+    last = datetime.strptime(days[-1]['date'], '%Y-%m-%d').date()
+    if len(days) != 365 or any(datetime.strptime(item['date'], '%Y-%m-%d').date() != first + timedelta(days=i)
+                               or not isinstance(item['count'], int) or item['count'] < 0
+                               for i, item in enumerate(days)):
+        raise ValueError('Invalid daily commit snapshot: expected 365 consecutive nonnegative daily counts')
+    summary = calendar_summary(days)
+    rect(.5, .5, width-1, height-1, '#0B0F14', '#242D3A', 12)
+    rect(12, 12, width-24, 38, '#151B25', '#242D3A', 7)
+    text(26, 36, '❯ git activity --calendar', 14, '#9AA7FF', 600, True)
+    text(width-26, 36, '365 DAYS / UTC', 10, '#98A2B3', mono=True, anchor='end')
+    text(24, 88, f"{summary['total']:,} commits in the last 365 days", 24 if mobile else 28, weight=700)
+    text(25, 111, 'Owned, original public repositories · authored commits', 12, '#98A2B3')
+    offset = (first.weekday() + 1) % 7
+    weeks = (offset + len(days) + 6) // 7
+    cell, pitch, origin_x = (14, 17, 57) if mobile else (15, 19, 62)
+
+    def draw_block(start_week, end_week, y):
+        last_label_x = -100
+        for row, label in ((1, 'Mon'), (3, 'Wed'), (5, 'Fri')):
+            text(24, y + row*pitch + cell-3, label, 10, '#98A2B3', mono=True)
+        for i, item in enumerate(days):
+            week, row = divmod(offset+i, 7)
+            if not start_week <= week < end_week:
+                continue
+            x = origin_x + (week-start_week)*pitch
+            yy = y + row*pitch
+            day = first + timedelta(days=i)
+            n = item['count']
+            level = 0 if n == 0 else 1 if n <= 2 else 2 if n <= 5 else 3 if n <= 10 else 4
+            parts.append(f'<rect x="{x}" y="{yy}" width="{cell}" height="{cell}" rx="3" fill="{HEAT_COLORS[level]}"><title>{item["date"]}: {n} commits</title></rect>')
+            if (day.day == 1 or i == 0 or (week == start_week and row == 0)) and x-last_label_x >= 35:
+                text(x, y-9, day.strftime('%b'), 11, '#98A2B3', mono=True)
+                last_label_x = x
+
+    draw_block(0, min(27, weeks) if mobile else weeks, 143)
+    if mobile:
+        draw_block(27, weeks, 291)
+    legend_y = 426 if mobile else 287
+    text(24, legend_y+11, f'{first.isoformat()} — {last.isoformat()}', 11, '#98A2B3', mono=True)
+    legend_x = width-176
+    text(legend_x-7, legend_y+11, 'Less', 10, '#98A2B3', anchor='end')
+    for i, color in enumerate(HEAT_COLORS):
+        rect(legend_x+i*19, legend_y, 14, 14, color, radius=3)
+    text(legend_x+99, legend_y+11, 'More', 10, '#98A2B3')
+    divider_y = 451 if mobile else 310
+    line(24, divider_y, width-24)
+    metrics = [('ACTIVE DAYS', summary['active']), ('LONGEST STREAK', f"{summary['longest']}d"), ('BUSIEST DAY', f"{summary['peak']} commits")]
+    if mobile:
+        for i, (label, value) in enumerate(metrics):
+            x = 24+i*174
+            rect(x, 468, 164, 62, '#11161D', '#242D3A')
+            text(x+10, 485, label, 9, '#98A2B3', mono=True)
+            text(x+10, 514, value, 21, '#9AA7FF', 700)
+        text(24, 558, 'TOP ACTIVE REPOSITORIES', 11, '#98A2B3', mono=True)
+        for i, entry in enumerate(s.get('active_repositories', [])[:3]):
+            y = 581+i*24
+            text(24, y, entry['name'][:44], 13)
+            text(width-24, y, f"{entry['count']} commits", 12, '#4FD1C5', anchor='end')
+        text(24, 674, 'Daily intensity: 0 / 1–2 / 3–5 / 6–10 / 11+ commits', 11, '#98A2B3')
+    else:
+        for i, (label, value) in enumerate(metrics):
+            x = 24+i*355
+            text(x, 330, label, 10, '#98A2B3', mono=True)
+            text(x, 356, value, 22, '#9AA7FF', 700)
+    return finish(height, f"{summary['total']} authored commits, {summary['active']} active days, {summary['longest']} day longest streak. Public original owned repositories only, not the complete GitHub contributions graph.")
+
+
+
 def render(s, output):
     # Finish every rendering before changing any checked-in output.
     outputs = {'github-overview.svg': overview(s), 'github-languages.svg': language_card(s),
@@ -223,6 +346,8 @@ def render(s, output):
                'github-overview-mobile.svg': overview_mobile(s),
                'github-details.svg': details_card(s),
                'github-details-mobile.svg': details_card(s, mobile=True),
+               'github-calendar.svg': calendar_svg(s),
+               'github-calendar-mobile.svg': calendar_svg(s, mobile=True),
                'github-stats.json': json.dumps(s, indent=2, ensure_ascii=False) + '\n'}
     output.mkdir(parents=True, exist_ok=True)
     for name, content in outputs.items():

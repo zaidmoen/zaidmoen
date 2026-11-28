@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import importlib.util
 from pathlib import Path
 import tempfile
@@ -74,6 +74,40 @@ class StatisticsTests(unittest.TestCase):
         self.assertIn('Current month · partial', stats.activity_card(data))
         self.assertIn(points[-2]['month'] + ' / 5', stats.activity_card(data))
 
+    def test_calendar_uses_actual_days_and_streaks(self):
+        data = snapshot()
+        start = NOW.date() - timedelta(days=364)
+        days = [{'date': (start + timedelta(days=i)).isoformat(), 'count': 0} for i in range(365)]
+        for i, count in [(4, 1), (5, 3), (6, 12), (364, 2)]:
+            days[i]['count'] = count
+        data['daily_commits'] = days
+        data['active_repositories'] = [{'name': 'A&B', 'count': 18}]
+        self.assertEqual(stats.calendar_summary(days), {'total': 18, 'active': 4, 'longest': 3, 'peak': 12})
+        for mobile in (False, True):
+            svg = stats.calendar_svg(data, mobile)
+            root = ET.fromstring(svg)
+            ns = {'s': 'http://www.w3.org/2000/svg'}
+            cells = [node for node in root.findall('.//s:rect', ns) if node.find('s:title', ns) is not None]
+            self.assertEqual(len(cells), 365)
+            self.assertIn('18 commits in the last 365 days', svg)
+        data['daily_commits'] = days[:-1]
+        with self.assertRaises(ValueError):
+            stats.calendar_svg(data)
+
+    def test_daily_collection_includes_rolling_window_and_excludes_future(self):
+        now = datetime(2026, 1, 15, tzinfo=timezone.utc)
+        def commit(value):
+            return {'commit': {'author': {'date': value}}}
+        batch = [commit('2025-01-16T10:00:00Z'), commit('2026-01-15T10:00:00Z'),
+                 commit('2026-01-16T10:00:00Z')]
+        with patch.object(stats, 'api', return_value=batch) as api:
+            monthly, days, repos = stats.fetch_commit_activity('zaidmoen', [{'name': 'demo'}], stats.month_keys(now), now)
+        self.assertEqual(len(days), 365)
+        self.assertEqual(sum(d['count'] for d in days), 2)
+        self.assertEqual(sum(d['count'] for d in monthly), 1)
+        self.assertEqual(repos, [{'name': 'demo', 'count': 2}])
+        self.assertIn('2025-01-16', api.call_args.args[0])
+
     def test_incomplete_commit_search_is_an_error(self):
         with patch.object(stats, 'api', return_value={'incomplete_results': True, 'total_count': 1}):
             with self.assertRaises(RuntimeError):
@@ -83,7 +117,7 @@ class StatisticsTests(unittest.TestCase):
         data = snapshot([repo()])
         with tempfile.TemporaryDirectory() as folder:
             stats.render(data, Path(folder))
-            self.assertEqual(len(list(Path(folder).iterdir())), 7)
+            self.assertEqual(len(list(Path(folder).iterdir())), 9)
             self.assertIn(data['updated_at'], (Path(folder) / 'github-overview.svg').read_text())
 
 
